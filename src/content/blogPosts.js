@@ -15,6 +15,45 @@ const AUTHOR_TEAM = {
 export const posts = [
   // ── 1 ─────────────────────────────────────────────────────────────────
   {
+    slug: 'gen-z-doesnt-want-romance-they-want-a-real-partner',
+    title: "Gen Z Doesn't Want a Romance. They Want a Real Partner.",
+    date: 'April 2, 2026',
+    sortDate: new Date('2026-04-02'),
+    tag: 'Culture',
+    tagColor: '#3B82F6',
+    tagBg: 'rgba(59,130,246,0.12)',
+    author: AUTHOR_MARTY,
+    excerpt: "I didn't build LLMA because I read a trend report. I built it because I've been living this for 17 years. And right now, the research is finally catching up.",
+    tags: ['#LLMA', '#LavenderMarriage', '#PlatoniclLove', '#IntentionalRelationships', '#GenZ'],
+    heroImage: null,
+    bodyHtml: `
+<p class="llma-lead">I didn't build LLMA because I read a trend report. I built it because I've been living this for 17 years. And right now, the research is finally catching up.</p>
+<hr class="llma-divider">
+<h2>What the Numbers Are Actually Telling Us</h2>
+<p>A major study released in early 2026 found that 85% of Gen Z and millennials no longer believe marriage is necessary for a fulfilling life. Nearly half — 48% — said they're open to what researchers are calling "parallel relationships": one person for emotional needs, a different person for physical ones. They're not being flippant. They're being honest about something older generations spent decades pretending wasn't true.</p>
+<p>I know that question because I've been asking it my whole life. What if I built a life with someone who actually chooses me? Someone I actually trust? Instead of chasing a romantic script that never fit?</p>
+<p>The people asking it out loud now are just getting started.</p>
+<hr class="llma-divider">
+<h2>What "Emotional Outsourcing" Gets Right</h2>
+<p>Researchers are calling it "emotional outsourcing." I call it honesty. When you build a partnership on what's actually real between two people, instead of what you're supposed to feel, something shifts. The pressure drops. The performance stops.</p>
+<p>My marriage works because Brandi and I were honest before we were anything else. We didn't walk in pretending. We walked in with our cards on the table. And 17 years later, with a daughter, a French Bulldog named Dior, and a life we designed ourselves, I can tell you that intentional love is not a lesser love. It's often a deeper one.</p>
+<div class="llma-quote"><p>"Platonic love is real love. That's not a consolation prize. It's a choice."</p></div>
+<hr class="llma-divider">
+<h2>Why This Moment Matters for Intentional Partnerships</h2>
+<p>What's happening right now isn't just a trend. It's a correction. For too long, the only "legitimate" partnership was the one that looked a certain way: romantic, sexual, heteronormative. Everything else was a workaround.</p>
+<p>That framing hurt a lot of people. Gay men who married the wrong way for the wrong reasons. Straight women who wanted a partner, a co-parent, a companion, and couldn't figure out why the men they dated couldn't give them that.</p>
+<p>A lavender marriage, a platonic life partnership, a companionship marriage — these aren't compromises. They're structures built on clarity. And clarity is the foundation of every relationship that actually lasts.</p>
+<hr class="llma-divider">
+<h2>You Don't Have to Figure This Out Alone</h2>
+<p>LLMA exists because I wished it existed when I was younger. It's the world's first matchmaking platform built specifically for intentional platonic partnerships. Gay men, straight women, and anyone who knows what they're looking for and is done settling for less.</p>
+<p>We've got 1,000+ members across 20+ countries. A feature called "Cards on the Table" with 160 conversation cards so you can actually know someone before you commit to building a life with them. And a community that gets it.</p>
+<p>You don't have to explain yourself here. You just have to show up.</p>
+<p><strong><a href="https://apps.apple.com/app/llma">Download LLMA on the App Store</a> and find your person.</strong></p>
+`,
+  },
+
+  // ── 2 ─────────────────────────────────────────────────────────────────
+  {
     slug: 'tax-benefits-are-not-a-reward-for-fucking',
     title: 'Tax Benefits Are Not a Reward for F*cking',
     date: 'February 28, 2026',
