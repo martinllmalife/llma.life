@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
 import { sortedPosts } from '../content/blogPosts';
-import { TIKTOK_EMBEDS } from '../content/tiktokEmbeds';
+import { INSTAGRAM_EMBEDS } from '../content/tiktokEmbeds';
 
 const APP_STORE_URL = 'https://apps.apple.com/us/app/llma-intentional-partnerships/id6760886909';
 const APP_URL = 'https://llma.app';
@@ -594,11 +594,15 @@ const TikTokIcon = ({ size = 16, color = 'currentColor' }) => (
 
 function TikTokSection() {
   useEffect(() => {
-    const existing = document.querySelector('script[src="https://www.tiktok.com/embed.js"]');
-    if (existing) existing.remove();
+    const existing = document.querySelector('script[src="//www.instagram.com/embed.js"]');
+    if (existing) {
+      window.instgrm?.Embeds?.process();
+      return;
+    }
     const script = document.createElement('script');
-    script.src = 'https://www.tiktok.com/embed.js';
+    script.src = '//www.instagram.com/embed.js';
     script.async = true;
+    script.onload = () => window.instgrm?.Embeds?.process();
     document.body.appendChild(script);
     return () => script.remove();
   }, []);
@@ -617,19 +621,18 @@ function TikTokSection() {
               80M+ views and counting
             </h2>
           </div>
-          <a href="https://www.tiktok.com/@itsmcmartyfly" target="_blank" rel="noopener noreferrer" style={{
+          <a href="https://www.instagram.com/itsmcmartyfly" target="_blank" rel="noopener noreferrer" style={{
             display: 'inline-flex', alignItems: 'center', gap: 10,
             padding: '12px 24px', borderRadius: 9999,
             background: '#fff', color: '#000',
             fontSize: 14, fontWeight: 700, textDecoration: 'none', flexShrink: 0,
           }}>
-            <TikTokIcon size={15} />
-            Follow @itsmcmartyfly
+            Follow @itsmcmartyfly on Instagram
           </a>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 12, alignItems: 'start' }}>
-          {TIKTOK_EMBEDS.map((html, i) => (
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 12, alignItems: 'start' }}>
+          {INSTAGRAM_EMBEDS.map((html, i) => (
             <div key={i} style={{ borderRadius: 16, overflow: 'hidden', background: S.card, border: `1px solid ${S.cardBorder}` }}
               dangerouslySetInnerHTML={{ __html: html }}
             />
