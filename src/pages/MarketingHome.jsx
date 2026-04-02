@@ -366,14 +366,14 @@ function CourseTeaser() {
 
 // ── Photo Grid ────────────────────────────────────────────────────────────────
 function PhotoGrid() {
-  // Replace src values with your actual image paths in /public/photos/
   const photos = [
-    { src: null, label: 'Family · Chicago' },
-    { src: null, label: 'Marty & Brandi' },
-    { src: null, label: 'The Kids' },
-    { src: null, label: 'Home Life' },
-    { src: null, label: 'Together' },
-    { src: null, label: 'Lavender Love' },
+    { src: 'https://lh3.googleusercontent.com/pw/AP1GczMbRGLQuadH0Ki9CH7dhkt7rRWuF3EVBDSEEjle1j9CQUROdg1Bg_yGbQ-N_qJjJ5Qx84ALSN7H1PNDqpgizB0nSTvWaSCqTFSEJRJesjYxzk993xGwEWbUt8PcUxd_PnaOVQGIK8YR5-283cYmPR6hfQ=w1078-h1616-s-no-gm', label: 'Family' },
+    { src: 'https://lh3.googleusercontent.com/pw/AP1GczO6hD8lUWTKaTBzeFjXYJdngEQmJdAbVpwXE5-KW9gQ-9yOZdyWPDGxoMC6rY_lqjT7va6nZ7vFZMzzmqPqeY6tP-QT9uB8Y3awzhTv7LWT9jY8TXdL1IWmdmMsXqiqO14N7Vmy3ytrKXgcByLW_IZvnw=w2424-h1616-s-no-gm', label: 'Together' },
+    { src: 'https://lh3.googleusercontent.com/pw/AP1GczNPJXCZgCnEFAwvM7SiFH5MmQg0BfvH7zk8m2tt5gcARO3aZIJll4HzQaxB58XSjG0RTefVzZNsETvpD517onYG22l5xHsGUoPjsbD-smIC19T305ePGx95YSgV_fnEmzG19Gud-qwRjVitwFbb9GxJ5g=w2424-h1616-s-no-gm', label: 'Home Life' },
+    { src: 'https://lh3.googleusercontent.com/pw/AP1GczPUVBgZ3sBQFDFCNMa5GP352ungpJTF6z4SS6X0BB6EnR_dbLaWR5DlM6YWinNba3hKW26y9XbJ2WzkH9X44o3g0y8q9jogTYtIBuxbSmYNboVqVYPztpzTwmDX4x2RhwWuHHd2tEYvrlaZaKY-YfAhGg=w2424-h1616-s-no-gm', label: 'The Kids' },
+    { src: 'https://lh3.googleusercontent.com/pw/AP1GczNy6WlnYPlxheZ6ziWNq68ljs-s6sKsgHFuAeRGhlRbJq9TnHfptkgveTmL37PwiOzUwz01MwfFlOwYjBPBlbWbcgM5cfPgN-oQclJDPchPXWoxsv1LN2tPA=w1078-h1616-s-no-gm', label: 'Marty & Brandi' },
+    { src: 'https://lh3.googleusercontent.com/pw/AP1GczMz0wIcFOchbodQFu-7pZ5FwVvBjCcy_Vk8_qss-LwDh0lG2hvqgI8lcR-ypbaSKqVGi1zHdPs_oM9NZO0XlCHL3miIv-EcynnQedBkqKy0JAM7ctdxXWfm8oCjVCIqDciHyiwT1Jm9nUauNVeGb0420g=w2424-h1616-s-no-gm', label: 'Lavender Love' },
+    { src: 'https://lh3.googleusercontent.com/pw/AP1GczPZuM7uzHJFq1FeI3YTSaiMPZcVc87C9WbrblS23aJGpCajefufBj06CC_qRD1H8eNYpzS7ut9ULEqtyBu0QIKghXnzZguzBzy8EHDCpzwoP-byMz1cwedwKgU1pm5eXPnw5XTbrxZ9kL_92v8f1uAsgg=w2424-h1616-s-no-gm', label: 'Real Life' },
   ];
 
   const gradients = [
@@ -402,16 +402,16 @@ function PhotoGrid() {
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(3, 1fr)',
-          gridTemplateRows: 'repeat(2, 280px)',
+          gridTemplateRows: 'repeat(3, 260px)',
           gap: 12,
         }}>
           {photos.map((photo, i) => (
             <div key={i} style={{
               borderRadius: 16, overflow: 'hidden',
-              background: photo.src ? 'transparent' : gradients[i],
+              background: photo.src ? 'transparent' : gradients[i % gradients.length],
               border: `1px solid ${S.cardBorder}`,
               position: 'relative',
-              gridColumn: i === 0 ? 'span 2' : i === 3 ? 'span 2' : 'span 1',
+              gridColumn: i === 0 ? 'span 2' : i === 3 ? 'span 2' : i === 5 ? 'span 2' : 'span 1',
             }}>
               {photo.src ? (
                 <img src={photo.src} alt={photo.label} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
@@ -436,9 +436,6 @@ function PhotoGrid() {
             </div>
           ))}
         </div>
-        <p style={{ textAlign: 'center', fontSize: 13, color: 'rgba(255,255,255,0.2)', marginTop: 16, fontStyle: 'italic' }}>
-          Add your photos to /public/photos/ and update the src values in PhotoGrid
-        </p>
       </div>
     </section>
   );
