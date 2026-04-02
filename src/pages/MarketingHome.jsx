@@ -544,10 +544,9 @@ function VideoGrid() {
 // 📱 Paste the 4 most viral TikTok video IDs here (the number at the end of the URL)
 // e.g. https://www.tiktok.com/@itsmcmartyfly/video/7312345678901234567 → '7312345678901234567'
 const TIKTOK_VIDEOS = [
-  { id: '', label: 'Lavender Marriage' },
-  { id: '', label: 'Our Story' },
-  { id: '', label: 'Co-Parenting' },
-  { id: '', label: 'The Truth' },
+  { id: '7578691659601431822', label: 'Lavender Marriage' },
+  { id: '7563048152257858871', label: 'Our Story' },
+  { id: '7563662830604487991', label: 'Real Life' },
 ];
 
 function TikTokSection() {
@@ -580,7 +579,7 @@ function TikTokSection() {
 
         {/* Video grid */}
         {hasVideos ? (
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 12 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 12 }}>
             {TIKTOK_VIDEOS.filter(v => v.id).map((v) => (
               <div key={v.id} style={{ borderRadius: 16, overflow: 'hidden', background: S.card, border: `1px solid ${S.cardBorder}` }}>
                 <iframe
@@ -595,7 +594,7 @@ function TikTokSection() {
           </div>
         ) : (
           // Placeholder grid until video IDs are added
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 12 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 12 }}>
             {TIKTOK_VIDEOS.map((v, i) => (
               <a key={i} href="https://www.tiktok.com/@itsmcmartyfly" target="_blank" rel="noopener noreferrer" style={{
                 display: 'block', textDecoration: 'none',
