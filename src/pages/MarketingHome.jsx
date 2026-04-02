@@ -365,30 +365,34 @@ function CourseTeaser() {
 }
 
 // ── Photo Grid ────────────────────────────────────────────────────────────────
+// 🖼️  Drop the Thomas Family hero URL here once you have the Google Photos link:
+const THOMAS_FAMILY_HERO = '';
+
 function PhotoGrid() {
-  const photos = [
-    { src: 'https://lh3.googleusercontent.com/pw/AP1GczMbRGLQuadH0Ki9CH7dhkt7rRWuF3EVBDSEEjle1j9CQUROdg1Bg_yGbQ-N_qJjJ5Qx84ALSN7H1PNDqpgizB0nSTvWaSCqTFSEJRJesjYxzk993xGwEWbUt8PcUxd_PnaOVQGIK8YR5-283cYmPR6hfQ=w1078-h1616-s-no-gm', label: 'Family' },
-    { src: 'https://lh3.googleusercontent.com/pw/AP1GczO6hD8lUWTKaTBzeFjXYJdngEQmJdAbVpwXE5-KW9gQ-9yOZdyWPDGxoMC6rY_lqjT7va6nZ7vFZMzzmqPqeY6tP-QT9uB8Y3awzhTv7LWT9jY8TXdL1IWmdmMsXqiqO14N7Vmy3ytrKXgcByLW_IZvnw=w2424-h1616-s-no-gm', label: 'Together' },
-    { src: 'https://lh3.googleusercontent.com/pw/AP1GczNPJXCZgCnEFAwvM7SiFH5MmQg0BfvH7zk8m2tt5gcARO3aZIJll4HzQaxB58XSjG0RTefVzZNsETvpD517onYG22l5xHsGUoPjsbD-smIC19T305ePGx95YSgV_fnEmzG19Gud-qwRjVitwFbb9GxJ5g=w2424-h1616-s-no-gm', label: 'Home Life' },
-    { src: 'https://lh3.googleusercontent.com/pw/AP1GczPUVBgZ3sBQFDFCNMa5GP352ungpJTF6z4SS6X0BB6EnR_dbLaWR5DlM6YWinNba3hKW26y9XbJ2WzkH9X44o3g0y8q9jogTYtIBuxbSmYNboVqVYPztpzTwmDX4x2RhwWuHHd2tEYvrlaZaKY-YfAhGg=w2424-h1616-s-no-gm', label: 'The Kids' },
-    { src: 'https://lh3.googleusercontent.com/pw/AP1GczNy6WlnYPlxheZ6ziWNq68ljs-s6sKsgHFuAeRGhlRbJq9TnHfptkgveTmL37PwiOzUwz01MwfFlOwYjBPBlbWbcgM5cfPgN-oQclJDPchPXWoxsv1LN2tPA=w1078-h1616-s-no-gm', label: 'Marty & Brandi' },
-    { src: 'https://lh3.googleusercontent.com/pw/AP1GczMz0wIcFOchbodQFu-7pZ5FwVvBjCcy_Vk8_qss-LwDh0lG2hvqgI8lcR-ypbaSKqVGi1zHdPs_oM9NZO0XlCHL3miIv-EcynnQedBkqKy0JAM7ctdxXWfm8oCjVCIqDciHyiwT1Jm9nUauNVeGb0420g=w2424-h1616-s-no-gm', label: 'Lavender Love' },
-    { src: 'https://lh3.googleusercontent.com/pw/AP1GczPZuM7uzHJFq1FeI3YTSaiMPZcVc87C9WbrblS23aJGpCajefufBj06CC_qRD1H8eNYpzS7ut9ULEqtyBu0QIKghXnzZguzBzy8EHDCpzwoP-byMz1cwedwKgU1pm5eXPnw5XTbrxZ9kL_92v8f1uAsgg=w2424-h1616-s-no-gm', label: 'Real Life' },
+  const gridPhotos = [
+    { src: 'https://lh3.googleusercontent.com/pw/AP1GczO6hD8lUWTKaTBzeFjXYJdngEQmJdAbVpwXE5-KW9gQ-9yOZdyWPDGxoMC6rY_lqjT7va6nZ7vFZMzzmqPqeY6tP-QT9uB8Y3awzhTv7LWT9jY8TXdL1IWmdmMsXqiqO14N7Vmy3ytrKXgcByLW_IZvnw=w2424-h1616-s-no-gm', label: 'Together', pos: 'center' },
+    { src: 'https://lh3.googleusercontent.com/pw/AP1GczNPJXCZgCnEFAwvM7SiFH5MmQg0BfvH7zk8m2tt5gcARO3aZIJll4HzQaxB58XSjG0RTefVzZNsETvpD517onYG22l5xHsGUoPjsbD-smIC19T305ePGx95YSgV_fnEmzG19Gud-qwRjVitwFbb9GxJ5g=w2424-h1616-s-no-gm', label: 'Home Life', pos: 'center' },
+    { src: 'https://lh3.googleusercontent.com/pw/AP1GczPUVBgZ3sBQFDFCNMa5GP352ungpJTF6z4SS6X0BB6EnR_dbLaWR5DlM6YWinNba3hKW26y9XbJ2WzkH9X44o3g0y8q9jogTYtIBuxbSmYNboVqVYPztpzTwmDX4x2RhwWuHHd2tEYvrlaZaKY-YfAhGg=w2424-h1616-s-no-gm', label: 'The Kids', pos: 'center top' },
+    { src: 'https://lh3.googleusercontent.com/pw/AP1GczMbRGLQuadH0Ki9CH7dhkt7rRWuF3EVBDSEEjle1j9CQUROdg1Bg_yGbQ-N_qJjJ5Qx84ALSN7H1PNDqpgizB0nSTvWaSCqTFSEJRJesjYxzk993xGwEWbUt8PcUxd_PnaOVQGIK8YR5-283cYmPR6hfQ=w1078-h1616-s-no-gm', label: 'Family', pos: 'center top' },
+    { src: 'https://lh3.googleusercontent.com/pw/AP1GczMz0wIcFOchbodQFu-7pZ5FwVvBjCcy_Vk8_qss-LwDh0lG2hvqgI8lcR-ypbaSKqVGi1zHdPs_oM9NZO0XlCHL3miIv-EcynnQedBkqKy0JAM7ctdxXWfm8oCjVCIqDciHyiwT1Jm9nUauNVeGb0420g=w2424-h1616-s-no-gm', label: 'Lavender Love', pos: 'center' },
+    { src: 'https://lh3.googleusercontent.com/pw/AP1GczPZuM7uzHJFq1FeI3YTSaiMPZcVc87C9WbrblS23aJGpCajefufBj06CC_qRD1H8eNYpzS7ut9ULEqtyBu0QIKghXnzZguzBzy8EHDCpzwoP-byMz1cwedwKgU1pm5eXPnw5XTbrxZ9kL_92v8f1uAsgg=w2424-h1616-s-no-gm', label: 'Real Life', pos: 'center' },
   ];
 
-  const gradients = [
-    'linear-gradient(135deg, rgba(143,92,184,0.3), rgba(220,90,75,0.15))',
+  const fallbackGradients = [
     'linear-gradient(135deg, rgba(197,159,225,0.2), rgba(143,92,184,0.25))',
+    'linear-gradient(135deg, rgba(143,92,184,0.25), rgba(220,90,75,0.12))',
     'linear-gradient(135deg, rgba(220,90,75,0.2), rgba(143,92,184,0.15))',
-    'linear-gradient(135deg, rgba(143,92,184,0.25), rgba(197,159,225,0.15))',
-    'linear-gradient(135deg, rgba(220,90,75,0.15), rgba(197,159,225,0.2))',
+    'linear-gradient(135deg, rgba(143,92,184,0.3), rgba(197,159,225,0.15))',
     'linear-gradient(135deg, rgba(197,159,225,0.25), rgba(220,90,75,0.1))',
+    'linear-gradient(135deg, rgba(220,90,75,0.15), rgba(197,159,225,0.2))',
   ];
 
   return (
     <section style={{ padding: '0 24px 100px', fontFamily: S.font }}>
       <div style={{ maxWidth: 1120, margin: '0 auto' }}>
-        <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: 40, flexWrap: 'wrap', gap: 16 }}>
+
+        {/* Section header */}
+        <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: 32, flexWrap: 'wrap', gap: 16 }}>
           <div>
             <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: S.lavender, marginBottom: 12 }}>Real Life</div>
             <h2 style={{ fontSize: 'clamp(28px, 3.5vw, 40px)', fontWeight: 800, color: '#fff', margin: 0, letterSpacing: '-0.02em' }}>
@@ -399,43 +403,93 @@ function PhotoGrid() {
             Real family. Real partnership. Built on honesty, not convention.
           </p>
         </div>
+
+        {/* Hero banner — Thomas Family */}
+        <div style={{
+          position: 'relative', borderRadius: 20, overflow: 'hidden',
+          height: 520, marginBottom: 12,
+          background: THOMAS_FAMILY_HERO
+            ? 'transparent'
+            : 'linear-gradient(135deg, rgba(143,92,184,0.25) 0%, rgba(197,159,225,0.12) 50%, rgba(220,90,75,0.15) 100%)',
+          border: `1px solid ${S.cardBorder}`,
+        }}>
+          {THOMAS_FAMILY_HERO ? (
+            <img
+              src={THOMAS_FAMILY_HERO}
+              alt="Thomas Family"
+              style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }}
+              onError={(e) => { e.target.style.display = 'none'; }}
+            />
+          ) : (
+            <div style={{
+              width: '100%', height: '100%',
+              display: 'flex', flexDirection: 'column',
+              alignItems: 'center', justifyContent: 'center', gap: 8,
+            }}>
+              <span style={{ fontSize: 48 }}>💜</span>
+              <span style={{ fontSize: 14, color: 'rgba(255,255,255,0.3)', fontFamily: S.font }}>Thomas Family</span>
+            </div>
+          )}
+          {/* Gradient overlay */}
+          <div style={{
+            position: 'absolute', inset: 0,
+            background: 'linear-gradient(to top, rgba(13,10,11,0.65) 0%, rgba(13,10,11,0.1) 40%, transparent 70%)',
+            pointerEvents: 'none',
+          }} />
+          <div style={{
+            position: 'absolute', bottom: 28, left: 32,
+          }}>
+            <div style={{ fontSize: 11, fontWeight: 700, color: S.lavender, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 6 }}>
+              Gilbert, Arizona
+            </div>
+            <p style={{
+              fontSize: 22, fontWeight: 800, color: '#fff',
+              letterSpacing: '-0.03em', lineHeight: 1.2,
+              fontFamily: S.font, margin: 0,
+              textShadow: '0 2px 12px rgba(0,0,0,0.5)',
+            }}>
+              Marty, Brandi & Londyn
+            </p>
+            <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.55)', marginTop: 4, fontFamily: S.font }}>
+              14+ years. Chosen every day.
+            </p>
+          </div>
+        </div>
+
+        {/* 6-photo grid */}
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(3, 1fr)',
-          gridTemplateRows: 'repeat(3, 260px)',
+          gridTemplateRows: 'repeat(2, 240px)',
           gap: 12,
         }}>
-          {photos.map((photo, i) => (
+          {gridPhotos.map((photo, i) => (
             <div key={i} style={{
-              borderRadius: 16, overflow: 'hidden',
-              background: photo.src ? 'transparent' : gradients[i % gradients.length],
+              borderRadius: 14, overflow: 'hidden',
+              background: fallbackGradients[i % fallbackGradients.length],
               border: `1px solid ${S.cardBorder}`,
               position: 'relative',
-              gridColumn: i === 0 ? 'span 2' : i === 3 ? 'span 2' : i === 5 ? 'span 2' : 'span 1',
             }}>
-              {photo.src ? (
-                <img src={photo.src} alt={photo.label} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-              ) : (
-                <div style={{
-                  width: '100%', height: '100%',
-                  display: 'flex', alignItems: 'flex-end',
-                  padding: '20px 24px',
-                }}>
-                  <span style={{ fontSize: 12, fontWeight: 600, color: 'rgba(255,255,255,0.3)', letterSpacing: '0.04em' }}>
-                    {photo.label}
-                  </span>
-                </div>
-              )}
+              <img
+                src={photo.src}
+                alt={photo.label}
+                style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: photo.pos }}
+                onError={(e) => { e.target.style.display = 'none'; }}
+              />
               <div style={{
                 position: 'absolute', bottom: 0, left: 0, right: 0,
-                background: 'linear-gradient(to top, rgba(13,10,11,0.6), transparent)',
-                padding: '20px 20px 16px',
+                background: 'linear-gradient(to top, rgba(13,10,11,0.55), transparent)',
+                padding: '16px 16px 12px',
+                pointerEvents: 'none',
               }}>
-                <span style={{ fontSize: 12, fontWeight: 600, color: 'rgba(255,255,255,0.5)', letterSpacing: '0.04em' }}>{photo.label}</span>
+                <span style={{ fontSize: 11, fontWeight: 600, color: 'rgba(255,255,255,0.6)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+                  {photo.label}
+                </span>
               </div>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );
