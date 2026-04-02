@@ -1,0 +1,330 @@
+// LLMA Blog Posts — source of truth for all blog content
+// Each post: slug, meta, excerpt, bodyHtml (inner content only, no <style> wrapper)
+
+const AUTHOR_MARTY = {
+  name: 'Marty Thomas',
+  initial: 'M',
+  href: 'https://www.youtube.com/@itsmcmartyfly',
+};
+const AUTHOR_TEAM = {
+  name: 'The LLMA Team',
+  initial: 'LLMA',
+  href: '/blog',
+};
+
+export const posts = [
+  // ── 1 ─────────────────────────────────────────────────────────────────
+  {
+    slug: 'tax-benefits-are-not-a-reward-for-fucking',
+    title: 'Tax Benefits Are Not a Reward for F*cking',
+    date: 'February 28, 2026',
+    sortDate: new Date('2026-02-28'),
+    tag: 'Culture',
+    tagColor: '#3B82F6',
+    tagBg: 'rgba(59,130,246,0.12)',
+    author: AUTHOR_MARTY,
+    excerpt: "Somebody had the audacity to say lavender marriages shouldn't qualify for tax benefits. Sir. Who do you think you are?",
+    tags: ['#LLMA', '#LavenderMarriage', '#AuthenticRelationships', '#LifeAndLoveMadeAuthentic'],
+    heroImage: 'https://img.youtube.com/vi/7qo6P6W_lnI/maxresdefault.jpg',
+    bodyHtml: `
+<p class="llma-lead">So somebody had the audacity — and I do mean the <em>audacity</em> — to say that lavender marriages shouldn't qualify for tax benefits.</p>
+<p>Sir. Who do you think you are?</p>
+<p>Let me make sure I'm hearing you right. You think the government hands out tax breaks as some kind of gold star for being <em>sexually attracted</em> to your spouse? Like a marriage license is really just a notarized "we do it" certificate? Like the IRS is checking bedrooms before they approve your joint filing?</p>
+<p>Because if that's the bar, I've got some real bad news for about half the "traditional" marriages out there.</p>
+<hr class="llma-divider">
+<p>Here's what marriage actually is in the eyes of the law. It's a <strong>legal partnership</strong>. A financial commitment. It's two people saying: <em>we are building a life together.</em> We're sharing assets, raising families, making medical decisions, co-signing on a future.</p>
+<p>Nowhere in that contract does it say "must maintain active sex life to qualify for the standard deduction."</p>
+<p>But here comes this guy on the internet appointing himself the <em>bedroom auditor of American marriages</em>, deciding which ones are real enough to deserve a tax break.</p>
+<div class="llma-quote"><p>"Jealous much?"</p></div>
+<p>Let me tell you what my marriage actually looks like. Brandi and I are partners. We co-parent an incredible 14-year-old daughter. We run a household. We show up for each other every single day with more intention and honesty than most couples will ever manage.</p>
+<p>And yeah — for the record? We have had sex. We have a child together. So even by your own broken little metric, we still qualify.</p>
+<p><strong>Congratulations. You played yourself.</strong></p>
+<hr class="llma-divider">
+<h2>The Part That Actually Bothers Me</h2>
+<p>The validity of our marriage doesn't hinge on what happens in our bedroom. It never did. Not for us, and not for the millions of other couples whose partnerships don't fit inside your narrow little box.</p>
+<p>But honestly, that's what bothers me most. We shouldn't have to prove <em>any</em> of that to anyone. The fact that we had sex — or didn't — or have a kid — or don't — is completely irrelevant to whether our marriage is real.</p>
+<p><strong>It's real because we decided it's real.</strong> We built it with our own hands, on our own terms.</p>
+<div class="llma-quote"><p>"What's audacious is thinking you get to decide whose commitment counts."</p></div>
+<hr class="llma-divider">
+<h2>What We Should Actually Be Rewarding</h2>
+<p>If anything, the government should be rewarding couples for the sheer act of <strong>showing up intentionally</strong>. For choosing partnership over pretense. For building something that actually works instead of something that just looks right at Thanksgiving dinner.</p>
+<p>And honestly? If we're really keeping it real? Maybe they should be giving tax breaks to people who <em>aren't</em> procreating. The planet could use the breather.</p>
+<p>But go ahead. Keep gatekeeping marriage from your couch. Keep telling committed, loving, intentional partnerships that they don't count because they don't match the fantasy in your head.</p>
+<p>Meanwhile Brandi and I will be over here. Legally married. Filing taxes together. Co-parenting. Building an empire. Being more married than half the people who think they have the right to judge us.</p>
+<p><strong>And doing it authentically.</strong></p>
+`,
+  },
+
+  // ── 2 ─────────────────────────────────────────────────────────────────
+  {
+    slug: 'you-can-fck-a-stranger-but-i-cant-love-my-best-friend',
+    title: "You Can F*ck a Stranger, But I Can't Love My Best Friend?",
+    date: 'December 5, 2025',
+    sortDate: new Date('2025-12-05'),
+    tag: 'Relationship',
+    tagColor: '#C59FE1',
+    tagBg: 'rgba(143,92,184,0.15)',
+    author: AUTHOR_MARTY,
+    excerpt: "So let me get this straight. You can sleep with someone you met at a bar two hours ago. But I can't love the person I've built a life with for seventeen years?",
+    tags: ['#LLMA', '#LavenderMarriage', '#AuthenticRelationships', '#ModernLove'],
+    heroImage: null,
+    bodyHtml: `
+<p class="llma-lead">So let me get this straight. You can sleep with someone you met at a bar two hours ago. But I can't love the person I've built a life with for seventeen years?</p>
+<p><strong>Make it make sense.</strong></p>
+<p>I'm in a lavender marriage. If you don't know what that is, here's the short version: my wife and I built a life together based on partnership, honesty, and genuine love — just not the kind that involves sex. We're raising a kid. We share finances. We make each other laugh every single day. We <em>chose each other</em>.</p>
+<p>And every single time I talk about it online, the comments flood with the same chorus:</p>
+<ul class="llma-list">
+  <li>"That's just roommates."</li>
+  <li>"What's even the point?"</li>
+  <li>"That's not a real marriage."</li>
+  <li>"Building a life together — <em>lol</em> — without sex and intimacy."</li>
+</ul>
+<p>And I need y'all to hear what you're actually saying. Because the logic? <strong>It's not logicking.</strong></p>
+<hr class="llma-divider">
+<h2>The Contradiction No One Wants to Explain</h2>
+<p>You're telling me that sex — the physical act — is the <strong>one thing</strong> that makes a marriage legitimate?</p>
+<p>Let's walk through what our culture has already decided is totally fine:</p>
+<ul class="llma-list">
+  <li><strong>Hookup culture?</strong> Valid.</li>
+  <li><strong>One night stands?</strong> Get it, girl.</li>
+  <li><strong>Friends with benefits?</strong> Healthy, even.</li>
+  <li><strong>Situationships with zero commitment?</strong> Just figuring yourself out.</li>
+  <li><strong>Open relationships?</strong> Progressive.</li>
+</ul>
+<p>But the second I say I have a life partner — someone I'm raising a child with, building a home with, making major life decisions with, growing old with — people stop me.</p>
+<p><em>"Well, do you have sex though?"</em></p>
+<p>No.</p>
+<p><strong>"NOT A MARRIAGE."</strong></p>
+<hr class="llma-divider">
+<h2>Help Me Understand</h2>
+<div class="llma-quote"><p>"You can share your body with someone you don't even like. But I can't share my life with someone I love?"</p></div>
+<p>You can be physically intimate with a stranger whose last name you don't know. But I can't be emotionally intimate with the person who knows me better than anyone on this planet?</p>
+<p>Sex with no feelings? Totally normal.</p>
+<p>Feelings with no sex? Fraud. Fake. Not real.</p>
+<p>Do you hear yourselves?</p>
+<hr class="llma-divider">
+<h2>You Just Told On Yourself</h2>
+<p>Every person who says my marriage "doesn't count" has accidentally revealed something about how <em>they</em> view marriage.</p>
+<p>You just admitted that you think marriage is a <strong>sex contract</strong>. That the only thing separating a marriage from a friendship is access to someone's body.</p>
+<p>That's actually really sad.</p>
+<p>Because my marriage has trust. Honesty. Partnership. Co-parenting. Shared finances. Shared dreams. Inside jokes. Someone who shows up for me every single day.</p>
+<p>All the stuff people <em>say</em> matters. All the stuff therapists tell you to prioritize. All the stuff that's actually <strong>hard</strong> to find.</p>
+<p>But none of that counts because we don't have sex?</p>
+<hr class="llma-divider">
+<h2>Pick a Lane</h2>
+<p>The hookup generation told us "sex doesn't have to mean anything."</p>
+<p>Cool. I agreed.</p>
+<p>So why does love <em>have</em> to include it?</p>
+<p>You separated sex from emotion and called it liberation. I separated emotion from sex and suddenly I'm a fraud?</p>
+<div class="llma-quote"><p>"Pick a lane."</p></div>
+<h2>What My Marriage Actually Is</h2>
+<p>My marriage is not <em>missing</em> something. It's just not performing for your expectations.</p>
+<p>The fact that you can't imagine commitment without sex says a lot more about how <em>you</em> view relationships than it does about mine.</p>
+<p>And honestly? If you're telling me the only thing keeping your marriage together is sex — that's not the flex you think it is, babe.</p>
+<p>I built something real. I just built it differently.</p>
+<p><strong>And I'm done apologizing for it.</strong></p>
+`,
+  },
+
+  // ── 3 ─────────────────────────────────────────────────────────────────
+  {
+    slug: 'when-motherly-love-showed-up-differently',
+    title: 'When Motherly Love Showed Up Differently',
+    date: 'May 11, 2025',
+    sortDate: new Date('2025-05-11'),
+    tag: 'Lifestyle',
+    tagColor: '#2DD4BF',
+    tagBg: 'rgba(13,148,136,0.12)',
+    author: AUTHOR_MARTY,
+    excerpt: "Not every Mother's Day message starts with flowers and fond memories. Mine doesn't. But here's the truth: the love you missed doesn't define you. The love you choose does.",
+    tags: ['#LLMA', '#LavenderLadies', '#ChosenFamily', '#LifeAndLoveMadeAuthentic'],
+    heroImage: null,
+    quoteAccent: '#2DD4BF',
+    bodyHtml: `
+<p class="llma-lead">Not every Mother's Day message starts with flowers and fond memories. Mine doesn't.</p>
+<p>I grew up without the kind of love you're supposed to get from a mom. There was no soft landing, no arms wide open. I didn't feel seen, or celebrated, or safe. And for a long time, I thought that meant something was wrong with me.</p>
+<p>But here's the truth: <strong>the love you missed doesn't define you. The love you choose does.</strong></p>
+<hr class="llma-divider">
+<p>I didn't find that nurturing kind of love until much later in life. When I did, it wasn't romantic at first — it was <em>real</em>. It was my wife, Brandi. Her love was steady. Safe. Unshakeable. She didn't just see me. She <strong>stayed</strong> with me.</p>
+<p>And when someone loves you like that — when someone shows you the kind of care you didn't even know you needed — sexuality starts to matter less than soul.</p>
+<div class="llma-quote llma-quote--teal"><p>"When someone loves you like that, sexuality starts to matter less than soul."</p></div>
+<p>People ask me all the time how a gay man ends up married to a woman. And the answer is: I never had a real example of what it felt like to be loved without condition until her. And once I tasted that kind of love, it changed how I saw everything — including myself.</p>
+<hr class="llma-divider">
+<p>That's the psychology people don't talk about.</p>
+<p>Some of us didn't grow up adored or protected. Some of us built our identity not in the reflection of love — but in the <em>absence</em> of it. And when a woman comes into your life who loves you like a son, a friend, a partner, a person worth protecting — it breaks open something sacred.</p>
+<p>To my Lavender Ladies, especially the ones who've been that love for someone like me: you are the mother I didn't have, the sister I needed, the healer I never expected.</p>
+<p>You redefined what womanhood meant to me. You made it powerful, tender, funny, fierce. You didn't judge. You just loved.</p>
+<p><strong>And that saved me.</strong></p>
+<hr class="llma-divider">
+<div class="llma-dedication">
+  <span class="llma-dedication-emoji">🕊️</span>
+  <p>So this Mother's Day, I'm not sending this to my mom.</p>
+  <p>I'm sending it to the woman who mothered my heart.</p>
+  <p><strong>Brandi, you gave me back parts of myself I thought I had to hide.</strong></p>
+  <p>To every Lavender Lady out there —<br>you're the reason some of us made it.</p>
+  <p class="llma-dedication-sign">Happy Mother's Day.<br>Forever your Marty Mar.</p>
+</div>
+`,
+  },
+
+  // ── 4 ─────────────────────────────────────────────────────────────────
+  {
+    slug: 'barry-diller-came-out-at-82',
+    title: 'Coming Out at 82?! Barry Diller Just Blew Up the Timeline',
+    date: 'May 7, 2025',
+    sortDate: new Date('2025-05-07'),
+    tag: 'Culture',
+    tagColor: '#3B82F6',
+    tagBg: 'rgba(59,130,246,0.12)',
+    author: AUTHOR_MARTY,
+    excerpt: "Barry Diller — billionaire, married to Diane von Fürstenberg for 24 years. Now 82. And gay. Let's just sit in that for a second.",
+    tags: ['#LLMA', '#LavenderMarriage', '#BarryDiller', '#ComingOut', '#LifeAndLoveMadeAuthentic'],
+    heroImage: null,
+    bodyHtml: `
+<p class="llma-lead">Barry Diller — billionaire. Media kingpin. Husband to fashion royalty Diane von Fürstenberg. Married 24 years. Now 82. And gay.</p>
+<p>Let's just sit in that for a second.</p>
+<p>Because this? <strong>This isn't a scandal.</strong> This is a plot twist that redefines what love, legacy, and late bloomers can actually look like.</p>
+<hr class="llma-divider">
+<h2>The Myth of Perfect Timing? Dead.</h2>
+<p>We've all been force-fed this Hallmark lie:</p>
+<p><em>"Come out early. Live out loud. If you wait too long, your story's fake."</em></p>
+<p>Nah.</p>
+<p>Some of us built lives before we built ourselves. We survived what we had to. And now we're finally choosing truth — not because we're late, but because we're <strong>ready</strong>.</p>
+<div class="llma-quote"><p>"Barry Diller didn't miss the moment. He <em>is</em> the moment."</p></div>
+<hr class="llma-divider">
+<h2>This Isn't a Divorce. It's a Rebrand.</h2>
+<p>Here's the real flex:</p>
+<div class="llma-stat-grid">
+  <div class="llma-stat-item"><strong>Still married.</strong><span>To DVF. After the reveal.</span></div>
+  <div class="llma-stat-item"><strong>Still aligned.</strong><span>Still partners. Still chosen.</span></div>
+</div>
+<p>Barry didn't walk away from Diane — he walked <em>toward</em> himself. And she let him. With grace. With loyalty. With more emotional maturity than most people can manage in a group text.</p>
+<p>That's not dysfunction. That's grown-ass love.</p>
+<p><strong>Lavender-coded. Legend-level. LLMA-certified.</strong></p>
+<hr class="llma-divider">
+<h2>This Is Bigger Than Them — This Is Us</h2>
+<p>If you're reading this thinking <em>"damn, that could be me…"</em> — it is.</p>
+<ul class="llma-arrow-list">
+  <li>You're the parent still playing it straight.</li>
+  <li>You're the boss still dialing it down.</li>
+  <li>You're the partner too afraid to rock the boat.</li>
+</ul>
+<p>The longer you wait, the louder your truth knocks.</p>
+<p>You don't owe anyone an explanation — but you do owe yourself a reality check.</p>
+<hr class="llma-divider">
+<h2>You Didn't Fake It. You Framed It.</h2>
+<p>Your past isn't a lie. It's just the prequel to the realest version of you.</p>
+<div class="llma-callout-red">
+  <p>If Barry Diller can rewrite his story in his <strong>eighties</strong> — in front of the entire world — <strong>what exactly are you waiting for?</strong></p>
+</div>
+<p>This is LLMA. Life &amp; Love Made Authentic. Not perfect. Not performative. Just true.</p>
+`,
+  },
+
+  // ── 5 ─────────────────────────────────────────────────────────────────
+  {
+    slug: 'when-you-dont-see-the-path-you-become-it',
+    title: "When You Don't See the Path — You Become It",
+    date: 'April 30, 2025',
+    sortDate: new Date('2025-04-30'),
+    tag: 'Relationship',
+    tagColor: '#C59FE1',
+    tagBg: 'rgba(143,92,184,0.15)',
+    author: AUTHOR_TEAM,
+    excerpt: "There was a moment — not long ago — when I realized there was no playbook for the life I was trying to build.",
+    tags: ['#LifeAndLoveMadeAuthentic', '#LavenderLogs', '#ModernMarriage', '#PowerCoupleEnergy', '#ChosenFamily'],
+    heroImage: null,
+    bodyHtml: `
+<p class="llma-lead">There was a moment — not long ago — when I realized there was no playbook for the life I was trying to build.</p>
+<p>I had come out. I had a daughter. I had a wife who had walked through fire with me. We weren't in love anymore — not romantically — but we still loved each other. And we still lived together.</p>
+<p>That part tends to confuse people.</p>
+<div class="llma-quote"><p>"We didn't fall apart. We evolved."</p></div>
+<p>We became business partners, co-parents, roommates, and each other's emergency contact. We turned the volume down on the version of marriage we thought we needed, and turned up the dial on what actually worked: <strong>honesty, loyalty, logistics, and shared legacy</strong>.</p>
+<p>We're not pretending. We're living fully.</p>
+<p>Under one roof, on different floors. In sync, even when we're not in step.</p>
+<hr class="llma-divider">
+<p>This isn't the story most people expect. But it's one that needs telling — because we're not alone.</p>
+<p>LLMA isn't about breaking the rules. It's about <strong>rewriting them</strong>.</p>
+<p>It's about recognizing that partnership doesn't have to look like a Nicholas Sparks novel to be real.</p>
+<p>It's about:</p>
+<ul class="llma-permissions">
+  <li>The women holding households together.</li>
+  <li>The best friends raising kids side-by-side.</li>
+  <li>The chosen families navigating joy and grief with grace.</li>
+  <li>The queers finding their people and building something stable, not just romantic.</li>
+  <li>Building a life that <em>fits</em> — even if it doesn't look like anyone else's.</li>
+</ul>
+<hr class="llma-divider">
+<p>To our Lavender Ladies:</p>
+<ul class="llma-permissions">
+  <li>You are allowed to be loyal and platonic.</li>
+  <li>You are allowed to love without labels.</li>
+  <li>You are allowed to stay.</li>
+  <li>You are allowed to go.</li>
+  <li>You are allowed to redefine everything.</li>
+</ul>
+<p>You are already doing it — and we're here to remind you: <strong>your version of forever is just as sacred.</strong></p>
+<p>Keep building. Keep blooming.</p>
+<p>You're not lost. You're just forging a new path — and it looks damn good on you.</p>
+`,
+  },
+
+  // ── 6 ─────────────────────────────────────────────────────────────────
+  {
+    slug: 'welcome-to-the-lavender-logs',
+    title: 'Welcome to the Lavender Logs',
+    subtitle: 'Life & Love Made Authentic',
+    date: 'April 26, 2025',
+    sortDate: new Date('2025-04-26'),
+    tag: 'Founding Post',
+    tagColor: '#C59FE1',
+    tagBg: 'linear-gradient(135deg, rgba(143,92,184,0.25), rgba(220,90,75,0.15))',
+    tagBorder: 'rgba(197,159,225,0.3)',
+    author: AUTHOR_MARTY,
+    excerpt: "If you had told me five years ago I'd be launching LLMA — a platform dedicated to redefining partnerships and chosen family — I would have questioned your sanity.",
+    tags: ['#LLMA', '#LifeAndLoveMadeAuthentic', '#LavenderMarriage', '#ChosenFamily', '#LavenderLogs'],
+    heroImage: null,
+    bodyHtml: `
+<p class="llma-lead">If you had told me five years ago I'd be launching LLMA — a platform dedicated to redefining partnerships and chosen family — I would have questioned your sanity.</p>
+<p>My life has been anything but ordinary.</p>
+<div class="llma-chaos-tags">
+  <span class="llma-chaos-tag">Abuse</span>
+  <span class="llma-chaos-tag">Addiction</span>
+  <span class="llma-chaos-tag">Incarceration</span>
+  <span class="llma-chaos-tag">Homelessness</span>
+  <span class="llma-chaos-tag">Lying every day about who I was</span>
+</div>
+<p>Authenticity seemed like a luxury reserved for others.</p>
+<hr class="llma-divider">
+<p>But amid all the chaos and darkness, there was always one person who saw past my masks — who believed in me relentlessly, who offered unconditional love when I felt unlovable.</p>
+<p>So I married her.</p>
+<p>Brandi isn't just my co-parent and life partner. She's the rock that grounded me. The mirror reflecting a version of myself I desperately wanted to become.</p>
+<div class="llma-quote"><p>"Family isn't limited by biology or tradition — it's defined by unwavering support, shared laughter, and the kind of loyalty that sticks around when life gets messy."</p></div>
+<p>Coming out later in life transformed me profoundly. It taught me that family isn't limited by biology or tradition — it's defined by unwavering support, shared laughter, and the kind of loyalty that sticks around when life gets messy.</p>
+<hr class="llma-divider">
+<h2>The Moment Everything Changed</h2>
+<p>Recently, life threw another unexpected curveball. I posted a candid TikTok about my marriage and my journey — and it blew up.</p>
+<p>Thousands of comments poured in. From people — especially <strong>lavender ladies</strong> — craving connection, validation, and support for their unconventional yet authentic family dynamics. Their response made one thing clear:</p>
+<p><strong>There's a real need for this.</strong></p>
+<div class="llma-mission-box">
+  <span class="llma-mission-eyebrow">Why LLMA</span>
+  <p>I've experienced firsthand how vital authentic, intentional relationships are. LLMA isn't just another social platform — it's a community built around real-life partnerships that prioritize honesty, strategic intention, and mutual growth.</p>
+  <p>Whether you're navigating co-parenting, shared living arrangements, or simply looking for your ride-or-die through life's chaos — LLMA offers a space to find and build connections that matter.</p>
+</div>
+<hr class="llma-divider">
+<h2>What's Next</h2>
+<p>Together, we'll normalize that coming out doesn't have to mean family breakup.</p>
+<p>Every year, hundreds if not thousands of families face a similar reality. Society often insists that authenticity must lead to divorce and disruption. <strong>LLMA rejects this notion entirely.</strong></p>
+<p>Here, we'll share real stories, host engaging conversations, and create resources designed specifically to support and celebrate lavender partnerships and families.</p>
+<p>I'm honored to have you join me on this journey.</p>
+<p><strong>Welcome to LLMA — where we live and love authentically.</strong></p>
+`,
+  },
+];
+
+// Sorted newest → oldest (default display order)
+export const sortedPosts = [...posts].sort((a, b) => b.sortDate - a.sortDate);
+
+export function getPostBySlug(slug) {
+  return posts.find(p => p.slug === slug) ?? null;
+}
