@@ -588,23 +588,46 @@ function VideoGrid() {
 }
 
 // ── TikTok Section ────────────────────────────────────────────────────────────
-// 📱 Paste the 4 most viral TikTok video IDs here (the number at the end of the URL)
-// e.g. https://www.tiktok.com/@itsmcmartyfly/video/7312345678901234567 → '7312345678901234567'
 const TIKTOK_VIDEOS = [
-  { id: '7578691659601431822', label: 'Lavender Marriage' },
-  { id: '7563048152257858871', label: 'Our Story' },
-  { id: '7563662830604487991', label: 'Real Life' },
-  { id: '7619865234194304270', label: 'The Truth' },
+  {
+    id: '7578691659601431822',
+    label: 'Lavender Marriage',
+    desc: 'What a lavender marriage actually looks like from the inside',
+    gradient: 'linear-gradient(160deg, rgba(143,92,184,0.35) 0%, rgba(13,10,11,0.95) 70%)',
+  },
+  {
+    id: '7563048152257858871',
+    label: 'Our Story',
+    desc: '14 years, one truth, and the family we chose to keep',
+    gradient: 'linear-gradient(160deg, rgba(220,90,75,0.3) 0%, rgba(13,10,11,0.95) 70%)',
+  },
+  {
+    id: '7563662830604487991',
+    label: 'Real Life',
+    desc: 'Nobody shows you what chosen family looks like day to day',
+    gradient: 'linear-gradient(160deg, rgba(197,159,225,0.3) 0%, rgba(13,10,11,0.95) 70%)',
+  },
+  {
+    id: '7619865234194304270',
+    label: 'The Truth',
+    desc: 'The video that started everything — 80M views later',
+    gradient: 'linear-gradient(160deg, rgba(143,92,184,0.35) 0%, rgba(13,10,11,0.95) 70%)',
+    embed: true,
+  },
 ];
 
-function TikTokSection() {
-  const hasVideos = TIKTOK_VIDEOS.some(v => v.id);
+const TikTokIcon = ({ size = 16, color = 'currentColor' }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill={color}>
+    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.15 8.15 0 0 0 4.77 1.52V6.76a4.85 4.85 0 0 1-1-.07z"/>
+  </svg>
+);
 
+function TikTokSection() {
   return (
     <section style={{ padding: '0 24px 100px', fontFamily: S.font }}>
       <div style={{ maxWidth: 1120, margin: '0 auto' }}>
 
-        {/* Header row */}
+        {/* Header */}
         <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: 32, flexWrap: 'wrap', gap: 16 }}>
           <div>
             <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: S.lavender, marginBottom: 12 }}>
@@ -620,15 +643,15 @@ function TikTokSection() {
             background: '#fff', color: '#000',
             fontSize: 14, fontWeight: 700, textDecoration: 'none', flexShrink: 0,
           }}>
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.15 8.15 0 0 0 4.77 1.52V6.76a4.85 4.85 0 0 1-1-.07z"/></svg>
+            <TikTokIcon size={15} />
             Follow @itsmcmartyfly
           </a>
         </div>
 
-        {/* Video grid */}
-        {hasVideos ? (
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 12 }}>
-            {TIKTOK_VIDEOS.filter(v => v.id).map((v) => (
+        {/* 4-column grid — embed for supported videos, card for others */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 12, alignItems: 'start' }}>
+          {TIKTOK_VIDEOS.map((v) => (
+            v.embed ? (
               <div key={v.id} style={{ borderRadius: 16, overflow: 'hidden', background: S.card, border: `1px solid ${S.cardBorder}` }}>
                 <iframe
                   src={`https://www.tiktok.com/embed/v2/${v.id}`}
@@ -638,35 +661,60 @@ function TikTokSection() {
                   title={v.label}
                 />
               </div>
-            ))}
-          </div>
-        ) : (
-          // Placeholder grid until video IDs are added
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 12 }}>
-            {TIKTOK_VIDEOS.map((v, i) => (
-              <a key={i} href="https://www.tiktok.com/@itsmcmartyfly" target="_blank" rel="noopener noreferrer" style={{
-                display: 'block', textDecoration: 'none',
-                borderRadius: 16, overflow: 'hidden',
-                background: S.card, border: `1px solid ${S.cardBorder}`,
-                height: 560, position: 'relative',
-                background: i % 2 === 0
-                  ? 'linear-gradient(180deg, rgba(143,92,184,0.15) 0%, rgba(13,10,11,0.9) 100%)'
-                  : 'linear-gradient(180deg, rgba(220,90,75,0.12) 0%, rgba(13,10,11,0.9) 100%)',
-              }}>
+            ) : (
+              <a key={v.id}
+                href={`https://www.tiktok.com/@itsmcmartyfly/video/${v.id}`}
+                target="_blank" rel="noopener noreferrer"
+                style={{ textDecoration: 'none', display: 'block' }}
+              >
                 <div style={{
-                  position: 'absolute', inset: 0,
-                  display: 'flex', flexDirection: 'column',
-                  alignItems: 'center', justifyContent: 'center', gap: 12,
+                  borderRadius: 16, overflow: 'hidden',
+                  background: v.gradient,
+                  border: `1px solid ${S.cardBorder}`,
+                  height: 560, position: 'relative',
+                  cursor: 'pointer',
                 }}>
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="rgba(255,255,255,0.2)"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.15 8.15 0 0 0 4.77 1.52V6.76a4.85 4.85 0 0 1-1-.07z"/></svg>
-                  <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.3)', fontFamily: S.font }}>{v.label}</span>
+                  {/* Play button */}
+                  <div style={{
+                    position: 'absolute', top: '38%', left: '50%',
+                    transform: 'translate(-50%, -50%)',
+                    width: 56, height: 56, borderRadius: '50%',
+                    background: 'rgba(255,255,255,0.12)',
+                    border: '1.5px solid rgba(255,255,255,0.25)',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  }}>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                      <polygon points="5,3 19,12 5,21"/>
+                    </svg>
+                  </div>
+
+                  {/* Bottom info */}
+                  <div style={{
+                    position: 'absolute', bottom: 0, left: 0, right: 0,
+                    padding: '48px 20px 20px',
+                    background: 'linear-gradient(to top, rgba(13,10,11,0.9) 0%, transparent 100%)',
+                  }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 8 }}>
+                      <TikTokIcon size={12} color="rgba(255,255,255,0.5)" />
+                      <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.4)', fontWeight: 600 }}>@itsmcmartyfly</span>
+                    </div>
+                    <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.8)', lineHeight: 1.45, margin: '0 0 12px', fontWeight: 500 }}>
+                      {v.desc}
+                    </p>
+                    <span style={{
+                      fontSize: 11, fontWeight: 700, color: S.lavender,
+                      background: S.lavenderMuted, border: `1px solid ${S.lavenderBorder}`,
+                      borderRadius: 20, padding: '3px 10px',
+                    }}>
+                      Watch on TikTok →
+                    </span>
+                  </div>
                 </div>
               </a>
-            ))}
-          </div>
-        )}
+            )
+          ))}
+        </div>
 
-        {/* Sub-copy */}
         <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.35)', lineHeight: 1.7, marginTop: 24, textAlign: 'center' }}>
           Real conversations about lavender marriage, co-parenting, chosen family, and building a life outside the script. New videos every week.
         </p>
