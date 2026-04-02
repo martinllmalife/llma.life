@@ -587,7 +587,7 @@ function VideoGrid() {
 const TIKTOK_VIDEO_IDS = [
   '7578691659601431822',
   '7563048152257858871',
-  '7582358376353402126',
+  '7563662830604487991',
   '7619865234194304270',
 ];
 
@@ -601,14 +601,18 @@ function TikTokSection() {
   const containerRef = useRef(null);
 
   useEffect(() => {
-    // Remove any existing TikTok embed script
+    // Remove any existing TikTok embed script and global so it re-initializes cleanly
     const existing = document.querySelector('script[src="https://www.tiktok.com/embed.js"]');
     if (existing) existing.remove();
+    delete window.tiktok;
 
-    // Inject fresh TikTok embed script
     const script = document.createElement('script');
     script.src = 'https://www.tiktok.com/embed.js';
     script.async = true;
+    script.onload = () => {
+      // Force TikTok to scan and render any blockquotes it may have missed
+      if (window.tiktok?.widgets?.load) window.tiktok.widgets.load();
+    };
     document.body.appendChild(script);
 
     return () => { script.remove(); };
@@ -647,10 +651,11 @@ function TikTokSection() {
                 className="tiktok-embed"
                 cite={`https://www.tiktok.com/@itsmcmartyfly/video/${id}`}
                 data-video-id={id}
-                data-embed-from="oembed"
-                style={{ maxWidth: '100%', minWidth: '100%', margin: 0 }}
+                style={{ maxWidth: '100%', minWidth: 325, margin: 0 }}
               >
-                <section />
+                <section>
+                  <a target="_blank" rel="noopener noreferrer" href={`https://www.tiktok.com/@itsmcmartyfly/video/${id}`}>@itsmcmartyfly</a>
+                </section>
               </blockquote>
             </div>
           ))}
