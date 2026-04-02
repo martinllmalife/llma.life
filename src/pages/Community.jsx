@@ -261,7 +261,7 @@ function StageCard({ stage, isExpanded, onToggle }) {
           </div>
 
           <a
-            href={APP_STORE_URL}
+            href={APP_URL}
             target="_blank"
             rel="noopener noreferrer"
             onClick={e => e.stopPropagation()}
@@ -370,7 +370,7 @@ export default function Community() {
             Thousands of people are somewhere on this journey — leaving performance, finding alignment, building partnerships that actually fit who they are. Find yours.
           </p>
           <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" style={{
+            <a href={APP_URL} target="_blank" rel="noopener noreferrer" style={{
               padding: '14px 28px', borderRadius: 9999,
               background: S.purple, color: '#fff',
               fontSize: 15, fontWeight: 700, textDecoration: 'none',
@@ -542,7 +542,7 @@ export default function Community() {
               </div>
             ))}
           </div>
-          <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" style={{
+          <a href={APP_URL} target="_blank" rel="noopener noreferrer" style={{
             display: 'inline-flex', alignItems: 'center', gap: 8,
             padding: '14px 32px', borderRadius: 9999,
             background: S.purple, color: '#fff',
