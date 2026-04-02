@@ -643,22 +643,17 @@ function TikTokSection() {
           </a>
         </div>
 
-        {/* Blockquote embeds — TikTok's official method */}
+        {/* Blockquote embeds — exact HTML from TikTok via dangerouslySetInnerHTML */}
         <div ref={containerRef} style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 12, alignItems: 'start' }}>
-          {TIKTOK_VIDEO_IDS.map((id) => (
-            <div key={id} style={{ borderRadius: 16, overflow: 'hidden', background: S.card, border: `1px solid ${S.cardBorder}` }}>
-              <blockquote
-                className="tiktok-embed"
-                cite={`https://www.tiktok.com/@itsmcmartyfly/video/${id}`}
-                data-video-id={id}
-                style={{ maxWidth: '100%', minWidth: 325, margin: 0 }}
-              >
-                <section>
-                  <a target="_blank" rel="noopener noreferrer" href={`https://www.tiktok.com/@itsmcmartyfly/video/${id}`}>@itsmcmartyfly</a>
-                </section>
-              </blockquote>
-            </div>
-          ))}
+          {[
+            `<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@itsmcmartyfly/video/7578691659601431822" data-video-id="7578691659601431822" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@itsmcmartyfly" href="https://www.tiktok.com/@itsmcmartyfly?refer=embed">@itsmcmartyfly</a> </section> </blockquote>`,
+            `<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@itsmcmartyfly/video/7563048152257858871" data-video-id="7563048152257858871" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@itsmcmartyfly" href="https://www.tiktok.com/@itsmcmartyfly?refer=embed">@itsmcmartyfly</a> <a title="lavendermarriage" target="_blank" href="https://www.tiktok.com/tag/lavendermarriage?refer=embed">#lavendermarriage</a> <a title="intimacy" target="_blank" href="https://www.tiktok.com/tag/intimacy?refer=embed">#intimacy</a> <a title="husbandwife" target="_blank" href="https://www.tiktok.com/tag/husbandwife?refer=embed">#husbandwife</a> <a title="relationships" target="_blank" href="https://www.tiktok.com/tag/relationships?refer=embed">#relationships</a> <a title="couplegoals" target="_blank" href="https://www.tiktok.com/tag/couplegoals?refer=embed">#couplegoals</a> <a target="_blank" title="♬ original sound - 𝙇𝙭𝙪𝙞𝙨𝙨𝙤𝙪𝙣𝙙𝙯 🎧" href="https://www.tiktok.com/music/original-sound-7416858572367186721?refer=embed">♬ original sound - 𝙇𝙭𝙪𝙞𝙨𝙨𝙤𝙪𝙣𝙙𝙯 🎧</a> </section> </blockquote>`,
+            `<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@itsmcmartyfly/video/7563662830604487991" data-video-id="7563662830604487991" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@itsmcmartyfly" href="https://www.tiktok.com/@itsmcmartyfly?refer=embed">@itsmcmartyfly</a> </section> </blockquote>`,
+            `<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@itsmcmartyfly/video/7619865234194304270" data-video-id="7619865234194304270" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@itsmcmartyfly" href="https://www.tiktok.com/@itsmcmartyfly?refer=embed">@itsmcmartyfly</a> </section> </blockquote>`,
+          ].map((html, i) => (
+            <div key={i} style={{ borderRadius: 16, overflow: 'hidden', background: S.card, border: `1px solid ${S.cardBorder}` }}
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
         </div>
 
         <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.35)', lineHeight: 1.7, marginTop: 24, textAlign: 'center' }}>
