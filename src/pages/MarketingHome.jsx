@@ -38,10 +38,12 @@ function Nav() {
           <span style={{ fontSize: 18, fontWeight: 800, color: '#fff', letterSpacing: '-0.02em' }}>llma.life</span>
         </Link>
         <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
-          <Link to="/blog" style={{ fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.55)', textDecoration: 'none', padding: '8px 12px', borderRadius: 8 }}>Blog</Link>
-          <a href="#videos" style={{ fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.55)', textDecoration: 'none', padding: '8px 12px', borderRadius: 8 }}>Watch</a>
-          <a href="#course" style={{ fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.55)', textDecoration: 'none', padding: '8px 12px', borderRadius: 8 }}>Course</a>
-          <a href={APP_URL} target="_blank" rel="noopener noreferrer" style={{ fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.55)', textDecoration: 'none', padding: '8px 12px', borderRadius: 8 }}>App</a>
+          <span className="nav-links" style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
+            <Link to="/blog" style={{ fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.55)', textDecoration: 'none', padding: '8px 12px', borderRadius: 8 }}>Blog</Link>
+            <a href="#videos" style={{ fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.55)', textDecoration: 'none', padding: '8px 12px', borderRadius: 8 }}>Watch</a>
+            <a href="#course" style={{ fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.55)', textDecoration: 'none', padding: '8px 12px', borderRadius: 8 }}>Course</a>
+            <a href={APP_URL} target="_blank" rel="noopener noreferrer" style={{ fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.55)', textDecoration: 'none', padding: '8px 12px', borderRadius: 8 }}>App</a>
+          </span>
           <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" style={{
             display: 'inline-flex', alignItems: 'center', gap: 6,
             padding: '8px 16px', borderRadius: 9999,
@@ -49,7 +51,8 @@ function Nav() {
             fontSize: 13, fontWeight: 700, textDecoration: 'none',
             marginLeft: 8,
           }}>
-            Download
+            <span className="nav-cta-text">Download</span>
+            <span className="nav-cta-short" style={{ display: 'none' }}>App</span>
           </a>
         </div>
       </div>
@@ -501,7 +504,7 @@ function PhotoGrid() {
         </div>
 
         {/* 6-photo grid */}
-        <div style={{
+        <div className="photo-grid" style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(4, 1fr)',
           gridTemplateRows: 'repeat(2, 240px)',
@@ -631,7 +634,7 @@ function TikTokSection() {
           </a>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 12, alignItems: 'start' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 12, alignItems: 'start' }}>
           {INSTAGRAM_EMBEDS.map((html, i) => (
             <div key={i} style={{ borderRadius: 16, overflow: 'hidden', background: S.card, border: `1px solid ${S.cardBorder}` }}
               dangerouslySetInnerHTML={{ __html: html }}

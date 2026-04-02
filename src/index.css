@@ -27,6 +27,37 @@
 body { margin: 0; background: #0D0A0B; }
 #root { min-height: 100vh; }
 
+/* ── Mobile responsive overrides ───────────────────────────────────────── */
+@media (max-width: 768px) {
+  /* Nav — hide secondary links, keep logo + CTA */
+  .nav-links { display: none !important; }
+  .nav-cta-text { display: none !important; }
+
+  /* Photo grid — single column on mobile */
+  .photo-grid {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto !important;
+  }
+  .photo-grid-hero {
+    height: 300px !important;
+    grid-column: 1 !important;
+    grid-row: auto !important;
+  }
+  .photo-grid-cell {
+    height: 200px !important;
+    grid-column: 1 !important;
+    grid-row: auto !important;
+  }
+
+  /* Nav CTA — show short label on mobile */
+  .nav-cta-text { display: none !important; }
+  .nav-cta-short { display: inline !important; }
+
+  /* Reduce section padding on mobile */
+  .section-inner-pad { padding-left: 16px !important; padding-right: 16px !important; }
+  .card-pad { padding: 28px 24px !important; }
+}
+
 h1,
 h2 {
   font-family: var(--heading);
