@@ -366,7 +366,7 @@ function CourseTeaser() {
 
 // ── Photo Grid ────────────────────────────────────────────────────────────────
 // 🖼️  Drop the Thomas Family hero URL here once you have the Google Photos link:
-const THOMAS_FAMILY_HERO = 'https://lh3.googleusercontent.com/pw/AP1GczNH3WDSVpPYldua1gqzjUKfkx_FqvjBvRo822vNymkdGplFRb3uNxfUmg=w2424-h1616-s-no-gm';
+const THOMAS_FAMILY_HERO = '/thomas-family.jpg';
 
 function PhotoGrid() {
   const gridPhotos = [
