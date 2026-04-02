@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useEffect, useRef } from 'react';
 import { sortedPosts } from '../content/blogPosts';
 
 const APP_STORE_URL = 'https://apps.apple.com/us/app/llma-intentional-partnerships/id6760886909';
@@ -588,32 +589,11 @@ function VideoGrid() {
 }
 
 // ── TikTok Section ────────────────────────────────────────────────────────────
-const TIKTOK_VIDEOS = [
-  {
-    id: '7578691659601431822',
-    label: 'Lavender Marriage',
-    desc: 'What a lavender marriage actually looks like from the inside',
-    gradient: 'linear-gradient(160deg, rgba(143,92,184,0.35) 0%, rgba(13,10,11,0.95) 70%)',
-  },
-  {
-    id: '7563048152257858871',
-    label: 'Our Story',
-    desc: '14 years, one truth, and the family we chose to keep',
-    gradient: 'linear-gradient(160deg, rgba(220,90,75,0.3) 0%, rgba(13,10,11,0.95) 70%)',
-  },
-  {
-    id: '7563662830604487991',
-    label: 'Real Life',
-    desc: 'Nobody shows you what chosen family looks like day to day',
-    gradient: 'linear-gradient(160deg, rgba(197,159,225,0.3) 0%, rgba(13,10,11,0.95) 70%)',
-  },
-  {
-    id: '7619865234194304270',
-    label: 'The Truth',
-    desc: 'The video that started everything — 80M views later',
-    gradient: 'linear-gradient(160deg, rgba(143,92,184,0.35) 0%, rgba(13,10,11,0.95) 70%)',
-    embed: true,
-  },
+const TIKTOK_VIDEO_IDS = [
+  '7578691659601431822',
+  '7563048152257858871',
+  '7563662830604487991',
+  '7619865234194304270',
 ];
 
 const TikTokIcon = ({ size = 16, color = 'currentColor' }) => (
@@ -623,6 +603,22 @@ const TikTokIcon = ({ size = 16, color = 'currentColor' }) => (
 );
 
 function TikTokSection() {
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    // Remove any existing TikTok embed script
+    const existing = document.querySelector('script[src="https://www.tiktok.com/embed.js"]');
+    if (existing) existing.remove();
+
+    // Inject fresh TikTok embed script
+    const script = document.createElement('script');
+    script.src = 'https://www.tiktok.com/embed.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => { script.remove(); };
+  }, []);
+
   return (
     <section style={{ padding: '0 24px 100px', fontFamily: S.font }}>
       <div style={{ maxWidth: 1120, margin: '0 auto' }}>
@@ -648,70 +644,20 @@ function TikTokSection() {
           </a>
         </div>
 
-        {/* 4-column grid — embed for supported videos, card for others */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 12, alignItems: 'start' }}>
-          {TIKTOK_VIDEOS.map((v) => (
-            v.embed ? (
-              <div key={v.id} style={{ borderRadius: 16, overflow: 'hidden', background: S.card, border: `1px solid ${S.cardBorder}` }}>
-                <iframe
-                  src={`https://www.tiktok.com/embed/v2/${v.id}`}
-                  style={{ width: '100%', height: 560, border: 'none', display: 'block' }}
-                  allow="encrypted-media"
-                  allowFullScreen
-                  title={v.label}
-                />
-              </div>
-            ) : (
-              <a key={v.id}
-                href={`https://www.tiktok.com/@itsmcmartyfly/video/${v.id}`}
-                target="_blank" rel="noopener noreferrer"
-                style={{ textDecoration: 'none', display: 'block' }}
+        {/* Blockquote embeds — TikTok's official method */}
+        <div ref={containerRef} style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 12, alignItems: 'start' }}>
+          {TIKTOK_VIDEO_IDS.map((id) => (
+            <div key={id} style={{ borderRadius: 16, overflow: 'hidden', background: S.card, border: `1px solid ${S.cardBorder}` }}>
+              <blockquote
+                className="tiktok-embed"
+                cite={`https://www.tiktok.com/@itsmcmartyfly/video/${id}`}
+                data-video-id={id}
+                data-embed-from="oembed"
+                style={{ maxWidth: '100%', minWidth: '100%', margin: 0 }}
               >
-                <div style={{
-                  borderRadius: 16, overflow: 'hidden',
-                  background: v.gradient,
-                  border: `1px solid ${S.cardBorder}`,
-                  height: 560, position: 'relative',
-                  cursor: 'pointer',
-                }}>
-                  {/* Play button */}
-                  <div style={{
-                    position: 'absolute', top: '38%', left: '50%',
-                    transform: 'translate(-50%, -50%)',
-                    width: 56, height: 56, borderRadius: '50%',
-                    background: 'rgba(255,255,255,0.12)',
-                    border: '1.5px solid rgba(255,255,255,0.25)',
-                    display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  }}>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-                      <polygon points="5,3 19,12 5,21"/>
-                    </svg>
-                  </div>
-
-                  {/* Bottom info */}
-                  <div style={{
-                    position: 'absolute', bottom: 0, left: 0, right: 0,
-                    padding: '48px 20px 20px',
-                    background: 'linear-gradient(to top, rgba(13,10,11,0.9) 0%, transparent 100%)',
-                  }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 8 }}>
-                      <TikTokIcon size={12} color="rgba(255,255,255,0.5)" />
-                      <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.4)', fontWeight: 600 }}>@itsmcmartyfly</span>
-                    </div>
-                    <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.8)', lineHeight: 1.45, margin: '0 0 12px', fontWeight: 500 }}>
-                      {v.desc}
-                    </p>
-                    <span style={{
-                      fontSize: 11, fontWeight: 700, color: S.lavender,
-                      background: S.lavenderMuted, border: `1px solid ${S.lavenderBorder}`,
-                      borderRadius: 20, padding: '3px 10px',
-                    }}>
-                      Watch on TikTok →
-                    </span>
-                  </div>
-                </div>
-              </a>
-            )
+                <section />
+              </blockquote>
+            </div>
           ))}
         </div>
 
