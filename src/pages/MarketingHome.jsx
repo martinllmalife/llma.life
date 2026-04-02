@@ -199,6 +199,195 @@ function WhatIsLLMA() {
   );
 }
 
+// ── About ────────────────────────────────────────────────────────────────────
+function About() {
+  return (
+    <section style={{ padding: '100px 24px', fontFamily: S.font }}>
+      <div style={{ maxWidth: 800, margin: '0 auto', textAlign: 'center' }}>
+        <div style={{
+          display: 'inline-block', fontSize: 11, fontWeight: 700,
+          letterSpacing: '0.1em', textTransform: 'uppercase', color: S.lavender,
+          marginBottom: 16,
+        }}>
+          Our Story
+        </div>
+        <h2 style={{ fontSize: 'clamp(32px, 4vw, 48px)', fontWeight: 800, color: '#fff', margin: '0 0 40px', letterSpacing: '-0.02em', lineHeight: 1.1 }}>
+          About LLMA
+        </h2>
+        <div style={{ fontSize: 17, color: 'rgba(255,255,255,0.6)', lineHeight: 1.85, textAlign: 'left' }}>
+          <p style={{ marginBottom: 20 }}>
+            LLMA started as a TikTok idea — half joke, half truth, all heart. The concept was simple: what if gay men and straight women stopped pretending that "romantic love" was the only valid foundation for a life partnership?
+          </p>
+          <p style={{ marginBottom: 20 }}>
+            What began as a viral conversation became a movement. Thousands of people — queer men, single women, co-parenting hopefuls, and intentional companions — were already living outside the script. They just had no place to find each other.
+          </p>
+          <p style={{ marginBottom: 20 }}>
+            LLMA is that place. It's a matchmaking app for people who are done performing relationships for an audience. For gay men who want a real life partner and a real family — without the pretending. For straight women who want devotion, companionship, and a co-pilot — without the hiding.
+          </p>
+          <p style={{ marginBottom: 20 }}>
+            We built LLMA because we believe that the best partnerships are chosen deliberately — not stumbled into. That a family built on honesty is stronger than one built on convention. That love doesn't have to look like a Hallmark movie to be real.
+          </p>
+          <p>
+            We're not rewriting love. We're just writing it our way.
+          </p>
+        </div>
+        <div style={{ marginTop: 48, padding: '24px 32px', background: S.purpleMuted, border: `1px solid ${S.purpleBorder}`, borderRadius: 16, textAlign: 'center' }}>
+          <p style={{ fontSize: 20, fontWeight: 700, color: S.lavender, margin: 0, lineHeight: 1.5, fontStyle: 'italic' }}>
+            "We're not rewriting love. We're just writing it our way."
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ── Videos ───────────────────────────────────────────────────────────────────
+function Videos() {
+  const videos = [
+    { id: 'hkp-V-qGfDg', title: 'We\'re Married But Sleep on Different Floors' },
+    { id: 'd3J8GZ5aq-k', title: 'LLMA Founders Marty & Brandi Thomas Discuss Lavender Marriage' },
+    { id: 'zXAKL-eglNg', title: 'Marriage Secrets: Why We Stayed When Others Left' },
+    { id: 'MTVZIS1pSq4', title: 'Gay Man Married To Woman: I told her I was into guys on our first date' },
+  ];
+
+  return (
+    <section style={{ padding: '80px 24px 100px', fontFamily: S.font }}>
+      <div style={{ maxWidth: 1120, margin: '0 auto' }}>
+        <div style={{ textAlign: 'center', marginBottom: 56 }}>
+          <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: S.lavender, marginBottom: 16 }}>
+            Watch & Learn
+          </div>
+          <h2 style={{ fontSize: 'clamp(32px, 4vw, 48px)', fontWeight: 800, color: '#fff', margin: '0 0 16px', letterSpacing: '-0.02em' }}>
+            Real stories, real conversations
+          </h2>
+          <p style={{ fontSize: 18, color: 'rgba(255,255,255,0.5)', maxWidth: 480, margin: '0 auto', lineHeight: 1.6 }}>
+            Watch the conversations that started a movement.
+          </p>
+        </div>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(480px, 1fr))', gap: 24 }}>
+          {videos.map(v => (
+            <div key={v.id} style={{ borderRadius: 16, overflow: 'hidden', background: '#151214', border: '1px solid rgba(255,255,255,0.06)' }}>
+              <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
+                <iframe
+                  src={`https://www.youtube.com/embed/${v.id}`}
+                  title={v.title}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                />
+              </div>
+              <div style={{ padding: '16px 20px' }}>
+                <p style={{ fontSize: 14, fontWeight: 600, color: 'rgba(255,255,255,0.75)', margin: 0, lineHeight: 1.45 }}>{v.title}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ── FAQ ──────────────────────────────────────────────────────────────────────
+function FAQ() {
+  const faqs = [
+    {
+      q: 'What is LLMA?',
+      a: 'LLMA (Life and Love Made Authentic) is a matchmaking app for intentional partnerships — connecting gay men and straight women for lavender marriages, chosen co-parenting, and authentic companionship. It\'s for people who want a real life partner without performing a relationship they don\'t feel.',
+    },
+    {
+      q: 'Who is LLMA for?',
+      a: 'LLMA is for gay men who want a committed life partner and family, straight women who want a loyal companion and co-parent, and anyone building intentional partnerships outside the conventional romantic script. If you\'ve ever thought "I want a partner, just not in the traditional way," LLMA was built for you.',
+    },
+    {
+      q: 'What can you expect from LLMA?',
+      a: 'A matching experience built around values, compatibility, and honesty — not swiping on looks. You\'ll answer structured questions about what you actually want in a life partnership, get matched with people who share your vision, and connect through a platform designed for intentional relationship-building. No games, no mixed signals, no pretending.',
+    },
+  ];
+
+  return (
+    <section style={{ padding: '80px 24px 100px', fontFamily: S.font }}>
+      <div style={{ maxWidth: 760, margin: '0 auto' }}>
+        <div style={{ textAlign: 'center', marginBottom: 56 }}>
+          <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: S.lavender, marginBottom: 16 }}>
+            FAQ
+          </div>
+          <h2 style={{ fontSize: 'clamp(32px, 4vw, 48px)', fontWeight: 800, color: '#fff', margin: 0, letterSpacing: '-0.02em' }}>
+            Questions you might have
+          </h2>
+        </div>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+          {faqs.map((faq, i) => (
+            <div key={i} style={{
+              padding: '28px 32px',
+              background: '#151214',
+              border: '1px solid rgba(255,255,255,0.06)',
+              borderRadius: 16,
+            }}>
+              <h3 style={{ fontSize: 17, fontWeight: 700, color: '#fff', margin: '0 0 12px', letterSpacing: '-0.01em' }}>
+                {faq.q}
+              </h3>
+              <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.55)', margin: 0, lineHeight: 1.7 }}>
+                {faq.a}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ── Newsletter ────────────────────────────────────────────────────────────────
+function Newsletter() {
+  return (
+    <section style={{ padding: '80px 24px', fontFamily: S.font }}>
+      <div style={{ maxWidth: 560, margin: '0 auto', textAlign: 'center' }}>
+        <div style={{
+          padding: '56px 40px',
+          background: 'linear-gradient(135deg, rgba(143,92,184,0.1) 0%, rgba(220,90,75,0.06) 100%)',
+          border: '1px solid rgba(197,159,225,0.12)',
+          borderRadius: 24,
+        }}>
+          <div style={{ fontSize: 36, marginBottom: 16 }}>✉️</div>
+          <h2 style={{ fontSize: 'clamp(24px, 3vw, 32px)', fontWeight: 800, color: '#fff', margin: '0 0 12px', letterSpacing: '-0.02em' }}>
+            Stay in the loop
+          </h2>
+          <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', margin: '0 0 32px', lineHeight: 1.6 }}>
+            Community stories, app updates, and real talk on intentional partnerships — straight to your inbox.
+          </p>
+          <form
+            onSubmit={e => { e.preventDefault(); const email = e.target.email.value; if (email) window.open(`mailto:martin@llma.life?subject=Newsletter Signup&body=Please add me to the LLMA newsletter: ${email}`, '_blank'); }}
+            style={{ display: 'flex', gap: 10, flexWrap: 'wrap', justifyContent: 'center' }}
+          >
+            <input
+              type="email"
+              name="email"
+              placeholder="your@email.com"
+              required
+              style={{
+                flex: '1 1 200px', padding: '12px 18px', borderRadius: 9999,
+                background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)',
+                color: '#fff', fontSize: 14, fontFamily: S.font, outline: 'none',
+              }}
+            />
+            <button type="submit" style={{
+              padding: '12px 24px', borderRadius: 9999,
+              background: S.purple, color: '#fff', border: 'none',
+              fontSize: 14, fontWeight: 700, fontFamily: S.font, cursor: 'pointer',
+            }}>
+              Sign up
+            </button>
+          </form>
+          <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.25)', marginTop: 16 }}>
+            No spam. Unsubscribe anytime.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 // ── Blog Preview ─────────────────────────────────────────────────────────────
 function BlogPreview() {
   const preview = sortedPosts.slice(0, 3);
@@ -303,30 +492,71 @@ function DownloadCTA() {
 }
 
 // ── Footer ───────────────────────────────────────────────────────────────────
+const SOCIAL_LINKS = [
+  { label: 'Facebook', href: 'https://www.facebook.com/648257818370717' },
+  { label: 'Instagram', href: 'https://www.instagram.com/thelavlam/' },
+  { label: 'TikTok', href: 'https://www.tiktok.com/@itsmcmartyfly' },
+  { label: 'YouTube', href: 'https://www.youtube.com/@itsmcmartyfly' },
+];
+
 function Footer() {
   return (
     <footer style={{
       borderTop: '1px solid rgba(255,255,255,0.06)',
-      padding: '40px 24px',
+      padding: '48px 24px 40px',
       fontFamily: S.font,
     }}>
-      <div style={{ maxWidth: 1120, margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 16 }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-          <div style={{
-            width: 28, height: 28, borderRadius: 6,
-            background: 'linear-gradient(135deg, #8F5CB8, #DC5A4B)',
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-            fontSize: 11, fontWeight: 800, color: '#fff',
-          }}>L</div>
-          <span style={{ fontSize: 15, fontWeight: 700, color: 'rgba(255,255,255,0.6)' }}>LLMA</span>
+      <div style={{ maxWidth: 1120, margin: '0 auto' }}>
+        {/* Top row */}
+        <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', flexWrap: 'wrap', gap: 32, marginBottom: 40 }}>
+          {/* Brand */}
+          <div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 10 }}>
+              <div style={{
+                width: 28, height: 28, borderRadius: 6,
+                background: 'linear-gradient(135deg, #8F5CB8, #DC5A4B)',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                fontSize: 11, fontWeight: 800, color: '#fff',
+              }}>L</div>
+              <span style={{ fontSize: 15, fontWeight: 700, color: 'rgba(255,255,255,0.7)' }}>LLMA</span>
+            </div>
+            <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.35)', margin: 0, maxWidth: 220, lineHeight: 1.55 }}>
+              Life and Love Made Authentic.<br />Building intentional partnerships.
+            </p>
+          </div>
+
+          {/* Nav links */}
+          <div style={{ display: 'flex', gap: 40, flexWrap: 'wrap' }}>
+            <div>
+              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.25)', marginBottom: 14 }}>Navigate</div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                <Link to="/blog" style={{ fontSize: 13, color: 'rgba(255,255,255,0.45)', textDecoration: 'none' }}>Blog</Link>
+                <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" style={{ fontSize: 13, color: 'rgba(255,255,255,0.45)', textDecoration: 'none' }}>Download App</a>
+              </div>
+            </div>
+            <div>
+              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.25)', marginBottom: 14 }}>Follow Us</div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                {SOCIAL_LINKS.map(s => (
+                  <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" style={{ fontSize: 13, color: 'rgba(255,255,255,0.45)', textDecoration: 'none' }}>{s.label}</a>
+                ))}
+              </div>
+            </div>
+            <div>
+              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.25)', marginBottom: 14 }}>Legal</div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                <Link to="/PrivacyPolicy" style={{ fontSize: 13, color: 'rgba(255,255,255,0.45)', textDecoration: 'none' }}>Privacy Policy</Link>
+                <Link to="/TermsOfService" style={{ fontSize: 13, color: 'rgba(255,255,255,0.45)', textDecoration: 'none' }}>Terms of Service</Link>
+              </div>
+            </div>
+          </div>
         </div>
-        <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap' }}>
-          <Link to="/blog" style={{ fontSize: 13, color: 'rgba(255,255,255,0.35)', textDecoration: 'none' }}>Blog</Link>
-          <Link to="/PrivacyPolicy" style={{ fontSize: 13, color: 'rgba(255,255,255,0.35)', textDecoration: 'none' }}>Privacy</Link>
-          <Link to="/TermsOfService" style={{ fontSize: 13, color: 'rgba(255,255,255,0.35)', textDecoration: 'none' }}>Terms</Link>
-          <a href="https://www.youtube.com/@itsmcmartyfly" target="_blank" rel="noopener noreferrer" style={{ fontSize: 13, color: 'rgba(255,255,255,0.35)', textDecoration: 'none' }}>YouTube</a>
+
+        {/* Bottom row */}
+        <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: 24, display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12 }}>
+          <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.2)' }}>© 2026 LLMA. All rights reserved.</div>
+          <a href="mailto:martin@llma.life" style={{ fontSize: 12, color: 'rgba(255,255,255,0.3)', textDecoration: 'none' }}>martin@llma.life</a>
         </div>
-        <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.2)' }}>© 2026 LLMA. All rights reserved.</div>
       </div>
     </footer>
   );
@@ -339,7 +569,11 @@ export default function MarketingHome() {
       <Nav />
       <Hero />
       <WhatIsLLMA />
+      <About />
+      <Videos />
+      <FAQ />
       <BlogPreview />
+      <Newsletter />
       <DownloadCTA />
       <Footer />
     </div>
