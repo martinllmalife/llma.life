@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
 import { sortedPosts } from '../content/blogPosts';
+import { TIKTOK_EMBEDS } from '../content/tiktokEmbeds';
 
 const APP_STORE_URL = 'https://apps.apple.com/us/app/llma-intentional-partnerships/id6760886909';
 const APP_URL = 'https://llma.app';
@@ -584,14 +585,6 @@ function VideoGrid() {
 }
 
 // ── TikTok Section ────────────────────────────────────────────────────────────
-const TIKTOK_VIDEO_IDS = [
-  '7578691659601431822',
-  '7563048152257858871',
-  '7563662830604487991',
-  '7619865234194304270',
-];
-
-const OEMBED_BASE = 'https://www.tiktok.com/oembed?url=https://www.tiktok.com/@itsmcmartyfly/video/';
 
 const TikTokIcon = ({ size = 16, color = 'currentColor' }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill={color}>
@@ -600,27 +593,14 @@ const TikTokIcon = ({ size = 16, color = 'currentColor' }) => (
 );
 
 function TikTokSection() {
-  const [embeds, setEmbeds] = useState([]);
-
   useEffect(() => {
-    // Fetch oEmbed HTML from TikTok for each video — returns the exact embed code TikTok generates
-    Promise.all(
-      TIKTOK_VIDEO_IDS.map(id =>
-        fetch(OEMBED_BASE + id)
-          .then(r => r.json())
-          .then(data => data.html.replace(/<script[^>]*>.*?<\/script>/gi, '').trim())
-          .catch(() => null)
-      )
-    ).then(results => {
-      setEmbeds(results.filter(Boolean));
-      // Load embed.js once all blockquotes are in the DOM
-      const existing = document.querySelector('script[src="https://www.tiktok.com/embed.js"]');
-      if (existing) existing.remove();
-      const script = document.createElement('script');
-      script.src = 'https://www.tiktok.com/embed.js';
-      script.async = true;
-      document.body.appendChild(script);
-    });
+    const existing = document.querySelector('script[src="https://www.tiktok.com/embed.js"]');
+    if (existing) existing.remove();
+    const script = document.createElement('script');
+    script.src = 'https://www.tiktok.com/embed.js';
+    script.async = true;
+    document.body.appendChild(script);
+    return () => script.remove();
   }, []);
 
   return (
@@ -648,9 +628,8 @@ function TikTokSection() {
           </a>
         </div>
 
-        {/* oEmbed — HTML fetched directly from TikTok's API */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 12, alignItems: 'start' }}>
-          {embeds.map((html, i) => (
+          {TIKTOK_EMBEDS.map((html, i) => (
             <div key={i} style={{ borderRadius: 16, overflow: 'hidden', background: S.card, border: `1px solid ${S.cardBorder}` }}
               dangerouslySetInnerHTML={{ __html: html }}
             />
