@@ -268,13 +268,49 @@ function FeaturedVideo() {
 }
 
 // ── Who It's For ─────────────────────────────────────────────────────────────
-function WhoItsFor() {
-  const cards = [
-    { icon: '💜', title: 'Lavender Marriage Partners', body: 'Gay men and straight women building intentional, authentic life partnerships — on their own terms.' },
-    { icon: '👨‍👩‍👧', title: 'Chosen Co-Parents', body: 'Finding the right person to raise a family with, regardless of romantic attraction.' },
-    { icon: '🤝', title: 'Intentional Companions', body: 'Ride-or-die partners for navigating life, sharing households, and building legacies together.' },
-  ];
+const WHO_CARDS = [
+  {
+    color: S.purple,
+    muted: S.purpleMuted,
+    border: S.purpleBorder,
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+      </svg>
+    ),
+    title: 'Lavender Marriage Partners',
+    body: 'Gay men and straight women building intentional, authentic life partnerships — on their own terms.',
+  },
+  {
+    color: S.coral,
+    muted: S.coralMuted,
+    border: S.coralBorder,
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+        <circle cx="9" cy="7" r="4"/>
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+      </svg>
+    ),
+    title: 'Chosen Co-Parents',
+    body: 'Finding the right person to raise a family with, regardless of romantic attraction.',
+  },
+  {
+    color: S.lavender,
+    muted: S.lavenderMuted,
+    border: S.lavenderBorder,
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </svg>
+    ),
+    title: 'Intentional Companions',
+    body: 'Ride-or-die partners for navigating life, sharing households, and building legacies together.',
+  },
+];
 
+function WhoItsFor() {
   return (
     <section style={{ padding: '0 24px 100px', fontFamily: S.font }}>
       <div style={{ maxWidth: 1120, margin: '0 auto' }}>
@@ -288,9 +324,20 @@ function WhoItsFor() {
           </p>
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
-          {cards.map(c => (
-            <div key={c.title} style={{ padding: '36px 32px', background: S.card, border: `1px solid ${S.cardBorder}`, borderRadius: 20 }}>
-              <div style={{ fontSize: 40, marginBottom: 20 }}>{c.icon}</div>
+          {WHO_CARDS.map(c => (
+            <div key={c.title} style={{
+              padding: '36px 32px', background: S.card,
+              border: `1px solid ${c.border}`,
+              borderRadius: 20, borderTop: `3px solid ${c.color}`,
+            }}>
+              <div style={{
+                width: 48, height: 48, borderRadius: 12,
+                background: c.muted, border: `1px solid ${c.border}`,
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                color: c.color, marginBottom: 24,
+              }}>
+                {c.icon}
+              </div>
               <h3 style={{ fontSize: 18, fontWeight: 700, color: '#fff', margin: '0 0 12px' }}>{c.title}</h3>
               <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', margin: 0, lineHeight: 1.65 }}>{c.body}</p>
             </div>
