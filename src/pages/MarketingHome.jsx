@@ -40,8 +40,8 @@ function Nav() {
         <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
           <span className="nav-links" style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
             <Link to="/blog" style={{ fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.55)', textDecoration: 'none', padding: '8px 12px', borderRadius: 8 }}>Blog</Link>
+            <Link to="/community" style={{ fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.55)', textDecoration: 'none', padding: '8px 12px', borderRadius: 8 }}>Community</Link>
             <a href="#videos" style={{ fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.55)', textDecoration: 'none', padding: '8px 12px', borderRadius: 8 }}>Watch</a>
-            <a href="#course" style={{ fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.55)', textDecoration: 'none', padding: '8px 12px', borderRadius: 8 }}>Course</a>
             <a href={APP_URL} target="_blank" rel="noopener noreferrer" style={{ fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.55)', textDecoration: 'none', padding: '8px 12px', borderRadius: 8 }}>App</a>
           </span>
           <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" style={{

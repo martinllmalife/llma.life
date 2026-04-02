@@ -6,6 +6,7 @@ import FiveTruths from './pages/FiveTruths'
 import LavenderTransitionGuide from './pages/LavenderTransitionGuide'
 import TheSixPillars from './pages/TheSixPillars'
 import Press from './pages/Press'
+import Community from './pages/Community'
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
         <Route path="/lavender-transition-guide" element={<LavenderTransitionGuide />} />
         <Route path="/the-six-pillars" element={<TheSixPillars />} />
         <Route path="/press" element={<Press />} />
+        <Route path="/community" element={<Community />} />
       </Routes>
     </Router>
   )

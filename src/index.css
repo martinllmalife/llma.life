@@ -56,6 +56,10 @@ body { margin: 0; background: #0D0A0B; }
   /* Reduce section padding on mobile */
   .section-inner-pad { padding-left: 16px !important; padding-right: 16px !important; }
   .card-pad { padding: 28px 24px !important; }
+
+  /* Community page — stack multi-column grids */
+  .community-two-col { grid-template-columns: 1fr !important; }
+  .community-three-col { grid-template-columns: 1fr !important; }
 }
 
 h1,
