@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { sortedPosts } from '../content/blogPosts';
 
 const APP_STORE_URL = 'https://apps.apple.com/us/app/llma-intentional-partnerships/id6760886909';
@@ -591,6 +591,8 @@ const TIKTOK_VIDEO_IDS = [
   '7619865234194304270',
 ];
 
+const OEMBED_BASE = 'https://www.tiktok.com/oembed?url=https://www.tiktok.com/@itsmcmartyfly/video/';
+
 const TikTokIcon = ({ size = 16, color = 'currentColor' }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill={color}>
     <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.15 8.15 0 0 0 4.77 1.52V6.76a4.85 4.85 0 0 1-1-.07z"/>
@@ -598,24 +600,27 @@ const TikTokIcon = ({ size = 16, color = 'currentColor' }) => (
 );
 
 function TikTokSection() {
-  const containerRef = useRef(null);
+  const [embeds, setEmbeds] = useState([]);
 
   useEffect(() => {
-    // Remove any existing TikTok embed script and global so it re-initializes cleanly
-    const existing = document.querySelector('script[src="https://www.tiktok.com/embed.js"]');
-    if (existing) existing.remove();
-    delete window.tiktok;
-
-    const script = document.createElement('script');
-    script.src = 'https://www.tiktok.com/embed.js';
-    script.async = true;
-    script.onload = () => {
-      // Force TikTok to scan and render any blockquotes it may have missed
-      if (window.tiktok?.widgets?.load) window.tiktok.widgets.load();
-    };
-    document.body.appendChild(script);
-
-    return () => { script.remove(); };
+    // Fetch oEmbed HTML from TikTok for each video — returns the exact embed code TikTok generates
+    Promise.all(
+      TIKTOK_VIDEO_IDS.map(id =>
+        fetch(OEMBED_BASE + id)
+          .then(r => r.json())
+          .then(data => data.html.replace(/<script[^>]*>.*?<\/script>/gi, '').trim())
+          .catch(() => null)
+      )
+    ).then(results => {
+      setEmbeds(results.filter(Boolean));
+      // Load embed.js once all blockquotes are in the DOM
+      const existing = document.querySelector('script[src="https://www.tiktok.com/embed.js"]');
+      if (existing) existing.remove();
+      const script = document.createElement('script');
+      script.src = 'https://www.tiktok.com/embed.js';
+      script.async = true;
+      document.body.appendChild(script);
+    });
   }, []);
 
   return (
@@ -643,14 +648,9 @@ function TikTokSection() {
           </a>
         </div>
 
-        {/* Blockquote embeds — exact HTML from TikTok via dangerouslySetInnerHTML */}
-        <div ref={containerRef} style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 12, alignItems: 'start' }}>
-          {[
-            '<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@itsmcmartyfly/video/7578691659601431822" data-video-id="7578691659601431822" style="max-width: 605px;min-width: 325px;"><section><a target="_blank" title="@itsmcmartyfly" href="https://www.tiktok.com/@itsmcmartyfly?refer=embed">@itsmcmartyfly</a></section></blockquote>',
-            '<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@itsmcmartyfly/video/7563048152257858871" data-video-id="7563048152257858871" style="max-width: 605px;min-width: 325px;"><section><a target="_blank" title="@itsmcmartyfly" href="https://www.tiktok.com/@itsmcmartyfly?refer=embed">@itsmcmartyfly</a><a title="lavendermarriage" target="_blank" href="https://www.tiktok.com/tag/lavendermarriage?refer=embed">#lavendermarriage</a><a title="intimacy" target="_blank" href="https://www.tiktok.com/tag/intimacy?refer=embed">#intimacy</a><a title="husbandwife" target="_blank" href="https://www.tiktok.com/tag/husbandwife?refer=embed">#husbandwife</a><a title="relationships" target="_blank" href="https://www.tiktok.com/tag/relationships?refer=embed">#relationships</a><a title="couplegoals" target="_blank" href="https://www.tiktok.com/tag/couplegoals?refer=embed">#couplegoals</a></section></blockquote>',
-            '<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@itsmcmartyfly/video/7563662830604487991" data-video-id="7563662830604487991" style="max-width: 605px;min-width: 325px;"><section><a target="_blank" title="@itsmcmartyfly" href="https://www.tiktok.com/@itsmcmartyfly?refer=embed">@itsmcmartyfly</a></section></blockquote>',
-            '<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@itsmcmartyfly/video/7619865234194304270" data-video-id="7619865234194304270" style="max-width: 605px;min-width: 325px;"><section><a target="_blank" title="@itsmcmartyfly" href="https://www.tiktok.com/@itsmcmartyfly?refer=embed">@itsmcmartyfly</a></section></blockquote>',
-          ].map((html, i) => (
+        {/* oEmbed — HTML fetched directly from TikTok's API */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 12, alignItems: 'start' }}>
+          {embeds.map((html, i) => (
             <div key={i} style={{ borderRadius: 16, overflow: 'hidden', background: S.card, border: `1px solid ${S.cardBorder}` }}
               dangerouslySetInnerHTML={{ __html: html }}
             />
