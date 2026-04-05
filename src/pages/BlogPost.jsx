@@ -215,7 +215,7 @@ export default function BlogPost() {
   return (
     <div style={{ background: S.bg, minHeight: '100vh', color: '#fff' }}>
       <Helmet>
-        <title>{post.title} | LLMA</title>
+        <title>{`${post.title} | LLMA`}</title>
         <meta name="description" content={post.excerpt} />
         <link rel="canonical" href={pageUrl} />
         <meta property="og:type" content="article" />

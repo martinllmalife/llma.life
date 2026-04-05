@@ -2,12 +2,15 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import sitemap from 'vite-plugin-sitemap'
 
+const isSSR = process.env.BUILD_SSR === 'true'
+
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
-    sitemap({
-      hostname: 'https://llma.life',
+    // Only generate sitemap during client build
+    ...(!isSSR ? [sitemap({
+      hostname: 'https://www.llma.life',
       dynamicRoutes: [
         '/',
         '/blog',
@@ -24,6 +27,15 @@ export default defineConfig({
         '/blog/when-you-dont-see-the-path-you-become-it',
         '/blog/welcome-to-the-lavender-logs',
       ],
-    }),
+    })] : []),
   ],
+  ...(isSSR && {
+    build: {
+      ssr: true,
+      outDir: 'dist/server',
+      rollupOptions: {
+        input: 'src/entry-server.jsx',
+      },
+    },
+  }),
 })
