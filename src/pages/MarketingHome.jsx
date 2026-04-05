@@ -221,6 +221,9 @@ function AppGateway() {
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
               Download the App
             </a>
+            <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap', marginTop: 20 }}>
+              <a href="https://www.llma.app/find-lavender-marriage-partner" target="_blank" rel="noopener noreferrer" style={{ fontSize: 14, fontWeight: 600, color: S.coral, textDecoration: 'none' }}>Read the guide →</a>
+            </div>
           </div>
         </div>
       </div>
@@ -344,6 +347,58 @@ function WhoItsFor() {
             </div>
           ))}
         </div>
+      </div>
+    </section>
+  );
+}
+
+// ── Guide Promo ───────────────────────────────────────────────────────────────
+function GuidePromo() {
+  return (
+    <section style={{ padding: '0 24px 100px', fontFamily: S.font }}>
+      <div style={{ maxWidth: 1120, margin: '0 auto' }}>
+        <a
+          href="https://www.llma.app/find-lavender-marriage-partner"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+            padding: '44px 56px', borderRadius: 24, gap: 32, flexWrap: 'wrap',
+            background: 'linear-gradient(135deg, rgba(143,92,184,0.12) 0%, rgba(220,90,75,0.06) 100%)',
+            border: '1px solid rgba(143,92,184,0.25)',
+            textDecoration: 'none',
+          }}
+        >
+          <div>
+            <div style={{
+              fontSize: 11, fontWeight: 700, letterSpacing: '0.1em',
+              textTransform: 'uppercase', color: S.lavender, marginBottom: 14,
+            }}>
+              Free Guide
+            </div>
+            <h2 style={{
+              fontSize: 'clamp(22px, 3vw, 34px)', fontWeight: 800,
+              color: '#fff', margin: '0 0 12px', letterSpacing: '-0.02em', lineHeight: 1.2,
+            }}>
+              How to Actually Find a Lavender Marriage Partner
+            </h2>
+            <p style={{
+              fontSize: 16, color: 'rgba(255,255,255,0.45)',
+              margin: 0, lineHeight: 1.65, maxWidth: 520,
+            }}>
+              A complete guide — from understanding what you're looking for to your first real conversation with someone who gets it.
+            </p>
+          </div>
+          <div style={{
+            display: 'inline-flex', alignItems: 'center', gap: 8,
+            padding: '14px 30px', borderRadius: 9999, flexShrink: 0,
+            background: S.purple, color: '#fff',
+            fontSize: 15, fontWeight: 700,
+            boxShadow: '0 4px 24px rgba(143,92,184,0.35)',
+          }}>
+            Read the Guide →
+          </div>
+        </a>
       </div>
     </section>
   );
@@ -895,6 +950,7 @@ export default function MarketingHome() {
       <AppGateway />
       <FeaturedVideo />
       <WhoItsFor />
+      <GuidePromo />
       <CourseTeaser />
       <PhotoGrid />
       <VideoGrid />
