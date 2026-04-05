@@ -1,4 +1,5 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { getPostBySlug, sortedPosts } from '../content/blogPosts';
 
 const APP_STORE_URL = 'https://apps.apple.com/us/app/llma-intentional-partnerships/id6760886909';
@@ -174,6 +175,9 @@ export default function BlogPost() {
 
   if (!post) return <Navigate to="/blog" replace />;
 
+  const pageUrl = `https://llma.life/blog/${post.slug}`;
+  const ogImage = post.heroImage || 'https://llma.life/og-image.png';
+
   // Adjacent posts for navigation
   const idx = sortedPosts.findIndex(p => p.slug === slug);
   const prev = idx < sortedPosts.length - 1 ? sortedPosts[idx + 1] : null;
@@ -181,6 +185,21 @@ export default function BlogPost() {
 
   return (
     <div style={{ background: S.bg, minHeight: '100vh', color: '#fff' }}>
+      <Helmet>
+        <title>{post.title} | LLMA</title>
+        <meta name="description" content={post.excerpt} />
+        <link rel="canonical" href={pageUrl} />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:title" content={`${post.title} | LLMA`} />
+        <meta property="og:description" content={post.excerpt} />
+        <meta property="og:image" content={ogImage} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${post.title} | LLMA`} />
+        <meta name="twitter:description" content={post.excerpt} />
+        <meta name="twitter:image" content={ogImage} />
+      </Helmet>
+
       {/* Inject blog CSS once */}
       <style>{BLOG_CSS}</style>
 

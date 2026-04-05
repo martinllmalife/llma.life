@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const APP_STORE_URL = 'https://apps.apple.com/us/app/llma-intentional-partnerships/id6760886909';
 
@@ -61,6 +62,15 @@ const SECTIONS = [
 export default function LavenderTransitionGuide() {
   return (
     <div style={{ background: S.bg, minHeight: '100vh', color: '#fff', fontFamily: S.font }}>
+      <Helmet>
+        <title>The Lavender Transition Guide | LLMA</title>
+        <meta name="description" content="A practical guide for navigating the transition into a lavender marriage or intentional platonic partnership. Real talk from people who've done it." />
+        <link rel="canonical" href="https://llma.life/lavender-transition-guide" />
+        <meta property="og:url" content="https://llma.life/lavender-transition-guide" />
+        <meta property="og:title" content="The Lavender Transition Guide | LLMA" />
+        <meta property="og:description" content="A practical guide for navigating the transition into a lavender marriage or intentional platonic partnership." />
+        <meta property="og:image" content="https://llma.life/og-image.png" />
+      </Helmet>
 
       {/* Nav */}
       <nav style={{

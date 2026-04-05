@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { sortedPosts } from '../content/blogPosts';
 
 const APP_STORE_URL = 'https://apps.apple.com/us/app/llma-intentional-partnerships/id6760886909';
@@ -60,6 +61,15 @@ export default function BlogIndex() {
 
   return (
     <div style={{ background: S.bg, minHeight: '100vh', color: '#fff', fontFamily: S.font }}>
+      <Helmet>
+        <title>The Lavender Logs | LLMA Blog</title>
+        <meta name="description" content="Real stories about lavender marriages, intentional partnerships, and chosen family. Written by Marty Thomas and the LLMA community." />
+        <link rel="canonical" href="https://llma.life/blog" />
+        <meta property="og:url" content="https://llma.life/blog" />
+        <meta property="og:title" content="The Lavender Logs | LLMA Blog" />
+        <meta property="og:description" content="Real stories about lavender marriages, intentional partnerships, and chosen family." />
+        <meta property="og:image" content="https://llma.life/og-image.png" />
+      </Helmet>
       <Nav />
 
       <div style={{ maxWidth: 1120, margin: '0 auto', padding: '120px 24px 80px' }}>

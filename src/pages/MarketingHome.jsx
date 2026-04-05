@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { sortedPosts } from '../content/blogPosts';
 import { INSTAGRAM_EMBEDS } from '../content/tiktokEmbeds';
 
@@ -846,6 +847,18 @@ function Footer() {
 export default function MarketingHome() {
   return (
     <div style={{ background: S.bg, minHeight: '100vh', color: '#fff' }}>
+      <Helmet>
+        <title>LLMA - The Lavender Marriage App | Intentional Partnerships</title>
+        <meta name="description" content="LLMA connects gay men and straight women for lavender marriages, chosen co-parenting, and intentional companionship. The app for partnerships built on honesty, not convention. Download on iOS." />
+        <link rel="canonical" href="https://llma.life/" />
+        <meta property="og:url" content="https://llma.life/" />
+        <meta property="og:title" content="LLMA - The Lavender Marriage App" />
+        <meta property="og:description" content="Lavender marriages. Chosen co-parents. Intentional companions. Find your person and build something real." />
+        <meta property="og:image" content="https://llma.life/og-image.png" />
+        <meta name="twitter:title" content="LLMA - The Lavender Marriage App" />
+        <meta name="twitter:description" content="Find your intentional partner. Lavender marriages, co-parenting, and authentic companionship." />
+        <meta name="twitter:image" content="https://llma.life/og-image.png" />
+      </Helmet>
       <Nav />
       <VideoHero />
       <AppGateway />

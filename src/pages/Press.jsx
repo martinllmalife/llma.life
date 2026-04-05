@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const APP_STORE_URL = 'https://apps.apple.com/us/app/llma-intentional-partnerships/id6760886909';
 
@@ -93,6 +94,15 @@ const TOPICS = [
 export default function Press() {
   return (
     <div style={{ background: S.bg, minHeight: '100vh', color: '#fff', fontFamily: S.font }}>
+      <Helmet>
+        <title>Press & Media | LLMA - The Lavender Marriage App</title>
+        <meta name="description" content="Press kit, media coverage, and interview requests for LLMA — the lavender marriage app connecting gay men and straight women for intentional partnerships." />
+        <link rel="canonical" href="https://llma.life/press" />
+        <meta property="og:url" content="https://llma.life/press" />
+        <meta property="og:title" content="Press & Media | LLMA" />
+        <meta property="og:description" content="Press kit and media coverage for LLMA — the world's first app for lavender marriages and intentional platonic partnerships." />
+        <meta property="og:image" content="https://llma.life/og-image.png" />
+      </Helmet>
 
       {/* Nav */}
       <nav style={{

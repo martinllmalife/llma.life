@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const APP_STORE_URL = 'https://apps.apple.com/us/app/llma-intentional-partnerships/id6760886909';
 
@@ -288,6 +289,15 @@ function Nav() {
 export default function FiveTruths() {
   return (
     <div style={{ background: S.bg, minHeight: '100vh', color: '#fff', fontFamily: S.font }}>
+      <Helmet>
+        <title>5 Truths That Saved Me | LLMA</title>
+        <meta name="description" content="The five things Marty Thomas wishes he'd known sooner about lavender marriage, identity, and intentional love. A personal essay from the founder of LLMA." />
+        <link rel="canonical" href="https://llma.life/5-truths-that-saved-me" />
+        <meta property="og:url" content="https://llma.life/5-truths-that-saved-me" />
+        <meta property="og:title" content="5 Truths That Saved Me | LLMA" />
+        <meta property="og:description" content="The five things Marty Thomas wishes he'd known sooner about lavender marriage, identity, and intentional love." />
+        <meta property="og:image" content="https://llma.life/og-image.png" />
+      </Helmet>
       <Nav />
 
       {/* Hero */}

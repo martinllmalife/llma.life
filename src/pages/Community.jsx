@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const APP_STORE_URL = 'https://apps.apple.com/us/app/llma-intentional-partnerships/id6760886909';
 const APP_URL = 'https://llma.app';
@@ -332,6 +333,15 @@ export default function Community() {
 
   return (
     <div style={{ background: S.bg, minHeight: '100vh', fontFamily: S.font }}>
+      <Helmet>
+        <title>Community | LLMA - Find Your People</title>
+        <meta name="description" content="Join the LLMA community — 1,000+ members across 20+ countries building intentional partnerships, lavender marriages, and chosen families." />
+        <link rel="canonical" href="https://llma.life/community" />
+        <meta property="og:url" content="https://llma.life/community" />
+        <meta property="og:title" content="Community | LLMA - Find Your People" />
+        <meta property="og:description" content="Join 1,000+ members across 20+ countries building intentional partnerships, lavender marriages, and chosen families." />
+        <meta property="og:image" content="https://llma.life/og-image.png" />
+      </Helmet>
       <Nav />
 
       {/* Hero */}

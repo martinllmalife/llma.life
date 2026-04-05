@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const APP_STORE_URL = 'https://apps.apple.com/us/app/llma-intentional-partnerships/id6760886909';
 
@@ -195,6 +196,15 @@ const WARNING_SIGNS = [
 export default function TheSixPillars() {
   return (
     <div style={{ background: S.bg, minHeight: '100vh', color: '#fff', fontFamily: S.font }}>
+      <Helmet>
+        <title>The Six Pillars of an Intentional Partnership | LLMA</title>
+        <meta name="description" content="The six foundational principles behind every successful lavender marriage and intentional partnership. A framework from LLMA founder Marty Thomas." />
+        <link rel="canonical" href="https://llma.life/the-six-pillars" />
+        <meta property="og:url" content="https://llma.life/the-six-pillars" />
+        <meta property="og:title" content="The Six Pillars of an Intentional Partnership | LLMA" />
+        <meta property="og:description" content="The six foundational principles behind every successful lavender marriage and intentional partnership." />
+        <meta property="og:image" content="https://llma.life/og-image.png" />
+      </Helmet>
 
       {/* Nav */}
       <nav style={{
