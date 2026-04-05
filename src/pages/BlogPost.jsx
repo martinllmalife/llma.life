@@ -175,8 +175,37 @@ export default function BlogPost() {
 
   if (!post) return <Navigate to="/blog" replace />;
 
-  const pageUrl = `https://llma.life/blog/${post.slug}`;
-  const ogImage = post.heroImage || 'https://llma.life/og-image.png';
+  const pageUrl = `https://www.llma.life/blog/${post.slug}`;
+  const ogImage = post.heroImage || 'https://www.llma.life/og-image.png';
+
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.excerpt,
+    url: pageUrl,
+    datePublished: post.sortDate.toISOString(),
+    dateModified: post.sortDate.toISOString(),
+    image: ogImage,
+    author: {
+      '@type': 'Person',
+      name: post.author.name,
+      url: post.author.href.startsWith('http') ? post.author.href : `https://www.llma.life${post.author.href}`,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'LLMA',
+      url: 'https://www.llma.life',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://www.llma.life/llma-logo.png',
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': pageUrl,
+    },
+  };
 
   // Adjacent posts for navigation
   const idx = sortedPosts.findIndex(p => p.slug === slug);
@@ -198,6 +227,7 @@ export default function BlogPost() {
         <meta name="twitter:title" content={`${post.title} | LLMA`} />
         <meta name="twitter:description" content={post.excerpt} />
         <meta name="twitter:image" content={ogImage} />
+        <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
       </Helmet>
 
       {/* Inject blog CSS once */}

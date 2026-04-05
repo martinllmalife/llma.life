@@ -850,14 +850,45 @@ export default function MarketingHome() {
       <Helmet>
         <title>LLMA - The Lavender Marriage App | Intentional Partnerships</title>
         <meta name="description" content="LLMA connects gay men and straight women for lavender marriages, chosen co-parenting, and intentional companionship. The app for partnerships built on honesty, not convention. Download on iOS." />
-        <link rel="canonical" href="https://llma.life/" />
-        <meta property="og:url" content="https://llma.life/" />
+        <link rel="canonical" href="https://www.llma.life/" />
+        <meta property="og:url" content="https://www.llma.life/" />
         <meta property="og:title" content="LLMA - The Lavender Marriage App" />
         <meta property="og:description" content="Lavender marriages. Chosen co-parents. Intentional companions. Find your person and build something real." />
-        <meta property="og:image" content="https://llma.life/og-image.png" />
+        <meta property="og:image" content="https://www.llma.life/og-image.png" />
         <meta name="twitter:title" content="LLMA - The Lavender Marriage App" />
         <meta name="twitter:description" content="Find your intentional partner. Lavender marriages, co-parenting, and authentic companionship." />
-        <meta name="twitter:image" content="https://llma.life/og-image.png" />
+        <meta name="twitter:image" content="https://www.llma.life/og-image.png" />
+        <script type="application/ld+json">{JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'Organization',
+          name: 'LLMA',
+          alternateName: 'Life & Love Made Authentic',
+          url: 'https://www.llma.life',
+          logo: 'https://www.llma.life/llma-logo.png',
+          description: 'LLMA is the world\'s first matchmaking platform for intentional platonic partnerships — lavender marriages, chosen co-parenting, and authentic companionship.',
+          sameAs: [
+            'https://apps.apple.com/us/app/llma-intentional-partnerships/id6760886909',
+          ],
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'MobileApplication',
+          name: 'LLMA - Intentional Partnerships',
+          description: 'The lavender marriage app. Find your intentional partner — gay men and straight women building real partnerships, co-parenting, and chosen family.',
+          operatingSystem: 'iOS',
+          applicationCategory: 'LifestyleApplication',
+          url: 'https://apps.apple.com/us/app/llma-intentional-partnerships/id6760886909',
+          offers: {
+            '@type': 'Offer',
+            price: '0',
+            priceCurrency: 'USD',
+          },
+          author: {
+            '@type': 'Organization',
+            name: 'LLMA',
+            url: 'https://www.llma.life',
+          },
+        })}</script>
       </Helmet>
       <Nav />
       <VideoHero />
