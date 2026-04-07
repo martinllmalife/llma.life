@@ -13,6 +13,50 @@ const AUTHOR_TEAM = {
 };
 
 export const posts = [
+  // ── NEW ──────────────────────────────────────────────────────────────
+  {
+    slug: 'summer-house-proved-it-again',
+    title: "Summer House Proved It Again: Relationships Built on Vibes Will Always Implode",
+    date: 'April 7, 2026',
+    sortDate: new Date('2026-04-07'),
+    tag: 'Culture',
+    tagColor: '#3B82F6',
+    tagBg: 'rgba(59,130,246,0.12)',
+    author: AUTHOR_MARTY,
+    excerpt: "The Amanda Batula and West Wilson bombshell on Summer House is a masterclass in why traditional romantic relationships keep failing. Here\'s what lavender marriages get right.",
+    tags: ['#LLMA', '#LavenderMarriage', '#SummerHouse', '#ModernRelationships', '#PlatonicPartnership'],
+    heroImage: null,
+    bodyHtml: `
+      <p class="llma-lead">If you have been anywhere near Bravo Twitter this week, you already know. Amanda Batula and West Wilson went public. Ciara Miller found out the way we all find out bad news in 2026, through Instagram stories. And the entire Summer House cast is choosing sides like it is middle school recess.</p>
+
+      <hr class="llma-divider">
+
+      <h2>The Drama, In Case You Missed It</h2>
+      <p>Here is the short version. West and Ciara were a thing. Amanda and Ciara were close friends. Then on March 31st, Amanda and West dropped matching Instagram stories confirming they are together. Ciara was photographed looking absolutely devastated outside an Hermes store on Madison Avenue. Kyle Cooke called it "wild betrayal." Paige DeSorbo and Hannah Berner from the Giggly Squad podcast came out swinging for Team Ciara. Andy Cohen said on his SiriusXM show that he "really feels for Ciara."</p>
+      <p>It is messy. It is dramatic. And it is the most predictable thing that has ever happened on reality television.</p>
+
+      <hr class="llma-divider">
+
+      <h2>Why This Keeps Happening</h2>
+      <p>I don't say that to be mean. I say it because this exact storyline plays out constantly. Not just on Bravo, but in real life. In your friend group. In your DMs. Someone dates someone. It ends. Their close friend starts dating that same person. Chaos erupts.</p>
+      <p>And the reason it keeps happening is because most romantic relationships are built on attraction first and everything else second. There is no upfront conversation about values. No agreement about boundaries. No honesty about what each person actually needs from the partnership. It is just "we have chemistry" and then fingers crossed.</p>
+      <p>That model has a roughly 50% failure rate even when nobody's best friend gets involved.</p>
+
+      <hr class="llma-divider">
+
+      <h2>What Lavender Marriages Get Right</h2>
+      <p>This is where I'm going to pivot, and I promise it is not a stretch. Lavender marriages, and platonic partnerships more broadly, are built on a completely different foundation. You lead with compatibility. You lead with shared goals. You have honest conversations about what the relationship is and what it isn't before anyone catches feelings or posts a joint Instagram story.</p>
+      <p>There are no love triangles in lavender marriages because the whole thing is built on transparency. Nobody is sneaking around because there is nothing to sneak about. You know what your partner needs. They know what you need. And you chose each other intentionally, not because of butterflies or because you looked good together at a rooftop party in the Hamptons.</p>
+
+      <hr class="llma-divider">
+
+      <h2>The Bigger Picture</h2>
+      <p>The Summer House drama is entertaining. I'm not going to pretend I didn't watch the Kyle Cooke TikTok three times. But it is also a reminder that the traditional relationship model keeps producing the same results. Jealousy. Betrayal. Public meltdowns outside luxury retail stores.</p>
+      <p>If that sounds exhausting, it is because it is. And there is another way.</p>
+      <p>LLMA is building a community for people who are ready to do relationships differently. Platonic partnerships. Lavender marriages. Intentional commitments that don't fall apart the second someone hotter walks into the Hamptons house. If that sounds like you, download the app.</p>
+      <p><strong><a href="https://apps.apple.com/app/llma">Download LLMA on the App Store</a> and find your person.</strong></p>
+    `,
+  },
   // ── 1 ─────────────────────────────────────────────────────────────────
   {
     slug: 'gen-z-doesnt-want-romance-they-want-a-real-partner',
