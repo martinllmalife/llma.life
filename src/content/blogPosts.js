@@ -25,7 +25,7 @@ export const posts = [
     author: AUTHOR_MARTY,
     excerpt: "TikTok is convinced Selena Gomez and Benny Blanco are in a lavender marriage. Whether they are or not isn't the interesting part. Here's what this viral obsession is actually telling us about how we think about love.",
     tags: ['#LLMA', '#LavenderMarriage', '#SelenaGomez', '#ModernMarriage', '#IntentionalRelationships'],
-    heroImage: null,
+    heroImage: '/blog/selena-benny-lavender-marriage-wrong-question.jpg',
     bodyHtml: `
       <p class="llma-lead">Every few months like clockwork, TikTok remembers that Selena Gomez and Benny Blanco exist, pulls up some clips from a Lakers game, and collectively decides: lavender marriage.</p>
 
@@ -99,7 +99,7 @@ export const posts = [
     author: AUTHOR_MARTY,
     excerpt: "The Amanda Batula and West Wilson bombshell on Summer House is a masterclass in why traditional romantic relationships keep failing. Here\'s what lavender marriages get right.",
     tags: ['#LLMA', '#LavenderMarriage', '#SummerHouse', '#ModernRelationships', '#PlatonicPartnership'],
-    heroImage: null,
+    heroImage: '/blog/summer-house-proved-it-again.jpg',
     bodyHtml: `
       <p class="llma-lead">If you have been anywhere near Bravo Twitter this week, you already know. Amanda Batula and West Wilson went public. Ciara Miller found out the way we all find out bad news in 2026, through Instagram stories. And the entire Summer House cast is choosing sides like it is middle school recess.</p>
 
@@ -143,7 +143,7 @@ export const posts = [
     author: AUTHOR_MARTY,
     excerpt: "I didn't build LLMA because I read a trend report. I built it because I've been living this for 17 years. And right now, the research is finally catching up.",
     tags: ['#LLMA', '#LavenderMarriage', '#PlatoniclLove', '#IntentionalRelationships', '#GenZ'],
-    heroImage: null,
+    heroImage: '/blog/gen-z-doesnt-want-romance-they-want-a-real-partner.jpg',
     bodyHtml: `
 <p class="llma-lead">I didn't build LLMA because I read a trend report. I built it because I've been living this for 17 years. And right now, the research is finally catching up.</p>
 <hr class="llma-divider">
@@ -182,7 +182,7 @@ export const posts = [
     author: AUTHOR_MARTY,
     excerpt: "Somebody had the audacity to say lavender marriages shouldn't qualify for tax benefits. Sir. Who do you think you are?",
     tags: ['#LLMA', '#LavenderMarriage', '#AuthenticRelationships', '#LifeAndLoveMadeAuthentic'],
-    heroImage: 'https://img.youtube.com/vi/7qo6P6W_lnI/maxresdefault.jpg',
+    heroImage: '/blog/tax-benefits-are-not-a-reward-for-fucking.jpg',
     bodyHtml: `
 <p class="llma-lead">So somebody had the audacity — and I do mean the <em>audacity</em> — to say that lavender marriages shouldn't qualify for tax benefits.</p>
 <p>Sir. Who do you think you are?</p>
@@ -224,7 +224,7 @@ export const posts = [
     author: AUTHOR_MARTY,
     excerpt: "So let me get this straight. You can sleep with someone you met at a bar two hours ago. But I can't love the person I've built a life with for seventeen years?",
     tags: ['#LLMA', '#LavenderMarriage', '#AuthenticRelationships', '#ModernLove'],
-    heroImage: null,
+    heroImage: '/blog/you-can-fck-a-stranger-but-i-cant-love-my-best-friend.jpg',
     bodyHtml: `
 <p class="llma-lead">So let me get this straight. You can sleep with someone you met at a bar two hours ago. But I can't love the person I've built a life with for seventeen years?</p>
 <p><strong>Make it make sense.</strong></p>
@@ -295,7 +295,7 @@ export const posts = [
     author: AUTHOR_MARTY,
     excerpt: "Not every Mother's Day message starts with flowers and fond memories. Mine doesn't. But here's the truth: the love you missed doesn't define you. The love you choose does.",
     tags: ['#LLMA', '#LavenderLadies', '#ChosenFamily', '#LifeAndLoveMadeAuthentic'],
-    heroImage: null,
+    heroImage: '/blog/when-motherly-love-showed-up-differently.jpg',
     quoteAccent: '#2DD4BF',
     bodyHtml: `
 <p class="llma-lead">Not every Mother's Day message starts with flowers and fond memories. Mine doesn't.</p>
@@ -336,7 +336,7 @@ export const posts = [
     author: AUTHOR_MARTY,
     excerpt: "Barry Diller — billionaire, married to Diane von Fürstenberg for 24 years. Now 82. And gay. Let's just sit in that for a second.",
     tags: ['#LLMA', '#LavenderMarriage', '#BarryDiller', '#ComingOut', '#LifeAndLoveMadeAuthentic'],
-    heroImage: null,
+    heroImage: '/blog/barry-diller-came-out-at-82.jpg',
     bodyHtml: `
 <p class="llma-lead">Barry Diller — billionaire. Media kingpin. Husband to fashion royalty Diane von Fürstenberg. Married 24 years. Now 82. And gay.</p>
 <p>Let's just sit in that for a second.</p>
@@ -390,7 +390,7 @@ export const posts = [
     author: AUTHOR_TEAM,
     excerpt: "There was a moment — not long ago — when I realized there was no playbook for the life I was trying to build.",
     tags: ['#LifeAndLoveMadeAuthentic', '#LavenderLogs', '#ModernMarriage', '#PowerCoupleEnergy', '#ChosenFamily'],
-    heroImage: null,
+    heroImage: '/blog/when-you-dont-see-the-path-you-become-it.jpg',
     bodyHtml: `
 <p class="llma-lead">There was a moment — not long ago — when I realized there was no playbook for the life I was trying to build.</p>
 <p>I had come out. I had a daughter. I had a wife who had walked through fire with me. We weren't in love anymore — not romantically — but we still loved each other. And we still lived together.</p>
@@ -440,7 +440,7 @@ export const posts = [
     author: AUTHOR_MARTY,
     excerpt: "If you had told me five years ago I'd be launching LLMA — a platform dedicated to redefining partnerships and chosen family — I would have questioned your sanity.",
     tags: ['#LLMA', '#LifeAndLoveMadeAuthentic', '#LavenderMarriage', '#ChosenFamily', '#LavenderLogs'],
-    heroImage: null,
+    heroImage: '/blog/welcome-to-the-lavender-logs.jpg',
     bodyHtml: `
 <p class="llma-lead">If you had told me five years ago I'd be launching LLMA — a platform dedicated to redefining partnerships and chosen family — I would have questioned your sanity.</p>
 <p>My life has been anything but ordinary.</p>

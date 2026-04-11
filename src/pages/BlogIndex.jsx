@@ -90,20 +90,26 @@ export default function BlogIndex() {
         {/* Featured post */}
         <Link to={`/blog/${featured.slug}`} style={{ textDecoration: 'none', display: 'block', marginBottom: 40 }}>
           <article style={{
-            padding: '40px 36px',
             background: '#151214',
             border: '1px solid rgba(255,255,255,0.06)',
             borderRadius: 24,
-            display: 'grid',
-            gridTemplateColumns: '1fr auto',
-            gap: 24,
-            alignItems: 'start',
+            overflow: 'hidden',
             transition: 'border-color 200ms ease',
           }}
             onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(143,92,184,0.4)'; }}
             onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.06)'; }}
           >
-            <div>
+            {featured.heroImage && (
+              <div style={{ width: '100%', aspectRatio: '21/9', maxHeight: 360, overflow: 'hidden', position: 'relative' }}>
+                <img
+                  src={featured.heroImage}
+                  alt={featured.title}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 30%', display: 'block' }}
+                />
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(13,10,11,0) 50%, rgba(13,10,11,0.7) 100%)' }} />
+              </div>
+            )}
+            <div style={{ padding: '32px 36px' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16, flexWrap: 'wrap' }}>
                 <span style={{
                   display: 'inline-block', padding: '3px 10px', borderRadius: 9999,
@@ -126,14 +132,16 @@ export default function BlogIndex() {
               <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.5)', margin: '0 0 20px', lineHeight: 1.65 }}>
                 {featured.excerpt}
               </p>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                <div style={{ width: 28, height: 28, borderRadius: '50%', background: 'linear-gradient(135deg, #8F5CB8, #DC5A4B)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 11, fontWeight: 800, color: '#fff', flexShrink: 0 }}>
-                  {featured.author.initial.charAt(0)}
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                  <div style={{ width: 28, height: 28, borderRadius: '50%', background: 'linear-gradient(135deg, #8F5CB8, #DC5A4B)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 11, fontWeight: 800, color: '#fff', flexShrink: 0 }}>
+                    {featured.author.initial.charAt(0)}
+                  </div>
+                  <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.45)', fontWeight: 500 }}>{featured.author.name}</span>
                 </div>
-                <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.45)', fontWeight: 500 }}>{featured.author.name}</span>
+                <span style={{ color: S.lavender, fontSize: 14, fontWeight: 700 }}>Read story →</span>
               </div>
             </div>
-            <div style={{ color: S.lavender, fontSize: 22, marginTop: 4 }}>→</div>
           </article>
         </Link>
 
@@ -142,41 +150,53 @@ export default function BlogIndex() {
           {rest.map(post => (
             <Link key={post.slug} to={`/blog/${post.slug}`} style={{ textDecoration: 'none' }}>
               <article style={{
-                padding: '28px 24px',
                 background: '#151214',
                 border: '1px solid rgba(255,255,255,0.06)',
                 borderRadius: 20,
                 height: '100%',
                 display: 'flex', flexDirection: 'column',
+                overflow: 'hidden',
                 transition: 'border-color 200ms ease, transform 200ms ease',
               }}
                 onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(143,92,184,0.3)'; e.currentTarget.style.transform = 'translateY(-2px)'; }}
                 onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.06)'; e.currentTarget.style.transform = 'translateY(0)'; }}
               >
-                <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 14, flexWrap: 'wrap' }}>
-                  <span style={{
-                    display: 'inline-block', padding: '3px 10px', borderRadius: 9999,
-                    fontSize: 11, fontWeight: 700, letterSpacing: '0.05em', textTransform: 'uppercase',
-                    background: post.tagBg, color: post.tagColor,
-                  }}>
-                    {post.tag}
-                  </span>
-                  <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.3)' }}>{post.date}</span>
-                </div>
-                <h3 style={{ fontSize: 18, fontWeight: 700, color: '#fff', margin: '0 0 10px', lineHeight: 1.3, letterSpacing: '-0.01em', flexGrow: 1 }}>
-                  {post.title}
-                </h3>
-                <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.45)', margin: '0 0 18px', lineHeight: 1.55 }}>
-                  {post.excerpt}
-                </p>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                    <div style={{ width: 24, height: 24, borderRadius: '50%', background: 'linear-gradient(135deg, #8F5CB8, #DC5A4B)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 9, fontWeight: 800, color: '#fff' }}>
-                      {post.author.initial.charAt(0)}
-                    </div>
-                    <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.35)' }}>{post.author.name}</span>
+                {post.heroImage && (
+                  <div style={{ width: '100%', aspectRatio: '16/9', overflow: 'hidden', flexShrink: 0, position: 'relative' }}>
+                    <img
+                      src={post.heroImage}
+                      alt={post.title}
+                      style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 30%', display: 'block' }}
+                    />
+                    <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(13,10,11,0) 60%, rgba(13,10,11,0.5) 100%)' }} />
                   </div>
-                  <span style={{ fontSize: 13, color: S.lavender, fontWeight: 600 }}>Read →</span>
+                )}
+                <div style={{ padding: '22px 24px', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 12, flexWrap: 'wrap' }}>
+                    <span style={{
+                      display: 'inline-block', padding: '3px 10px', borderRadius: 9999,
+                      fontSize: 11, fontWeight: 700, letterSpacing: '0.05em', textTransform: 'uppercase',
+                      background: post.tagBg, color: post.tagColor,
+                    }}>
+                      {post.tag}
+                    </span>
+                    <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.3)' }}>{post.date}</span>
+                  </div>
+                  <h3 style={{ fontSize: 18, fontWeight: 700, color: '#fff', margin: '0 0 10px', lineHeight: 1.3, letterSpacing: '-0.01em', flexGrow: 1 }}>
+                    {post.title}
+                  </h3>
+                  <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.45)', margin: '0 0 18px', lineHeight: 1.55 }}>
+                    {post.excerpt}
+                  </p>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                      <div style={{ width: 24, height: 24, borderRadius: '50%', background: 'linear-gradient(135deg, #8F5CB8, #DC5A4B)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 9, fontWeight: 800, color: '#fff' }}>
+                        {post.author.initial.charAt(0)}
+                      </div>
+                      <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.35)' }}>{post.author.name}</span>
+                    </div>
+                    <span style={{ fontSize: 13, color: S.lavender, fontWeight: 600 }}>Read →</span>
+                  </div>
                 </div>
               </article>
             </Link>
