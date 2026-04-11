@@ -15,6 +15,80 @@ const AUTHOR_TEAM = {
 export const posts = [
   // ── NEW ──────────────────────────────────────────────────────────────
   {
+    slug: 'selena-benny-lavender-marriage-wrong-question',
+    title: "Why Everyone Keeps Saying Selena and Benny Are in a Lavender Marriage (And Why That's the Wrong Question)",
+    date: 'April 11, 2026',
+    sortDate: new Date('2026-04-11'),
+    tag: 'Culture',
+    tagColor: '#3B82F6',
+    tagBg: 'rgba(59,130,246,0.12)',
+    author: AUTHOR_MARTY,
+    excerpt: "TikTok is convinced Selena Gomez and Benny Blanco are in a lavender marriage. Whether they are or not isn't the interesting part. Here's what this viral obsession is actually telling us about how we think about love.",
+    tags: ['#LLMA', '#LavenderMarriage', '#SelenaGomez', '#ModernMarriage', '#IntentionalRelationships'],
+    heroImage: null,
+    bodyHtml: `
+      <p class="llma-lead">Every few months like clockwork, TikTok remembers that Selena Gomez and Benny Blanco exist, pulls up some clips from a Lakers game, and collectively decides: lavender marriage.</p>
+
+      <p>The compilation videos practically write themselves. He doesn't hold her hand the right way. They look awkward in interviews. Their energy is "off." Someone's sister who "worked in the industry" drops cryptic hints. A hundred thousand people hit repost and the whole cycle starts again.</p>
+
+      <p>I've watched this happen at least four times now. And I want to talk about why we can't stop doing it.</p>
+
+      <hr class="llma-divider">
+
+      <h2>What People Are Actually Looking For</h2>
+      <p>Here's the thing about the Selena and Benny discourse: nobody is really trying to expose them. They're trying to figure out what a "real" relationship looks like.</p>
+
+      <p>The evidence people point to is telling. He doesn't grab her hand on the red carpet. He makes a weird joke in an interview. She seems more comfortable with her friends. They don't look at each other the way we've been trained — by every rom-com, every engagement announcement, every Valentine's Day post — to expect.</p>
+
+      <p>And so the verdict comes down: something must be off.</p>
+
+      <p>But what if nothing is off? What if they're just two people who built a partnership that works for them and doesn't perform for a camera?</p>
+
+      <p>We've been so conditioned to expect love to look a specific way that when it doesn't, our brains fill in the gap with conspiracy.</p>
+
+      <hr class="llma-divider">
+
+      <h2>The More Interesting Question</h2>
+      <p>Whether Selena and Benny are in a lavender marriage isn't really the interesting question here.</p>
+
+      <p>The interesting question is: why do millions of people keep watching their relationship and feeling like they need to decode it?</p>
+
+      <p>Because here's what I think is actually happening. People are looking at their own lives. They're in relationships that feel more like partnerships than love stories. They're building lives with people they care about but aren't passionately in love with. And they're wondering if that's okay, if it's real, if it counts.</p>
+
+      <p>And when they see a famous couple that might be doing the same thing, they can't look away.</p>
+
+      <hr class="llma-divider">
+
+      <h2>What Lavender Marriages Actually Are</h2>
+      <p>For the people in the back: a lavender marriage is a partnership between two people that functions as a marriage but isn't built on traditional romantic or sexual attraction. Historically, they were arrangements of necessity, but in 2026, people are choosing them intentionally.</p>
+
+      <p>For companionship. For stability. For shared goals. For legal and financial benefits. For a million completely valid reasons that don't require a love story.</p>
+
+      <p>And here's what makes them work: honesty. Both people know what they're building and why. There's no performance, no pretending, no checking the rom-com box. Just two people who decided this works for us.</p>
+
+      <div class="llma-quote"><p>"That's not sad. That's actually pretty mature."</p></div>
+
+      <hr class="llma-divider">
+
+      <h2>The Part That Gets Lost in the TikTok Comments</h2>
+      <p>Whether or not the Selena and Benny theories are true, there are real people watching those videos and recognizing something in themselves.</p>
+
+      <p>The person who wants a life partner but doesn't feel that head-over-heels thing. The person in a relationship that works great on paper but doesn't feel like the movies. The person who's been wondering if what they have is "enough" to count.</p>
+
+      <p>Here's what I want those people to hear: your relationship doesn't have to look like anything in particular. The only question worth asking is whether it's honest and whether it actually works for both people involved.</p>
+
+      <p>If TikTok needs to name it a lavender marriage to give it legitimacy, fine. We'll take it.</p>
+
+      <hr class="llma-divider">
+
+      <p>At LLMA, we're building for the people who are tired of forcing their relationship into a shape that was never meant for them. If any of this sounds familiar — whether you're figuring out what you want, looking for a real partner, or just finally ready to stop performing — the app is waiting.</p>
+
+      <p>Come as you are.</p>
+
+      <p><strong><a href="https://apps.apple.com/app/llma">Download LLMA on the App Store</a> and find your people.</strong></p>
+    `,
+  },
+  {
     slug: 'summer-house-proved-it-again',
     title: "Summer House Proved It Again: Relationships Built on Vibes Will Always Implode",
     date: 'April 7, 2026',
