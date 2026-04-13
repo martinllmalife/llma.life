@@ -15,6 +15,61 @@ const AUTHOR_TEAM = {
 export const posts = [
   // ── NEW ──────────────────────────────────────────────────────────────
   {
+    slug: 'gen-z-quit-dating-apps-lavender-marriages-2026',
+    title: "Gen Z Quit Dating Apps and Started Marrying Their Best Friends Instead (Same, Honestly)",
+    date: 'April 13, 2026',
+    sortDate: new Date('2026-04-13'),
+    tag: 'Culture',
+    tagColor: '#3B82F6',
+    tagBg: 'rgba(59,130,246,0.12)',
+    author: AUTHOR_MARTY,
+    excerpt: "Gen Z spends 156 hours a year on dating apps for an average of six meaningful connections. So they quit — and started designing intentional partnerships instead. We're not mad about it.",
+    tags: ['#LLMA', '#LavenderMarriage', '#GenZ', '#IntentionalRelationships', '#ModernMarriage'],
+    heroImage: null,
+    bodyHtml: `
+      <p class="llma-lead">There's a study from February 2026 that I keep thinking about. It found that Gen Z spends 156 hours a year on dating apps. That's almost a full work month. Of swiping. Of waiting. Of rereading "hey" and trying to determine if it has any depth to it. For an average of six meaningful connections a year.</p>
+
+      <p>Six.</p>
+
+      <p>And here's what Gen Z did with that information: they quit.</p>
+
+      <hr class="llma-divider">
+
+      <h2>The Numbers That Made a Generation Tap Out</h2>
+      <p>Interest in lavender marriages — intentional, platonic partnerships between people who actually want to build a life together — is up 200% since 2020. And it's not just the LGBTQ+ community reclaiming the term anymore. Gen Z is rewriting the definition entirely.</p>
+
+      <p>In their version, a lavender marriage is just... designing your partnership on purpose. It might be marrying your best friend. It might mean building a household with someone you love deeply but not romantically. It might mean creating a chosen family structure that looks nothing like the Hallmark movie and everything like your actual life.</p>
+
+      <p>While the rest of us were busy wondering if Selena and Benny were going to make it — and spiraling over that Secret Lives of Mormon Wives divorce, because the emotional affair drama hit different — Gen Z was quietly doing the math and rewriting the equation.</p>
+
+      <hr class="llma-divider">
+
+      <h2>Why "Just Go on More Dates" Isn't the Answer</h2>
+      <p>The Mormon Wives situation is a masterclass in what happens when a marriage is designed around external expectations. Built for the community, the family, the optics — not for the two people actually living inside it. When the honest emotional reality eventually leaked out through a Vanderpump Villa cast member, the whole thing cracked. Because it had to. Performances always do.</p>
+
+      <p>Gen Z watched that play out and basically said: we'd like to skip that part.</p>
+
+      <p>They're not avoiding commitment. They're avoiding the version of commitment that requires you to perform for an audience of people who will never actually share your mortgage. They want the real thing — the stability, the support, the person in your corner at 2am who isn't there because they got swept up in feelings but because they chose you, clearly, on purpose.</p>
+
+      <div class="llma-quote"><p>"That's not settling. That's actually the most serious approach to partnership I've seen in a decade."</p></div>
+
+      <hr class="llma-divider">
+
+      <h2>The Thing About Intentional Design</h2>
+      <p>There's a version of this that scares people. "But what about love? What about passion?"</p>
+
+      <p>Nobody's taking your feelings away. The argument isn't that romance is fake — it's that romance alone has never been a load-bearing foundation for a life together. We've just been pretending it is.</p>
+
+      <p>The couples who last — the ones who are still actually friends after 25 years — didn't just get lucky with feelings. They made a series of choices. To stay. To show up. To be honest when things got uncomfortable. To keep choosing each other even when the butterflies moved out.</p>
+
+      <p>Gen Z is just trying to start with that part. Skip the three years of undefined situationship and land directly on: we're doing this together, intentionally, because we both want the same thing.</p>
+
+      <p>If you're reading this nodding along, you're not alone. The LLMA community is full of people who looked at traditional relationship templates and felt that specific kind of exhaustion — not because they don't want partnership, but because the options presented to them didn't fit.</p>
+
+      <p><strong><a href="https://apps.apple.com/app/llma">Download LLMA on the App Store</a> and find the people who are designing their relationships on purpose.</strong></p>
+    `,
+  },
+  {
     slug: 'selena-benny-lavender-marriage-wrong-question',
     title: "Why Everyone Keeps Saying Selena and Benny Are in a Lavender Marriage (And Why That's the Wrong Question)",
     date: 'April 11, 2026',
