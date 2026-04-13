@@ -63,6 +63,12 @@ function Nav() {
 
 // ── Video Hero ────────────────────────────────────────────────────────────────
 function VideoHero() {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
+
   return (
     <section style={{
       position: 'relative', minHeight: '100vh',
@@ -88,27 +94,41 @@ function VideoHero() {
             border: 'none',
           }}
         />
-        {/* Gradient overlay */}
+        {/* Enhanced gradient overlay for better text contrast */}
         <div style={{
           position: 'absolute', inset: 0,
-          background: 'linear-gradient(to bottom, rgba(13,10,11,0.55) 0%, rgba(13,10,11,0.25) 40%, rgba(13,10,11,0.75) 80%, rgba(13,10,11,1) 100%)',
+          background: 'linear-gradient(to bottom, rgba(13,10,11,0.65) 0%, rgba(13,10,11,0.35) 35%, rgba(13,10,11,0.8) 75%, rgba(13,10,11,1) 100%)',
         }} />
-        {/* Side fade */}
+        {/* Side vignette for focus */}
         <div style={{
           position: 'absolute', inset: 0,
-          background: 'radial-gradient(ellipse at center, transparent 40%, rgba(13,10,11,0.6) 100%)',
+          background: 'radial-gradient(ellipse at center, transparent 35%, rgba(13,10,11,0.7) 100%)',
+        }} />
+        {/* Subtle purple tint overlay */}
+        <div style={{
+          position: 'absolute', inset: 0,
+          background: 'radial-gradient(ellipse at top, rgba(143,92,184,0.08) 0%, transparent 60%)',
         }} />
       </div>
 
-      {/* Content */}
-      <div style={{ position: 'relative', zIndex: 1, padding: '140px 24px 100px', maxWidth: 820, margin: '0 auto' }}>
+      {/* Content with entrance animations */}
+      <div style={{
+        position: 'relative', zIndex: 1, padding: '140px 24px 100px', maxWidth: 820, margin: '0 auto',
+        opacity: isLoaded ? 1 : 0,
+        transform: isLoaded ? 'translateY(0)' : 'translateY(20px)',
+        transition: 'opacity 1s ease-out, transform 1s ease-out',
+      }}>
         <div style={{
           display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 28,
-          background: 'rgba(143,92,184,0.2)', border: '1px solid rgba(143,92,184,0.35)',
-          borderRadius: 9999, padding: '6px 16px',
+          background: 'rgba(143,92,184,0.25)', border: '1px solid rgba(143,92,184,0.4)',
+          borderRadius: 9999, padding: '7px 18px',
           fontSize: 11, fontWeight: 700, color: S.lavender,
           letterSpacing: '0.08em', textTransform: 'uppercase',
-          backdropFilter: 'blur(8px)',
+          backdropFilter: 'blur(12px)',
+          boxShadow: '0 4px 24px rgba(143,92,184,0.15)',
+          opacity: isLoaded ? 1 : 0,
+          transform: isLoaded ? 'translateY(0)' : 'translateY(-10px)',
+          transition: 'opacity 1.2s ease-out 0.2s, transform 1.2s ease-out 0.2s',
         }}>
           ✦ Life &amp; Love Made Authentic
         </div>
@@ -116,13 +136,17 @@ function VideoHero() {
         <h1 style={{
           fontSize: 'clamp(48px, 7.5vw, 88px)', fontWeight: 900,
           lineHeight: 1.04, letterSpacing: '-0.04em', color: '#fff',
-          margin: '0 0 20px',
-          textShadow: '0 2px 40px rgba(0,0,0,0.5)',
+          margin: '0 0 24px',
+          textShadow: '0 4px 48px rgba(0,0,0,0.7), 0 2px 16px rgba(0,0,0,0.5)',
+          opacity: isLoaded ? 1 : 0,
+          transform: isLoaded ? 'translateY(0)' : 'translateY(20px)',
+          transition: 'opacity 1.4s ease-out 0.4s, transform 1.4s ease-out 0.4s',
         }}>
           Partnership built on{' '}
           <span style={{
             background: 'linear-gradient(135deg, #C59FE1 0%, #8F5CB8 50%, #DC5A4B 100%)',
             WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
+            filter: 'drop-shadow(0 2px 12px rgba(197,159,225,0.4))',
           }}>
             intention
           </span>
@@ -130,42 +154,87 @@ function VideoHero() {
         </h1>
 
         <p style={{
-          fontSize: 'clamp(17px, 2.2vw, 21px)', color: 'rgba(255,255,255,0.7)',
-          maxWidth: 560, margin: '0 auto 48px', lineHeight: 1.6,
-          textShadow: '0 1px 12px rgba(0,0,0,0.4)',
+          fontSize: 'clamp(17px, 2.2vw, 21px)', color: 'rgba(255,255,255,0.8)',
+          maxWidth: 560, margin: '0 auto 52px', lineHeight: 1.65,
+          textShadow: '0 2px 16px rgba(0,0,0,0.6)',
+          fontWeight: 500,
+          opacity: isLoaded ? 1 : 0,
+          transform: isLoaded ? 'translateY(0)' : 'translateY(20px)',
+          transition: 'opacity 1.6s ease-out 0.6s, transform 1.6s ease-out 0.6s',
         }}>
           Lavender marriages. Chosen co-parents. Intentional companions. Find your people and build something real.
         </p>
 
-        <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', justifyContent: 'center' }}>
-          <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" style={{
+        <div style={{
+          display: 'flex', gap: 14, flexWrap: 'wrap', justifyContent: 'center',
+          opacity: isLoaded ? 1 : 0,
+          transform: isLoaded ? 'translateY(0)' : 'translateY(20px)',
+          transition: 'opacity 1.8s ease-out 0.8s, transform 1.8s ease-out 0.8s',
+        }}>
+          <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" className="hero-cta-primary" style={{
             display: 'inline-flex', alignItems: 'center', gap: 10,
-            padding: '16px 36px', borderRadius: 9999,
+            padding: '17px 38px', borderRadius: 9999,
             background: S.purple, color: '#fff',
             fontSize: 16, fontWeight: 700, textDecoration: 'none',
-            boxShadow: '0 4px 32px rgba(143,92,184,0.5)',
-          }}>
+            boxShadow: '0 6px 40px rgba(143,92,184,0.6), 0 2px 12px rgba(143,92,184,0.4)',
+            transition: 'transform 0.2s ease, box-shadow 0.2s ease',
+          }}
+            onMouseEnter={e => {
+              e.currentTarget.style.transform = 'translateY(-2px)';
+              e.currentTarget.style.boxShadow = '0 8px 48px rgba(143,92,184,0.7), 0 4px 16px rgba(143,92,184,0.5)';
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = '0 6px 40px rgba(143,92,184,0.6), 0 2px 12px rgba(143,92,184,0.4)';
+            }}
+          >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
             Download on App Store
           </a>
-          <a href="#videos" style={{
+          <a href="#videos" className="hero-cta-secondary" style={{
             display: 'inline-flex', alignItems: 'center', gap: 8,
-            padding: '16px 32px', borderRadius: 9999,
-            background: 'rgba(255,255,255,0.1)', color: '#fff',
-            border: '1px solid rgba(255,255,255,0.2)',
+            padding: '17px 34px', borderRadius: 9999,
+            background: 'rgba(255,255,255,0.12)', color: '#fff',
+            border: '1px solid rgba(255,255,255,0.25)',
             fontSize: 16, fontWeight: 600, textDecoration: 'none',
-            backdropFilter: 'blur(8px)',
-          }}>
+            backdropFilter: 'blur(12px)',
+            transition: 'all 0.2s ease',
+          }}
+            onMouseEnter={e => {
+              e.currentTarget.style.background = 'rgba(255,255,255,0.18)';
+              e.currentTarget.style.borderColor = 'rgba(255,255,255,0.35)';
+              e.currentTarget.style.transform = 'translateY(-2px)';
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.background = 'rgba(255,255,255,0.12)';
+              e.currentTarget.style.borderColor = 'rgba(255,255,255,0.25)';
+              e.currentTarget.style.transform = 'translateY(0)';
+            }}
+          >
             ▶ Watch the Story
           </a>
         </div>
 
-        {/* Scroll indicator */}
-        <div style={{ marginTop: 64, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, opacity: 0.4 }}>
+        {/* Animated scroll indicator */}
+        <div style={{
+          marginTop: 72, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10,
+          opacity: isLoaded ? 0.5 : 0,
+          transition: 'opacity 2s ease-out 1.2s',
+        }}>
           <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#fff' }}>Scroll</div>
-          <div style={{ width: 1, height: 40, background: 'linear-gradient(to bottom, rgba(255,255,255,0.6), transparent)' }} />
+          <div style={{
+            width: 1, height: 44, background: 'linear-gradient(to bottom, rgba(255,255,255,0.6), transparent)',
+            animation: 'scroll-bounce 2s ease-in-out infinite',
+          }} />
         </div>
       </div>
+
+      <style>{`
+        @keyframes scroll-bounce {
+          0%, 100% { transform: translateY(0); opacity: 0.5; }
+          50% { transform: translateY(8px); opacity: 0.8; }
+        }
+      `}</style>
     </section>
   );
 }
@@ -315,35 +384,74 @@ const WHO_CARDS = [
 ];
 
 function WhoItsFor() {
+  const [cardsVisible, setCardsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setCardsVisible(true);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section style={{ padding: '0 24px 100px', fontFamily: S.font }}>
+    <section ref={sectionRef} style={{ padding: '0 24px 100px', fontFamily: S.font }}>
       <div style={{ maxWidth: 1120, margin: '0 auto' }}>
-        <div style={{ textAlign: 'center', marginBottom: 52 }}>
+        <div style={{ textAlign: 'center', marginBottom: 56 }}>
           <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: S.lavender, marginBottom: 16 }}>Who It's For</div>
-          <h2 style={{ fontSize: 'clamp(32px, 4vw, 48px)', fontWeight: 800, color: '#fff', margin: '0 0 16px', letterSpacing: '-0.02em' }}>
+          <h2 style={{ fontSize: 'clamp(32px, 4vw, 48px)', fontWeight: 800, color: '#fff', margin: '0 0 18px', letterSpacing: '-0.02em', lineHeight: 1.15 }}>
             Relationships beyond the conventional
           </h2>
-          <p style={{ fontSize: 18, color: 'rgba(255,255,255,0.45)', maxWidth: 480, margin: '0 auto', lineHeight: 1.6 }}>
+          <p style={{ fontSize: 18, color: 'rgba(255,255,255,0.5)', maxWidth: 500, margin: '0 auto', lineHeight: 1.65, fontWeight: 500 }}>
             LLMA is for people who know exactly what they want — and it doesn't fit in a Hallmark movie.
           </p>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
-          {WHO_CARDS.map(c => (
-            <div key={c.title} style={{
-              padding: '36px 32px', background: S.card,
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 20 }}>
+          {WHO_CARDS.map((c, index) => (
+            <div key={c.title} className="who-card" style={{
+              padding: '40px 36px', background: S.card,
               border: `1px solid ${c.border}`,
-              borderRadius: 20, borderTop: `3px solid ${c.color}`,
-            }}>
+              borderRadius: 24, borderTop: `3px solid ${c.color}`,
+              cursor: 'default',
+              opacity: cardsVisible ? 1 : 0,
+              transform: cardsVisible ? 'translateY(0)' : 'translateY(30px)',
+              transition: `opacity 0.6s ease ${index * 0.15}s, transform 0.6s ease ${index * 0.15}s, border-color 0.3s ease, transform 0.3s ease`,
+            }}
+              onMouseEnter={e => {
+                e.currentTarget.style.borderColor = c.color;
+                e.currentTarget.style.transform = 'translateY(-6px)';
+                e.currentTarget.style.boxShadow = `0 12px 40px ${c.color}20`;
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.borderColor = c.border;
+                e.currentTarget.style.transform = cardsVisible ? 'translateY(0)' : 'translateY(30px)';
+                e.currentTarget.style.boxShadow = 'none';
+              }}
+            >
               <div style={{
-                width: 48, height: 48, borderRadius: 12,
+                width: 52, height: 52, borderRadius: 14,
                 background: c.muted, border: `1px solid ${c.border}`,
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
-                color: c.color, marginBottom: 24,
-              }}>
+                color: c.color, marginBottom: 28,
+                transition: 'transform 0.3s ease',
+              }}
+                onMouseEnter={e => { e.currentTarget.style.transform = 'scale(1.1) rotate(5deg)'; }}
+                onMouseLeave={e => { e.currentTarget.style.transform = 'scale(1) rotate(0deg)'; }}
+              >
                 {c.icon}
               </div>
-              <h3 style={{ fontSize: 18, fontWeight: 700, color: '#fff', margin: '0 0 12px' }}>{c.title}</h3>
-              <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', margin: 0, lineHeight: 1.65 }}>{c.body}</p>
+              <h3 style={{ fontSize: 19, fontWeight: 700, color: '#fff', margin: '0 0 14px', letterSpacing: '-0.01em' }}>{c.title}</h3>
+              <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.55)', margin: 0, lineHeight: 1.7 }}>{c.body}</p>
             </div>
           ))}
         </div>
@@ -762,22 +870,31 @@ function BlogPreview() {
 
 // ── Newsletter ────────────────────────────────────────────────────────────────
 function Newsletter() {
+  const [focusedInput, setFocusedInput] = useState(false);
+
   return (
     <section style={{ padding: '0 24px 100px', fontFamily: S.font }}>
-      <div style={{ maxWidth: 680, margin: '0 auto', textAlign: 'center' }}>
+      <div style={{ maxWidth: 700, margin: '0 auto', textAlign: 'center' }}>
         <div style={{
-          padding: '64px 48px',
-          background: 'linear-gradient(135deg, rgba(143,92,184,0.1) 0%, rgba(220,90,75,0.06) 100%)',
-          border: '1px solid rgba(197,159,225,0.15)',
-          borderRadius: 28,
+          padding: '68px 52px',
+          background: 'linear-gradient(135deg, rgba(143,92,184,0.12) 0%, rgba(220,90,75,0.07) 100%)',
+          border: '1px solid rgba(197,159,225,0.2)',
+          borderRadius: 32,
+          boxShadow: '0 8px 32px rgba(143,92,184,0.1)',
         }}>
-          <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: S.lavender, marginBottom: 16 }}>
-            The Lavender Letter
+          <div style={{
+            display: 'inline-flex', alignItems: 'center', gap: 8,
+            fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase',
+            color: S.lavender, marginBottom: 18,
+            background: 'rgba(143,92,184,0.15)', border: '1px solid rgba(143,92,184,0.25)',
+            borderRadius: 9999, padding: '6px 14px',
+          }}>
+            ✉ The Lavender Letter
           </div>
-          <h2 style={{ fontSize: 'clamp(26px, 3.5vw, 36px)', fontWeight: 800, color: '#fff', margin: '0 0 14px', letterSpacing: '-0.02em' }}>
+          <h2 style={{ fontSize: 'clamp(28px, 3.5vw, 38px)', fontWeight: 800, color: '#fff', margin: '0 0 16px', letterSpacing: '-0.02em', lineHeight: 1.2 }}>
             Weekly stories. Real talk.
           </h2>
-          <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.45)', margin: '0 0 36px', lineHeight: 1.65 }}>
+          <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.5)', margin: '0 0 40px', lineHeight: 1.7, fontWeight: 500 }}>
             New blog posts, TikTok roundups, and community stories — every week. No spam. Just the real stuff.
           </p>
           <form
@@ -786,26 +903,43 @@ function Newsletter() {
               const email = e.target.email.value;
               if (email) window.open(`mailto:martin@llma.life?subject=Newsletter Signup&body=Add me to The Lavender Letter: ${email}`, '_blank');
             }}
-            style={{ display: 'flex', gap: 10, flexWrap: 'wrap', justifyContent: 'center' }}
+            style={{ display: 'flex', gap: 12, flexWrap: 'wrap', justifyContent: 'center' }}
           >
             <input
               type="email" name="email" placeholder="your@email.com" required
+              onFocus={() => setFocusedInput(true)}
+              onBlur={() => setFocusedInput(false)}
               style={{
-                flex: '1 1 220px', padding: '14px 20px', borderRadius: 9999,
-                background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)',
+                flex: '1 1 240px', padding: '16px 24px', borderRadius: 9999,
+                background: focusedInput ? 'rgba(255,255,255,0.1)' : 'rgba(255,255,255,0.07)',
+                border: focusedInput ? '1px solid rgba(143,92,184,0.4)' : '1px solid rgba(255,255,255,0.12)',
                 color: '#fff', fontSize: 15, fontFamily: S.font, outline: 'none',
+                transition: 'all 0.3s ease',
+                boxShadow: focusedInput ? '0 0 0 3px rgba(143,92,184,0.15)' : 'none',
               }}
             />
-            <button type="submit" style={{
-              padding: '14px 28px', borderRadius: 9999,
+            <button type="submit" className="newsletter-submit" style={{
+              padding: '16px 32px', borderRadius: 9999,
               background: S.purple, color: '#fff', border: 'none',
               fontSize: 15, fontWeight: 700, fontFamily: S.font, cursor: 'pointer',
-              boxShadow: '0 4px 20px rgba(143,92,184,0.35)',
-            }}>
+              boxShadow: '0 4px 24px rgba(143,92,184,0.4)',
+              transition: 'all 0.2s ease',
+            }}
+              onMouseEnter={e => {
+                e.currentTarget.style.transform = 'translateY(-2px)';
+                e.currentTarget.style.boxShadow = '0 6px 32px rgba(143,92,184,0.5)';
+                e.currentTarget.style.background = S.purpleHover;
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 4px 24px rgba(143,92,184,0.4)';
+                e.currentTarget.style.background = S.purple;
+              }}
+            >
               Subscribe
             </button>
           </form>
-          <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.2)', marginTop: 16 }}>
+          <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.25)', marginTop: 18, fontWeight: 500 }}>
             Join the community. Unsubscribe anytime.
           </p>
         </div>
