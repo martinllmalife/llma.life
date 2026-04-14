@@ -205,15 +205,16 @@ export default function Press() {
           borderRadius: 24, padding: '40px 44px',
         }}>
           <div>
-            <div style={{
-              width: '100%', aspectRatio: '1', borderRadius: 20,
-              background: 'linear-gradient(135deg, rgba(143,92,184,0.3) 0%, rgba(220,90,75,0.2) 100%)',
-              border: `1px solid ${S.purpleBorder}`,
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              fontSize: 64, marginBottom: 16,
-            }}>
-              💜
-            </div>
+            <img
+              src="/marty-press.jpg"
+              alt="Marty Thomas with Dior the French Bulldog"
+              style={{
+                width: '100%', aspectRatio: '1', borderRadius: 20,
+                objectFit: 'cover', objectPosition: 'center top',
+                border: `1px solid ${S.purpleBorder}`,
+                marginBottom: 16,
+              }}
+            />
             <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
               {[
                 { label: 'Lavender Marriage' },
