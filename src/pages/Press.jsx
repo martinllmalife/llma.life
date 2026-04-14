@@ -30,53 +30,77 @@ const STATS = [
 
 const COVERAGE = [
   {
-    flag: '🇬🇧',
-    outlet: 'Metro UK',
-    date: 'December 31, 2025',
-    headline: 'I\'m a gay man in a lavender marriage — we don\'t have sex but I won\'t divorce my wife',
-    type: 'print',
-  },
-  {
-    flag: '🇬🇧',
     outlet: 'LadBible',
     date: 'December 31, 2025',
     headline: 'Gay man in sexless \'lavender marriage\' explains why he won\'t get divorce',
     type: 'print',
+    url: 'https://www.ladbible.com/lifestyle/lavender-marriage-wife-relationships-divorce-us-arizona-097007-20251231',
+    accent: '#FF5A3D',
+    region: '🇬🇧 UK',
+    featured: true,
   },
   {
-    flag: '🇬🇧',
+    outlet: 'Metro UK',
+    date: 'December 31, 2025',
+    headline: 'I\'m a gay man in a lavender marriage — we don\'t have sex but I won\'t divorce my wife',
+    type: 'print',
+    url: 'https://metro.co.uk/2025/12/31/im-gay-man-lavender-marriage-wont-divorce-wife-22371489/',
+    accent: '#6B8CFF',
+    region: '🇬🇧 UK',
+    featured: true,
+  },
+  {
     outlet: 'Tyla',
     date: 'January 7, 2026',
     headline: 'Man in \'lavender marriage\' explains why he won\'t leave wife despite no sex life',
     type: 'print',
+    url: 'https://www.tyla.com/life/sex-and-relationships/lavender-marriage-gay-man-wife-divorce-relationship-720104-20260107',
+    accent: '#E91E8C',
+    region: '🇬🇧 UK',
+    featured: false,
   },
   {
-    flag: '🇬🇧',
     outlet: 'Need To Know',
     date: 'February 23, 2026',
     headline: 'I\'m in a LAVENDER marriage — we get ridiculed online but we\'ve lasted 14 years',
     type: 'print',
+    url: 'https://needtoknow.co.uk/2026/02/23/im-in-a-lavender-marriage-we-get-ridiculed-online-but-weve-lasted-14-years/',
+    accent: '#1DA1F2',
+    region: '🇬🇧 UK',
+    featured: false,
   },
   {
-    flag: '🇺🇸',
     outlet: 'National Law Review',
     date: 'March 4, 2026',
     headline: 'The First Lavender Marriage Matchmaking App Built by Someone Actually Living One',
     type: 'print',
+    url: 'https://natlawreview.com/press-releases/first-lavender-marriage-matchmaking-app-built-someone-actually-living-one',
+    accent: '#4ADE80',
+    region: '🇺🇸 US',
+    featured: false,
   },
   {
-    flag: '🎙️',
-    outlet: 'The Juicy Scoop with Heather McDonald',
+    outlet: 'The Juicy Scoop',
+    shortName: 'Juicy Scoop',
+    host: 'Heather McDonald',
     date: '2025',
     headline: 'Marty Thomas on Lavender Marriage — living it, building a platform around it',
     type: 'podcast',
+    url: 'https://podcasts.apple.com/us/podcast/juicy-scoop-with-heather-mcdonald/id1135332109',
+    accent: '#F97316',
+    region: '🇺🇸 US',
+    featured: false,
   },
   {
-    flag: '🇦🇺',
-    outlet: 'Saucy Secrets — KIIS Australia',
+    outlet: 'Saucy Secrets',
+    host: 'Jana Hocking · KIIS Australia',
     date: '2025',
     headline: 'Lavender Marriages: what they are, who chooses them, and why it\'s growing',
     type: 'podcast',
+    url: 'https://podcasts.apple.com/us/podcast/saucy-secrets/id1500508979',
+    accent: '#EC4899',
+    region: '🇦🇺 AU',
+    featured: false,
   },
 ];
 
@@ -246,49 +270,212 @@ export default function Press() {
 
       {/* Press Coverage */}
       <section style={{ maxWidth: 900, margin: '0 auto 80px', padding: '0 24px' }}>
-        <h2 style={{ fontSize: 26, fontWeight: 800, letterSpacing: '-0.5px', marginBottom: 8 }}>Press Coverage</h2>
+        <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: 8 }}>
+          <h2 style={{ fontSize: 26, fontWeight: 800, letterSpacing: '-0.5px' }}>Featured Coverage</h2>
+        </div>
         <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.45)', marginBottom: 32 }}>
-          Additional coverage available upon request. The Sun UK feature coming soon.
+          Click any article to read the full story. Additional coverage available upon request.
         </p>
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-          {COVERAGE.map((item, i) => (
-            <div key={i} style={{
-              background: S.card, border: `1px solid ${S.cardBorder}`,
-              borderRadius: 16, padding: '24px 28px',
-              display: 'flex', alignItems: 'flex-start', gap: 20,
-              transition: 'border-color 0.2s',
-            }}>
-              {/* Flag / icon */}
+        {/* Featured articles — large cards */}
+        <div className="press-featured-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginBottom: 16 }}>
+          {COVERAGE.filter(c => c.featured).map((item, i) => (
+            <a
+              key={i}
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="press-card"
+              style={{
+                display: 'block', textDecoration: 'none', color: '#fff',
+                background: S.card,
+                border: `1px solid ${S.cardBorder}`,
+                borderRadius: 20, overflow: 'hidden',
+                transition: 'transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease',
+                position: 'relative',
+              }}
+            >
+              {/* Gradient header area */}
               <div style={{
-                width: 52, height: 52, borderRadius: 12, flexShrink: 0,
-                background: item.type === 'podcast' ? S.coralMuted : S.purpleMuted,
-                border: `1px solid ${item.type === 'podcast' ? S.coralBorder : S.purpleBorder}`,
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                fontSize: 22,
+                height: 140, position: 'relative', overflow: 'hidden',
+                background: `linear-gradient(135deg, ${item.accent}30 0%, ${item.accent}08 50%, transparent 100%)`,
               }}>
-                {item.flag}
-              </div>
-
-              <div style={{ flex: 1, minWidth: 0 }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 6, flexWrap: 'wrap' }}>
-                  <span style={{ fontSize: 13, fontWeight: 800, color: '#fff' }}>{item.outlet}</span>
+                <div style={{
+                  position: 'absolute', top: 16, left: 20,
+                  display: 'flex', alignItems: 'center', gap: 8,
+                }}>
                   <span style={{
-                    fontSize: 11, fontWeight: 700,
-                    color: item.type === 'podcast' ? S.coral : S.lavender,
-                    background: item.type === 'podcast' ? S.coralMuted : S.lavenderMuted,
-                    border: `1px solid ${item.type === 'podcast' ? S.coralBorder : S.lavenderBorder}`,
-                    borderRadius: 20, padding: '2px 10px', textTransform: 'uppercase', letterSpacing: '0.06em',
+                    fontSize: 10, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
+                    color: item.accent, background: `${item.accent}18`,
+                    border: `1px solid ${item.accent}30`,
+                    borderRadius: 20, padding: '4px 12px',
                   }}>
                     {item.type === 'podcast' ? 'Podcast' : 'Press'}
                   </span>
-                  <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.3)' }}>{item.date}</span>
+                  <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.35)' }}>{item.region}</span>
                 </div>
-                <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.75)', lineHeight: 1.5, margin: 0, fontStyle: 'italic' }}>
-                  "{item.headline}"
-                </p>
+                <div style={{
+                  position: 'absolute', bottom: 16, left: 20, right: 20,
+                }}>
+                  <p style={{
+                    fontSize: 22, fontWeight: 900, letterSpacing: '-0.5px',
+                    color: '#fff', lineHeight: 1.15, margin: 0,
+                  }}>
+                    {item.outlet}
+                  </p>
+                  <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.4)', marginTop: 4 }}>{item.date}</p>
+                </div>
+                {/* Decorative accent line */}
+                <div style={{
+                  position: 'absolute', bottom: 0, left: 0, right: 0, height: 1,
+                  background: `linear-gradient(90deg, ${item.accent}60, transparent)`,
+                }} />
               </div>
-            </div>
+              {/* Content */}
+              <div style={{ padding: '20px 20px 24px' }}>
+                <p style={{
+                  fontSize: 15, color: 'rgba(255,255,255,0.7)', lineHeight: 1.55,
+                  margin: 0, fontStyle: 'italic',
+                }}>
+                  &ldquo;{item.headline}&rdquo;
+                </p>
+                <div style={{
+                  display: 'flex', alignItems: 'center', gap: 6, marginTop: 16,
+                  fontSize: 13, fontWeight: 700, color: item.accent,
+                }}>
+                  Read Article
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M7 17L17 7" /><path d="M7 7h10v10" />
+                  </svg>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+
+        {/* All coverage — compact grid */}
+        <div className="press-articles-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 12, marginBottom: 16 }}>
+          {COVERAGE.filter(c => !c.featured && c.type === 'print').map((item, i) => (
+            <a
+              key={i}
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="press-card"
+              style={{
+                display: 'block', textDecoration: 'none', color: '#fff',
+                background: S.card,
+                border: `1px solid ${S.cardBorder}`,
+                borderRadius: 16, padding: '20px',
+                transition: 'transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease',
+                position: 'relative',
+              }}
+            >
+              {/* Accent dot + outlet */}
+              <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 12 }}>
+                <div style={{
+                  width: 8, height: 8, borderRadius: '50%', flexShrink: 0,
+                  background: item.accent,
+                  boxShadow: `0 0 8px ${item.accent}60`,
+                }} />
+                <span style={{ fontSize: 12, fontWeight: 800, color: '#fff' }}>{item.outlet}</span>
+              </div>
+              {/* Region + date */}
+              <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 10 }}>
+                <span style={{
+                  fontSize: 10, fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase',
+                  color: item.accent, background: `${item.accent}15`,
+                  border: `1px solid ${item.accent}25`,
+                  borderRadius: 20, padding: '2px 8px',
+                }}>
+                  {item.region}
+                </span>
+                <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.3)' }}>{item.date}</span>
+              </div>
+              {/* Headline */}
+              <p style={{
+                fontSize: 13, color: 'rgba(255,255,255,0.65)', lineHeight: 1.5,
+                margin: '0 0 14px', fontStyle: 'italic',
+                display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden',
+              }}>
+                &ldquo;{item.headline}&rdquo;
+              </p>
+              {/* Read link */}
+              <div style={{
+                display: 'flex', alignItems: 'center', gap: 4,
+                fontSize: 12, fontWeight: 700, color: item.accent,
+              }}>
+                Read
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M7 17L17 7" /><path d="M7 7h10v10" />
+                </svg>
+              </div>
+            </a>
+          ))}
+        </div>
+
+        {/* Podcast appearances */}
+        <div className="press-podcasts-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+          {COVERAGE.filter(c => c.type === 'podcast').map((item, i) => (
+            <a
+              key={i}
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="press-card"
+              style={{
+                display: 'flex', alignItems: 'flex-start', gap: 16,
+                textDecoration: 'none', color: '#fff',
+                background: S.card,
+                border: `1px solid ${S.cardBorder}`,
+                borderRadius: 16, padding: '20px',
+                transition: 'transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease',
+              }}
+            >
+              {/* Podcast icon */}
+              <div style={{
+                width: 48, height: 48, borderRadius: 12, flexShrink: 0,
+                background: `linear-gradient(135deg, ${item.accent}25, ${item.accent}08)`,
+                border: `1px solid ${item.accent}30`,
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                fontSize: 20,
+              }}>
+                🎙️
+              </div>
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4 }}>
+                  <span style={{ fontSize: 14, fontWeight: 800, color: '#fff' }}>{item.outlet}</span>
+                  <span style={{
+                    fontSize: 10, fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase',
+                    color: item.accent, background: `${item.accent}15`,
+                    border: `1px solid ${item.accent}25`,
+                    borderRadius: 20, padding: '2px 8px',
+                  }}>
+                    Podcast
+                  </span>
+                </div>
+                {item.host && (
+                  <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.4)', margin: '0 0 6px' }}>
+                    {item.host}
+                  </p>
+                )}
+                <p style={{
+                  fontSize: 13, color: 'rgba(255,255,255,0.6)', lineHeight: 1.45,
+                  margin: '0 0 10px', fontStyle: 'italic',
+                }}>
+                  &ldquo;{item.headline}&rdquo;
+                </p>
+                <div style={{
+                  display: 'flex', alignItems: 'center', gap: 4,
+                  fontSize: 12, fontWeight: 700, color: item.accent,
+                }}>
+                  Listen
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M7 17L17 7" /><path d="M7 7h10v10" />
+                  </svg>
+                </div>
+              </div>
+            </a>
           ))}
         </div>
       </section>
@@ -392,10 +579,19 @@ export default function Press() {
             background: S.purpleMuted, border: `1px solid ${S.purpleBorder}`,
             borderRadius: 16, padding: '20px 24px', textAlign: 'center',
           }}>
-            <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', marginBottom: 4 }}>As seen in</p>
-            <p style={{ fontSize: 15, fontWeight: 700, color: S.lavender, lineHeight: 1.6 }}>
-              Metro UK · LadBible · Tyla · Need To Know · National Law Review
-            </p>
+            <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', marginBottom: 8 }}>As seen in</p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 6 }}>
+              {COVERAGE.filter(c => c.type === 'print').map((c, i) => (
+                <a key={i} href={c.url} target="_blank" rel="noopener noreferrer" style={{
+                  fontSize: 12, fontWeight: 700, color: S.lavender, textDecoration: 'none',
+                  background: 'rgba(197,159,225,0.08)', border: '1px solid rgba(197,159,225,0.15)',
+                  borderRadius: 20, padding: '4px 12px',
+                  transition: 'background 0.2s',
+                }}>
+                  {c.outlet}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </section>

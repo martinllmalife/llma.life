@@ -27,6 +27,13 @@
 body { margin: 0; background: #0D0A0B; }
 #root { min-height: 100vh; }
 
+/* ── Press card hover effects ─────────────────────────────────────────── */
+.press-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255,255,255,0.15) !important;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.06);
+}
+
 /* ── Mobile responsive overrides ───────────────────────────────────────── */
 @media (max-width: 768px) {
   /* Nav — hide secondary links, keep logo + CTA */
@@ -60,6 +67,11 @@ body { margin: 0; background: #0D0A0B; }
   /* Community page — stack multi-column grids */
   .community-two-col { grid-template-columns: 1fr !important; }
   .community-three-col { grid-template-columns: 1fr !important; }
+
+  /* Press page — stack grids on mobile */
+  .press-featured-grid { grid-template-columns: 1fr !important; }
+  .press-articles-grid { grid-template-columns: 1fr !important; }
+  .press-podcasts-grid { grid-template-columns: 1fr !important; }
 }
 
 h1,
