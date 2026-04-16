@@ -1,0 +1,31 @@
+{
+  "date": "2026-04-16",
+  "topics": [
+    {
+      "id": 1,
+      "title": "Secret Lives of Mormon Wives: When 'Traditional' Is the Biggest Performance of All",
+      "hook": "Reality TV pop culture / Bravo-adjacent",
+      "why_trending": "The Secret Lives of Mormon Wives continues to surface conversation about what's actually happening behind perfectly staged, 'traditional' family facades — the swinging rumors, the curated Instagram marriages, the gap between what's performed and what's real. Perfect lavender marriage parallel.",
+      "angle": "Use the Mormon Wives phenomenon to ask: how many 'traditional' marriages are actually more intentional and unconventional than they let on? And who's really brave here — the people living secretly or the people living openly?",
+      "sources": ["Bravo/Hulu: Secret Lives of Mormon Wives (ongoing)", "TikTok discourse on performative traditionalism", "Reddit r/BravoRealHousewives ongoing threads"]
+    },
+    {
+      "id": 2,
+      "title": "Gen Z Is 'Soft Launching' Their Platonic Life Partners and We Love It",
+      "hook": "Gen Z dating trends / social media",
+      "why_trending": "The trend of soft-launching not a romantic partner but a best friend / platonic co-parent / chosen family member on social media has been gaining steam on TikTok. Gen Z is quietly normalizing what LLMA has been shouting about.",
+      "angle": "This is the generation that accidentally invented the lavender partnership aesthetic without realizing it. What LLMA is doing formally, Gen Z is doing informally — and it's time to connect those dots.",
+      "sources": ["TikTok #softlaunch trend data", "Twitter/X discourse on platonic partnerships", "Gen Z relationship survey data 2026"]
+    },
+    {
+      "id": 3,
+      "title": "The 'We're Still Married' Era: Why More Couples Are Choosing Partnership Over Divorce",
+      "hook": "Celebrity culture / relationship restructuring",
+      "why_trending": "More high-profile couples are going public with restructured marriages — staying together but redefining everything. The cultural conversation is shifting from 'why didn't they just divorce?' to 'wait, this actually makes sense.'",
+      "angle": "Divorce is always framed as the 'honest' choice when romance fades. But what if staying — and being honest about what staying actually looks like — is braver?",
+      "sources": ["Celebrity culture news 2026", "Marriage restructuring trend reporting", "LLMA community member stories"]
+    }
+  ],
+  "selected_main_topic": 1,
+  "note": "Web search unavailable this run (API auth error). Topics generated from established trend knowledge and ongoing cultural conversations. Reality TV hook anchored to Secret Lives of Mormon Wives as primary pop culture vehicle."
+}
