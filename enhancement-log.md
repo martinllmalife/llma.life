@@ -4,6 +4,17 @@ This log tracks automated UI enhancements made by the Claude Code agent.
 
 ---
 
+## [2026-04-16 — Content Drop Run]
+- **Component**: blogPosts.js (content)
+- **File**: src/content/blogPosts.js
+- **Change**: Added new blog post "Secret Lives of Mormon Wives Accidentally Made a Lavender Marriage Documentary" (April 16, 2026). Resolved merge conflict preserving all 3 upstream posts from prior run (Apr 7, 11, 13). New post is now the top/newest entry.
+- **Content Drop**: content-drops/2026-04-16/ — TikTok script (Mormon Wives lavender marriage hook), Instagram carousel (7 slides), Q&A snippet (platonic life partnership), blog post (published to llma.life via GitHub push)
+- **Topic Hook**: Secret Lives of Mormon Wives as accidental lavender marriage documentary
+- **Published**: Pushed to `main` → Vercel auto-deploy triggered
+- **Tool**: Scheduled content agent (llma-daily-content-drop)
+
+---
+
 ## 2026-04-12 19:17 — Auto-Enhancement Run
 
 ### VideoHero Section
