@@ -13,6 +13,42 @@ const AUTHOR_TEAM = {
 };
 
 export const posts = [
+  // ── NEW (2026-04-18) ───────────────────────────────────────────────────
+  {
+    slug: 'kyle-richards-mauricio-quiet-divorce-script',
+    title: "Kyle Richards And Mauricio Umansky Accidentally Wrote The Divorce Script I've Been Waiting For",
+    date: 'April 18, 2026',
+    sortDate: new Date('2026-04-18'),
+    tag: 'Culture',
+    tagColor: '#3B82F6',
+    tagBg: 'rgba(59,130,246,0.12)',
+    author: AUTHOR_MARTY,
+    excerpt: "Kyle Richards says she and Mauricio have been separated for 2.5 years with no paperwork and no fighting. It's the most quietly revolutionary thing on Bravo right now.",
+    tags: ['#LLMA', '#LavenderMarriage', '#KyleRichards', '#RHOBH', '#QuietDivorce'],
+    heroImage: null,
+    bodyHtml: `
+      <p class="llma-lead">Kyle Richards went on The Bossticks podcast a couple weeks ago and dropped one of the most quietly radical quotes I've heard on Bravo in a long time. Two and a half years separated from Mauricio Umansky, no paperwork filed, no lawyers pushing, no third party involved. Her line, roughly: they're doing it on their own terms, in their own time, and there's no reason to fight.</p>
+      <p>The comments want a verdict. Are they together? Over? Faking? Getting back together? Somebody tried to splice a timeline that would pin her down.</p>
+      <p>She isn't doing a verdict. And I think that's the entire story.</p>
+      <hr class="llma-divider">
+      <h2>The Scripts We've Been Handed</h2>
+      <p>Reality TV usually gives us two marriage endings. Either it's a public fireball — reunion tears, property fights, Instagram unfollow, a whole season of allies picking sides. Or it's the "stay together for the optics" version, where two people who are clearly done pretend they aren't because the brand requires it.</p>
+      <p>Kyle and Mauricio are refusing both scripts. They're modeling a third option that almost nobody on Bravo has committed to on camera, which is: we got it wrong as a romance, we got it right as a family, and we are not going to burn down the second part to prove the first part is over.</p>
+      <p>They aren't the only ones doing it. Divorce lawyers are saying out loud that the divorce-party era is gone. Sai De Silva is going through it, Kandi Burruss is going through it, and more and more of these announcements are coming out as short, respectful statements instead of season-long gladiator matches.</p>
+      <div class="llma-quote"><p>"We built a beautiful life and family. There's no reason to fight." — the most LLMA quote a Real Housewife has ever said.</p></div>
+      <hr class="llma-divider">
+      <h2>Why This Is A Lavender Marriage Muscle</h2>
+      <p>I know this sounds like a weird pivot, but stay with me. A lavender marriage works because two people name what they actually want before they sign anything, and the partnership reflects the real terms. No performance. No hidden clauses. Just clarity.</p>
+      <p>The Kyle and Mauricio thing is the same muscle pointed in the opposite direction. Instead of naming what a partnership is at the start, they're naming what it's becoming at the end. "We love each other. We respect each other. The romantic marriage is over. The co-parenting partnership isn't. We're figuring it out on our own timeline." That is a contract being rewritten in real time, out loud, with consent.</p>
+      <p>The vocabulary for this already exists in queerplatonic partnership and relationship anarchy communities. Two people deeply, explicitly committed to each other, on terms that don't fit the rom-com template. The words are sitting right there. Bravo just hasn't picked them up yet.</p>
+      <hr class="llma-divider">
+      <h2>The Takeaway For People Not On A Reality Show</h2>
+      <p>Most of us will never have a premiere episode about our split. We will, however, at some point have a relationship that needs to change shape. Maybe it's a marriage that stops being a romance but still wants to be a family. Maybe it's a best-friend partnership that evolves into a business partnership. Maybe it's something you don't have a word for yet.</p>
+      <p>The move is the same move LLMA has been banging the drum about from day one. Say out loud what this is becoming. Say what you still want from each other. Take the default divorce script off the table and build the paperwork that actually matches your lives.</p>
+      <p>Kyle and Mauricio are not out here launching a brand. They're just refusing to let a camera force them into a fight they don't actually want. But the example is sitting right there for anyone paying attention.</p>
+      <p><strong><a href="https://apps.apple.com/app/llma">Download LLMA on the App Store</a> and build — or rebuild — the partnership you actually want. Stay Bold. Stay Inspired.</strong></p>
+    `,
+  },
   // ── NEW (2026-04-16) ───────────────────────────────────────────────────
   {
     slug: 'secret-lives-mormon-wives-lavender-marriage-documentary',
