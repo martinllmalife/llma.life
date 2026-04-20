@@ -13,6 +13,59 @@ const AUTHOR_TEAM = {
 };
 
 export const posts = [
+  // ── NEW (2026-04-19) ───────────────────────────────────────────────────
+  {
+    slug: 'summer-house-amanda-kyle-divorce-performed-vs-designed-relationship',
+    title: "The Amanda and Kyle \"Perfect Marriage\" Just Collapsed — And Summer House Is Accidentally Teaching Us Something Important",
+    date: 'April 19, 2026',
+    sortDate: new Date('2026-04-19'),
+    tag: 'Culture',
+    tagColor: '#3B82F6',
+    tagBg: 'rgba(59,130,246,0.12)',
+    author: AUTHOR_MARTY,
+    excerpt: "Amanda Batula and Kyle Cooke's Summer House divorce is getting treated like a scandal. It's not. It's what happens when two people build a relationship for the cameras and then have to figure out what's underneath.",
+    tags: ['#LLMA', '#LavenderMarriage', '#SummerHouse', '#BravoTV', '#IntentionalRelationships'],
+    heroImage: null,
+    bodyHtml: `
+<p class="llma-lead">If you've been on the internet this month, you know. Amanda Batula confirmed she's with West Wilson. Kyle Cooke is somewhere processing. Ciara Miller gave exactly one pointed quote and got out of the blast radius. The Summer House reunion is allegedly a diplomatic nightmare.</p>
+<p>And everyone is treating this like a scandal.</p>
+<p>I want to offer a different read: this isn't a scandal. It's a case study. And honestly, it's one of the more honest things to come out of reality TV in a while.</p>
+<hr class="llma-divider">
+<h2>The "Perfect Bravo Couple" Problem</h2>
+<p>Kyle and Amanda were Bravo's answer to relationship goals. Eight seasons. Engagement content. Wedding content. "Are they doing okay?" content. "They're totally doing okay" content. Brand deals built around their coupledom.</p>
+<p>Their relationship was, for a long time, one of the stickier storylines on Summer House precisely because it looked so aspirational. Kyle, the entrepreneur. Amanda, the creative. Together forever in the Hamptons. Curated to within an inch of its life.</p>
+<p>And now it's over. And West, Ciara's ex, is the next chapter.</p>
+<div class="llma-quote"><p>"Here's my question: what did we think was going to happen?"</p></div>
+<hr class="llma-divider">
+<h2>When the Performance Has to Stop</h2>
+<p>Here's something I've noticed in every high-visibility couple dissolution: there's always a moment where someone has to stop performing.</p>
+<p>Not because they're bad people. Not because the love wasn't real at some point. But because performing a relationship for an audience — any audience, whether it's 4 million Bravo viewers or your Instagram followers or just your family at Christmas — is not the same thing as building one.</p>
+<p>Kyle and Amanda were incentivized to be a couple in a very public, very specific way. Their fights got airtime. Their reconciliations got airtime. The audience had opinions about their relationship. That's not pressure any marriage is designed to absorb.</p>
+<p>When the cameras stopped making the relationship profitable as a storyline, they had to figure out what was actually underneath it. And apparently: not enough.</p>
+<p>That's not shade. That is what happens.</p>
+<hr class="llma-divider">
+<h2>What "Designed" Looks Like Instead</h2>
+<p>The couples I see actually work — the ones I talk to through LLMA, the ones across our 20+ country community who keep messaging me that they found their person — they didn't build a relationship for an audience. They built it for themselves.</p>
+<p>They started with honest conversations about what they actually wanted before they were too invested to change course. They designed their partnership on purpose instead of falling into a storyline and hoping it held.</p>
+<p>That looks like:</p>
+<ul class="llma-list">
+  <li>Two people who agree what "commitment" means to them before they commit</li>
+  <li>A partnership where the support structure is real, not curated</li>
+  <li>Choosing someone because of who they actually are, not because the relationship looks good from the outside</li>
+  <li>Being willing to say "this isn't working" before eight seasons go by</li>
+</ul>
+<p>Some of those partnerships look traditional. Some don't. Some are what we'd call lavender marriages — intentional, designed, sometimes platonic, always honest. Some are romantic and also real.</p>
+<p>The common thread: they started with the design, not the performance.</p>
+<hr class="llma-divider">
+<h2>The Summer House Lesson</h2>
+<p>I genuinely don't know what was or wasn't real between Kyle and Amanda. None of us do, and that's kind of the point. We knew the version they showed us. We liked that version. And now the version is over, and Ciara Miller is giving quote-worthy sound bites about the 45-minute notice she received, and the whole thing is imploding in the very public way it was always going to implode.</p>
+<p>The lesson isn't "don't go on Bravo." (Though, maybe.) The lesson is that a relationship built primarily around its own narrative has a structural problem from the start.</p>
+<div class="llma-quote llma-quote--teal"><p>"You can't design a marriage in the editing room."</p></div>
+<p>LLMA is the alternative. Download it. Find your person. Start with the honest conversation, not the narrative.</p>
+<p><strong><a href="https://apps.apple.com/us/app/llma-intentional-partnerships/id6760886909">Download LLMA on the App Store</a> — because your partnership should be built for your life, not your storyline.</strong></p>
+`,
+  },
+
   // ── NEW (2026-04-18) ───────────────────────────────────────────────────
   {
     slug: 'kyle-richards-mauricio-quiet-divorce-script',
@@ -49,6 +102,7 @@ export const posts = [
       <p><strong><a href="https://apps.apple.com/app/llma">Download LLMA on the App Store</a> and build — or rebuild — the partnership you actually want. Stay Bold. Stay Inspired.</strong></p>
     `,
   },
+
   // ── NEW (2026-04-16) ───────────────────────────────────────────────────
   {
     slug: 'secret-lives-mormon-wives-lavender-marriage-documentary',
