@@ -4,6 +4,18 @@ This log tracks automated UI enhancements made by the Claude Code agent.
 
 ---
 
+## [2026-04-20 — Content Drop Run]
+- **Component**: blogPosts.js (content)
+- **File**: src/content/blogPosts.js
+- **Change**: Added new blog post "The Amanda and Kyle 'Perfect Marriage' Just Collapsed — And Summer House Is Accidentally Teaching Us Something Important" (April 19, 2026). Resolved merge conflict preserving the Apr 18 post (Kyle Richards / Mauricio quiet divorce) that had been pushed remotely.
+- **Content Drop**: content-drops/2026-04-19/ — TikTok script, Instagram carousel (7 slides), Q&A snippet, blog post (published to llma.life via GitHub push)
+- **Topic Hook**: Amanda Batula + Kyle Cooke Summer House divorce / West Wilson love triangle as lavender marriage "performed vs. designed relationship" case study
+- **Secondary topics researched**: Gen Z lavender marriages for financial stability (TikTok trend), Secret Lives of Mormon Wives Season 5 filming resumes
+- **Published**: Pushed to `main` → Vercel auto-deploy triggered
+- **Tool**: Scheduled content agent (llma-daily-content-drop)
+
+---
+
 ## [2026-04-16 — Content Drop Run]
 - **Component**: blogPosts.js (content)
 - **File**: src/content/blogPosts.js
