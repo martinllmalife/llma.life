@@ -4,6 +4,14 @@ This log tracks automated UI enhancements made by the Claude Code agent.
 
 ---
 
+## [2026-04-21 — Content Drop Run]
+- **Component**: blogPosts.js (content)
+- **File**: src/content/blogPosts.js
+- **Change**: Added new blog post "The Real Summer House Breakup Was Ciara and Amanda" (April 21, 2026). Angle: Ciara Miller's 'major mindf--k' quote used to explore why platonic bonds deserve the same intentionality as romantic ones. Pop culture hook: Amanda Batula + West Wilson + Ciara Miller triangle, Season 10 reunion context.
+- **Content drop**: 4 pieces generated in content-drops/2026-04-21/ (topics JSON, TikTok script, blog post MD, Instagram carousel, Q&A snippet)
+- **Topics researched**: (1) Ciara/Amanda friendship betrayal via Summer House drama, (2) Platonic Life Partners TikTok trend 13.5M views, (3) Gen Z redefining marriage — 58% say optional
+- **Published**: Pushed to GitHub main → Vercel auto-deploy triggered
+
 ## [2026-04-20 — Content Drop Run]
 - **Component**: blogPosts.js (content)
 - **File**: src/content/blogPosts.js
@@ -56,3 +64,14 @@ This log tracks automated UI enhancements made by the Claude Code agent.
 - **Typography**: Enhanced text shadows for better readability over video backgrounds
 - **Color harmony**: Maintained lavender/purple brand palette (#8F5CB8, #C59FE1) throughout
 - **Performance**: CSS transitions only (no JS animation libraries)
+
+## [2026-04-20 00:00] — Content Drop Run
+- **Blog Post**: "The Amanda and Kyle Perfect Marriage Just Collapsed — and Honestly, Good For Them"
+- **File**: src/content/blogPosts.js (slug: amanda-kyle-perfect-marriage-just-collapsed)
+- **TikTok Script**: content-drops/2026-04-20/tiktok_script.txt
+- **Instagram Carousel**: content-drops/2026-04-20/instagram_carousel.txt
+- **Q&A Snippet**: content-drops/2026-04-20/qa_snippet.txt
+- **Topics**: content-drops/2026-04-20/_topics.json
+- **Hook**: Amanda Batula + Kyle Cooke Summer House split / brand marriage concept
+- **Secondary hook**: Secret Lives of Mormon Wives S4 lavender marriage speculation
+- **Published**: Pushed to main, Vercel auto-deploy triggered
