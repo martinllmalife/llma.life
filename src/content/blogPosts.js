@@ -13,6 +13,55 @@ const AUTHOR_TEAM = {
 };
 
 export const posts = [
+  // ── NEW (2026-04-21) ───────────────────────────────────────────────────
+  {
+    slug: 'the-real-summer-house-breakup-was-ciara-and-amanda',
+    title: "The Real Summer House Breakup Was Ciara and Amanda",
+    date: 'April 21, 2026',
+    sortDate: new Date('2026-04-21'),
+    tag: 'Culture',
+    tagColor: '#3B82F6',
+    tagBg: 'rgba(59,130,246,0.12)',
+    author: AUTHOR_MARTY,
+    excerpt: "Ciara Miller called Amanda Batula's new romance a 'major mindf--k' and said she felt more betrayed by her friend than her ex. That one quote just explained everything wrong with how we treat platonic love.",
+    tags: ['#LLMA', '#SummerHouse', '#CiaraMiller', '#PlatonicPartnership', '#IntentionalRelationships'],
+    heroImage: null,
+    bodyHtml: `
+<p class="llma-lead">Everyone is watching Amanda Batula and West Wilson hold hands at a Yankees game. Good for them. Truly.</p>
+<p>But I'm still on Ciara Miller's Glamour quote.</p>
+<p>"You can't put anything past a man."</p>
+<p>That's funny. That's quotable. That belongs on a coffee mug in a breakup recovery kit.</p>
+<p>But here's the sentence that actually stopped me cold: Ciara said she felt <strong>more betrayed by Amanda than by West.</strong></p>
+<p>Not her ex. Her friend.</p>
+<p>And that's the story that nobody is telling.</p>
+<hr class="llma-divider">
+<h2>The Part Everyone Keeps Skipping Past</h2>
+<p>Let's recap for the people who don't have Bravo push notifications (how are you living). West Wilson was with Ciara Miller. Then he and Amanda Batula — who separated from Kyle Cooke in January, who was also Ciara's close friend — released a joint Instagram statement on March 31 confirming they were together. Ciara found out less than 24 hours before that statement dropped.</p>
+<p>Amanda has since apologized. West clarified timelines. The Season 10 reunion is coming.</p>
+<p>But forget the couple for a second. The real headline is Ciara's emotional math. She expected more from Amanda than from West. "You can't put anything past a man" is a whole worldview — the implicit part is: <strong>but I thought my friend was different.</strong></p>
+<p>That expectation? That's the whole problem.</p>
+<hr class="llma-divider">
+<h2>We Have Elaborate Rules for Romantic Love and Vibes for Everything Else</h2>
+<p>Think about how much infrastructure we've built around romantic partnerships.</p>
+<p>We sign legal documents. We buy rings. We write vows. We have ceremonies with a hundred people watching. We have couples counseling and The Five Love Languages and relationship podcasts and apps and entire Netflix series about what happens when romantic bonds break down.</p>
+<p>Our platonic bonds? We protect those with... vibes.</p>
+<p>Maybe a "best friend" title. Maybe a group chat called "the girls" or "the boys." Maybe an annual birthday dinner if you're organized.</p>
+<p>That's the whole framework.</p>
+<p>No agreements about what loyalty looks like when things get complicated. No conversations about what happens when a romantic situation overlaps with the friend group. No clarity about what a heads-up actually means or how much notice counts as respect.</p>
+<p>So when it breaks — when Ciara gets a less-than-24-hours warning before the public announcement — we're shocked. But we shouldn't be. We never built anything that could hold the weight.</p>
+<hr class="llma-divider">
+<h2>What Your Platonic Partnerships Actually Deserve</h2>
+<p>Here's what I want to propose. Your platonic partnerships are real partnerships. They deserve the same intentionality you give (or aspire to give) to your romantic ones.</p>
+<p>That doesn't mean contracts and vows. It means conversations.</p>
+<p>What does loyalty look like in this friendship when things get complicated? What's the agreement about discretion? About timing? About bringing things to each other first?</p>
+<p>This is what LLMA is actually about. Not just lavender marriages and romantic alternatives — but designing ALL your relationships with clarity. Romantic and platonic. Because the people you build your life with, whatever the label, deserve more than vibes.</p>
+<p>Ciara deserved a real conversation. Not a 24-hour heads-up. Amanda probably knows that now.</p>
+<div class="llma-quote"><p>"The only failure is pretending your relationship — any relationship — is something it's not."</p></div>
+<p>The question is what you're going to do with yours before you get to that moment.</p>
+<p><strong><a href="https://apps.apple.com/us/app/llma-intentional-partnerships/id6760886909">Download LLMA on the App Store</a> — because the people you build your life with deserve more than vibes. Stay Bold. Stay Inspired.</strong></p>
+`,
+  },
+
   // ── NEW (2026-04-20) ───────────────────────────────────────────────────
   {
     slug: 'amanda-kyle-perfect-marriage-just-collapsed',
