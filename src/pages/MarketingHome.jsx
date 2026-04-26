@@ -461,52 +461,80 @@ function WhoItsFor() {
 }
 
 // ── Guide Promo ───────────────────────────────────────────────────────────────
+function GuidePromoCard({ to, external, eyebrow, title, body, cta }) {
+  const cardStyle = {
+    display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+    padding: '40px 48px', borderRadius: 24, gap: 28, flexWrap: 'wrap',
+    background: 'linear-gradient(135deg, rgba(143,92,184,0.12) 0%, rgba(220,90,75,0.06) 100%)',
+    border: '1px solid rgba(143,92,184,0.25)',
+    textDecoration: 'none',
+  };
+  const inner = (
+    <>
+      <div>
+        <div style={{
+          fontSize: 11, fontWeight: 700, letterSpacing: '0.1em',
+          textTransform: 'uppercase', color: S.lavender, marginBottom: 14,
+        }}>
+          {eyebrow}
+        </div>
+        <h2 style={{
+          fontSize: 'clamp(22px, 2.6vw, 30px)', fontWeight: 800,
+          color: '#fff', margin: '0 0 12px', letterSpacing: '-0.02em', lineHeight: 1.2,
+        }}>
+          {title}
+        </h2>
+        <p style={{
+          fontSize: 16, color: 'rgba(255,255,255,0.45)',
+          margin: 0, lineHeight: 1.65, maxWidth: 520,
+        }}>
+          {body}
+        </p>
+      </div>
+      <div style={{
+        display: 'inline-flex', alignItems: 'center', gap: 8,
+        padding: '14px 30px', borderRadius: 9999, flexShrink: 0,
+        background: S.purple, color: '#fff',
+        fontSize: 15, fontWeight: 700,
+        boxShadow: '0 4px 24px rgba(143,92,184,0.35)',
+      }}>
+        {cta} →
+      </div>
+    </>
+  );
+  if (external) {
+    return (
+      <a href={to} target="_blank" rel="noopener noreferrer" style={cardStyle}>
+        {inner}
+      </a>
+    );
+  }
+  return (
+    <Link to={to} style={cardStyle}>
+      {inner}
+    </Link>
+  );
+}
+
 function GuidePromo() {
   return (
     <section style={{ padding: '0 24px 100px', fontFamily: S.font }}>
-      <div style={{ maxWidth: 1120, margin: '0 auto' }}>
-        <a
-          href="https://www.llma.app/find-lavender-marriage-partner"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-            padding: '44px 56px', borderRadius: 24, gap: 32, flexWrap: 'wrap',
-            background: 'linear-gradient(135deg, rgba(143,92,184,0.12) 0%, rgba(220,90,75,0.06) 100%)',
-            border: '1px solid rgba(143,92,184,0.25)',
-            textDecoration: 'none',
-          }}
-        >
-          <div>
-            <div style={{
-              fontSize: 11, fontWeight: 700, letterSpacing: '0.1em',
-              textTransform: 'uppercase', color: S.lavender, marginBottom: 14,
-            }}>
-              Free Guide
-            </div>
-            <h2 style={{
-              fontSize: 'clamp(22px, 3vw, 34px)', fontWeight: 800,
-              color: '#fff', margin: '0 0 12px', letterSpacing: '-0.02em', lineHeight: 1.2,
-            }}>
-              How to Actually Find a Lavender Marriage Partner
-            </h2>
-            <p style={{
-              fontSize: 16, color: 'rgba(255,255,255,0.45)',
-              margin: 0, lineHeight: 1.65, maxWidth: 520,
-            }}>
-              A complete guide — from understanding what you're looking for to your first real conversation with someone who gets it.
-            </p>
-          </div>
-          <div style={{
-            display: 'inline-flex', alignItems: 'center', gap: 8,
-            padding: '14px 30px', borderRadius: 9999, flexShrink: 0,
-            background: S.purple, color: '#fff',
-            fontSize: 15, fontWeight: 700,
-            boxShadow: '0 4px 24px rgba(143,92,184,0.35)',
-          }}>
-            Read the Guide →
-          </div>
-        </a>
+      <div style={{ maxWidth: 1120, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 20 }}>
+        <GuidePromoCard
+          to="/what-is-a-lavender-marriage"
+          eyebrow="The Real 2026 Guide"
+          title="What Is a Lavender Marriage?"
+          body="The honest definition, the history, and what modern lavender marriages actually look like — from someone who's been in one for 17 years."
+          cta="Read the Guide"
+        />
+        <GuidePromoCard
+          to="https://www.llma.app/find-lavender-marriage-partner"
+          external
+          eyebrow="Free Guide"
+          title="How to Actually Find a Lavender Marriage Partner"
+          body="A complete guide — from understanding what you're looking for to your first real conversation with someone who gets it."
+          cta="Read the Guide"
+        />
       </div>
     </section>
   );

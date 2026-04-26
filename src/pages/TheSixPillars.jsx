@@ -220,6 +220,7 @@ export default function TheSixPillars() {
         </Link>
         <div style={{ display: 'flex', gap: 16, alignItems: 'center' }}>
           <Link to="/lavender-transition-guide" style={{ color: 'rgba(255,255,255,0.6)', fontSize: 14, textDecoration: 'none' }}>← Part 1</Link>
+          <Link to="/what-is-a-lavender-marriage" style={{ color: 'rgba(255,255,255,0.6)', fontSize: 14, textDecoration: 'none' }}>What Is It?</Link>
           <Link to="/5-truths-that-saved-me" style={{ color: 'rgba(255,255,255,0.6)', fontSize: 14, textDecoration: 'none' }}>5 Truths</Link>
           <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" style={{
             background: S.lavender, color: S.bg, padding: '7px 16px', borderRadius: 20,
@@ -610,6 +611,8 @@ export default function TheSixPillars() {
       }}>
         <p style={{ marginBottom: 8 }}>
           <Link to="/" style={{ color: S.lavender, textDecoration: 'none', fontWeight: 600 }}>llma.life</Link>
+          {' · '}
+          <Link to="/what-is-a-lavender-marriage" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none' }}>What Is a Lavender Marriage?</Link>
           {' · '}
           <Link to="/lavender-transition-guide" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none' }}>Lavender Guide Pt.1</Link>
           {' · '}

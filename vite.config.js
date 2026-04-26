@@ -19,6 +19,7 @@ export default defineConfig({
         '/5-truths-that-saved-me',
         '/lavender-transition-guide',
         '/the-six-pillars',
+        '/what-is-a-lavender-marriage',
         '/blog/gen-z-doesnt-want-romance-they-want-a-real-partner',
         '/blog/tax-benefits-are-not-a-reward-for-fucking',
         '/blog/you-can-fck-a-stranger-but-i-cant-love-my-best-friend',

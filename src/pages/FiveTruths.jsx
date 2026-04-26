@@ -278,6 +278,7 @@ function Nav() {
           <span style={{ fontSize: 18, fontWeight: 800, color: '#fff', letterSpacing: '-0.02em' }}>llma.life</span>
         </Link>
         <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+          <Link to="/what-is-a-lavender-marriage" style={{ fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.5)', textDecoration: 'none', padding: '8px 12px' }}>What Is It?</Link>
           <Link to="/lavender-transition-guide" style={{ fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.5)', textDecoration: 'none', padding: '8px 12px' }}>Lavender Guide</Link>
           <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" style={{ padding: '8px 16px', borderRadius: 9999, background: S.purple, color: '#fff', fontSize: 13, fontWeight: 700, textDecoration: 'none' }}>Download App</a>
         </div>
@@ -492,6 +493,9 @@ export default function FiveTruths() {
               <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" style={{ padding: '13px 28px', borderRadius: 9999, background: S.purple, color: '#fff', fontSize: 15, fontWeight: 700, textDecoration: 'none', boxShadow: '0 4px 20px rgba(143,92,184,0.4)' }}>
                 Download LLMA
               </a>
+              <Link to="/what-is-a-lavender-marriage" style={{ padding: '13px 28px', borderRadius: 9999, background: 'transparent', color: 'rgba(255,255,255,0.6)', border: '1px solid rgba(255,255,255,0.12)', fontSize: 15, fontWeight: 600, textDecoration: 'none' }}>
+                What Is a Lavender Marriage? →
+              </Link>
               <Link to="/lavender-transition-guide" style={{ padding: '13px 28px', borderRadius: 9999, background: 'transparent', color: 'rgba(255,255,255,0.6)', border: '1px solid rgba(255,255,255,0.12)', fontSize: 15, fontWeight: 600, textDecoration: 'none' }}>
                 Lavender Transition Guide →
               </Link>
