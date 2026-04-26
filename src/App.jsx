@@ -5,6 +5,7 @@ import BlogPost from './pages/BlogPost'
 import FiveTruths from './pages/FiveTruths'
 import LavenderTransitionGuide from './pages/LavenderTransitionGuide'
 import TheSixPillars from './pages/TheSixPillars'
+import WhatIsALavenderMarriage from './pages/WhatIsALavenderMarriage'
 import Press from './pages/Press'
 import Community from './pages/Community'
 
@@ -17,6 +18,7 @@ export default function App() {
       <Route path="/5-truths-that-saved-me" element={<FiveTruths />} />
       <Route path="/lavender-transition-guide" element={<LavenderTransitionGuide />} />
       <Route path="/the-six-pillars" element={<TheSixPillars />} />
+      <Route path="/what-is-a-lavender-marriage" element={<WhatIsALavenderMarriage />} />
       <Route path="/press" element={<Press />} />
       <Route path="/community" element={<Community />} />
     </Routes>

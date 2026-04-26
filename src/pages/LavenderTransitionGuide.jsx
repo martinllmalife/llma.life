@@ -85,6 +85,7 @@ export default function LavenderTransitionGuide() {
           <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.4)', fontWeight: 500 }}>/ lavender guide</span>
         </Link>
         <div style={{ display: 'flex', gap: 16, alignItems: 'center' }}>
+          <Link to="/what-is-a-lavender-marriage" style={{ color: 'rgba(255,255,255,0.6)', fontSize: 14, textDecoration: 'none' }}>What Is It?</Link>
           <Link to="/5-truths-that-saved-me" style={{ color: 'rgba(255,255,255,0.6)', fontSize: 14, textDecoration: 'none' }}>5 Truths</Link>
           <Link to="/the-six-pillars" style={{ color: 'rgba(255,255,255,0.6)', fontSize: 14, textDecoration: 'none' }}>Six Pillars</Link>
           <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" style={{
@@ -531,6 +532,8 @@ export default function LavenderTransitionGuide() {
       }}>
         <p style={{ marginBottom: 8 }}>
           <Link to="/" style={{ color: S.lavender, textDecoration: 'none', fontWeight: 600 }}>llma.life</Link>
+          {' · '}
+          <Link to="/what-is-a-lavender-marriage" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none' }}>What Is a Lavender Marriage?</Link>
           {' · '}
           <Link to="/5-truths-that-saved-me" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none' }}>5 Truths</Link>
           {' · '}
