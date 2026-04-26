@@ -1,7 +1,12 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
 const APP_STORE_URL = 'https://apps.apple.com/us/app/llma-intentional-partnerships/id6760886909';
+
+// YouTube hero video — Marty Thomas interview clip
+const YOUTUBE_VIDEO_ID = '5P47i_qFp_M';
+const YOUTUBE_START_SECONDS = 347;
 
 // Press screenshot images live in llma.app's public folder; we reference
 // them via absolute URL so they don't have to be duplicated here.
@@ -143,6 +148,63 @@ const TOPICS = [
   'Coming out within a marriage — what both partners actually go through',
 ];
 
+function YouTubeHero({ videoId, startSeconds }) {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+  const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&start=${startSeconds}&rel=0`;
+  return (
+    <div style={{
+      width: '100%', aspectRatio: '16 / 9', position: 'relative',
+      background: '#000', borderRadius: 20, overflow: 'hidden',
+      border: `1px solid ${S.cardBorder}`,
+    }}>
+      {isPlaying ? (
+        <iframe
+          src={embedUrl}
+          title="LLMA on YouTube"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          style={{ width: '100%', height: '100%', border: 0, display: 'block' }}
+        />
+      ) : (
+        <button
+          type="button"
+          onClick={() => setIsPlaying(true)}
+          aria-label="Play video"
+          style={{
+            position: 'absolute', inset: 0, width: '100%', height: '100%',
+            padding: 0, margin: 0, border: 0, cursor: 'pointer',
+            background: 'transparent',
+          }}
+        >
+          <img
+            src={thumbnailUrl}
+            alt="YouTube video thumbnail"
+            loading="lazy"
+            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+          />
+          <div style={{
+            position: 'absolute', inset: 0,
+            background: 'linear-gradient(135deg, rgba(13,10,11,0.35) 0%, rgba(13,10,11,0.15) 50%, rgba(13,10,11,0.45) 100%)',
+            pointerEvents: 'none',
+          }} />
+          <div style={{
+            position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)',
+            width: 88, height: 88, borderRadius: '50%',
+            background: S.purple, display: 'flex', alignItems: 'center', justifyContent: 'center',
+            boxShadow: '0 12px 40px rgba(143,92,184,0.55)',
+            pointerEvents: 'none',
+          }}>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="#fff" aria-hidden="true">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </div>
+        </button>
+      )}
+    </div>
+  );
+}
+
 function PressCard({ item }) {
   return (
     <a
@@ -276,9 +338,17 @@ export default function Press() {
         </div>
       </nav>
 
+      {/* YouTube Video Hero */}
+      <section style={{
+        paddingTop: 84, paddingLeft: 24, paddingRight: 24,
+        maxWidth: 1100, margin: '0 auto',
+      }}>
+        <YouTubeHero videoId={YOUTUBE_VIDEO_ID} startSeconds={YOUTUBE_START_SECONDS} />
+      </section>
+
       {/* Hero */}
       <section style={{
-        paddingTop: 120, paddingBottom: 72, paddingLeft: 24, paddingRight: 24,
+        paddingTop: 56, paddingBottom: 72, paddingLeft: 24, paddingRight: 24,
         maxWidth: 1100, margin: '0 auto', textAlign: 'center',
         position: 'relative', overflow: 'hidden',
       }}>
