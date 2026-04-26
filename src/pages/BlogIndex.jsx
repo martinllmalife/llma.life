@@ -64,11 +64,11 @@ export default function BlogIndex() {
       <Helmet>
         <title>The Lavender Logs | LLMA Blog</title>
         <meta name="description" content="Real stories about lavender marriages, intentional partnerships, and chosen family. Written by Marty Thomas and the LLMA community." />
-        <link rel="canonical" href="https://llma.life/blog" />
-        <meta property="og:url" content="https://llma.life/blog" />
+        <link rel="canonical" href="https://www.llma.life/blog" />
+        <meta property="og:url" content="https://www.llma.life/blog" />
         <meta property="og:title" content="The Lavender Logs | LLMA Blog" />
         <meta property="og:description" content="Real stories about lavender marriages, intentional partnerships, and chosen family." />
-        <meta property="og:image" content="https://llma.life/og-image.png" />
+        <meta property="og:image" content="https://www.llma.life/og-image.png" />
       </Helmet>
       <Nav />
 

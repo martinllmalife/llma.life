@@ -11,8 +11,10 @@ export default defineConfig({
     // Only generate sitemap during client build
     ...(!isSSR ? [sitemap({
       hostname: 'https://www.llma.life',
+      // NOTE: '/' is intentionally omitted — vite-plugin-sitemap auto-discovers
+      // it from the build output's index.html. Listing it here too produces a
+      // duplicate <url><loc>https://www.llma.life/</loc> entry in sitemap.xml.
       dynamicRoutes: [
-        '/',
         '/blog',
         '/community',
         '/press',

@@ -65,11 +65,11 @@ export default function LavenderTransitionGuide() {
       <Helmet>
         <title>The Lavender Transition Guide | LLMA</title>
         <meta name="description" content="A practical guide for navigating the transition into a lavender marriage or intentional platonic partnership. Real talk from people who've done it." />
-        <link rel="canonical" href="https://llma.life/lavender-transition-guide" />
-        <meta property="og:url" content="https://llma.life/lavender-transition-guide" />
+        <link rel="canonical" href="https://www.llma.life/lavender-transition-guide" />
+        <meta property="og:url" content="https://www.llma.life/lavender-transition-guide" />
         <meta property="og:title" content="The Lavender Transition Guide | LLMA" />
         <meta property="og:description" content="A practical guide for navigating the transition into a lavender marriage or intentional platonic partnership." />
-        <meta property="og:image" content="https://llma.life/og-image.png" />
+        <meta property="og:image" content="https://www.llma.life/og-image.png" />
       </Helmet>
 
       {/* Nav */}

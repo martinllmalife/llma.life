@@ -3,8 +3,8 @@ import { Helmet } from 'react-helmet-async';
 
 const APP_STORE_URL = 'https://apps.apple.com/us/app/llma-lavender-marriage-app/id6760886909';
 const TIKTOK_URL = 'https://www.tiktok.com/@itsmcmartyfly';
-const CANONICAL_URL = 'https://llma.life/what-is-a-lavender-marriage';
-const OG_IMAGE = 'https://llma.life/wlm-og-family.jpg';
+const CANONICAL_URL = 'https://www.llma.life/what-is-a-lavender-marriage';
+const OG_IMAGE = 'https://www.llma.life/wlm-og-family.jpg';
 
 const S = {
   bg: '#0D0A0B',
@@ -268,14 +268,14 @@ export default function WhatIsALavenderMarriage() {
             author: {
               '@type': 'Person',
               name: 'Martin Court Thomas Jr.',
-              url: 'https://llma.life',
+              url: 'https://www.llma.life',
             },
             publisher: {
               '@type': 'Organization',
               name: 'LLMA',
               logo: {
                 '@type': 'ImageObject',
-                url: 'https://llma.life/llma-logo.png',
+                url: 'https://www.llma.life/llma-logo.png',
               },
             },
             mainEntityOfPage: CANONICAL_URL,
