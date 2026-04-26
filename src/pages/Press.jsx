@@ -110,7 +110,9 @@ const PRESS_COVERAGE = [
 const PODCASTS = [
   {
     outlet: 'The Juicy Scoop with Heather McDonald',
-    headline: 'Marty Thomas on Lavender Marriage — living it, building a platform around it',
+    headline: 'Chris Franjola, Epstein, Wicked Press and Gay Clubs',
+    url: 'https://www.youtube.com/watch?v=blnfGQljuQg&t=3334s',
+    videoId: 'blnfGQljuQg',
     date: '2025',
     flag: '🎙️',
     accent: '#8F5CB8',
@@ -120,6 +122,8 @@ const PODCASTS = [
   {
     outlet: "The Party's Over",
     headline: 'Podcast and interview appearance',
+    url: 'https://www.youtube.com/watch?v=sSPoXDsJfTQ&t=43s',
+    videoId: 'sSPoXDsJfTQ',
     date: '2025',
     flag: '🎙️',
     accent: '#DC5A4B',
@@ -127,8 +131,21 @@ const PODCASTS = [
     eyebrow: 'Thoughtful conversation, less tabloid energy',
   },
   {
-    outlet: 'Saucy Secrets — KIIS Australia',
+    outlet: 'Modern Marriage with Monica',
+    headline: 'Lavender Marriage Exposed: Why Women LOVE the Idea of Marrying Gay Men',
+    url: 'https://www.youtube.com/watch?v=ZD4dFWe7x80',
+    videoId: 'ZD4dFWe7x80',
+    date: '2025',
+    flag: '🎙️',
+    accent: '#3ABFAA',
+    kicker: 'Interview',
+    eyebrow: 'A modern-marriage podcast takes on the lavender conversation',
+  },
+  {
+    outlet: 'Saucy Secrets — KIIS FM Sydney',
     headline: 'Lavender Marriages: what they are, who chooses them, and why it’s growing',
+    url: 'https://www.youtube.com/watch?v=hWb8Ky9u24M&t=457s',
+    videoId: 'hWb8Ky9u24M',
     date: '2025',
     flag: '🇦🇺',
     accent: '#A97BCF',
@@ -264,40 +281,79 @@ function PressCard({ item }) {
 }
 
 function PodcastCard({ item }) {
+  const href = item.url || '#contact';
+  const isExternal = !!item.url;
+  const hasVideo = !!item.videoId;
   return (
     <a
-      href="#contact"
+      href={href}
+      target={isExternal ? '_blank' : undefined}
+      rel={isExternal ? 'noopener noreferrer' : undefined}
       style={{
         display: 'flex', flexDirection: 'column',
         background: S.card, border: `1px solid ${S.cardBorder}`,
-        borderRadius: 16, padding: 20, gap: 12, textDecoration: 'none',
+        borderRadius: 16, overflow: 'hidden', textDecoration: 'none',
+        transition: 'transform 200ms ease, border-color 200ms ease',
       }}
     >
-      <div style={{ height: 4, width: '100%', flexShrink: 0, background: `linear-gradient(90deg, ${item.accent}, transparent)`, marginLeft: -20, marginRight: -20, marginTop: -20, width: 'calc(100% + 40px)' }} />
+      {/* Accent strip */}
+      <div style={{ height: 4, width: '100%', flexShrink: 0, background: `linear-gradient(90deg, ${item.accent}, transparent)` }} />
 
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8, flexWrap: 'wrap' }}>
-        <span style={{ fontSize: 11, fontWeight: 800, letterSpacing: '0.2em', textTransform: 'uppercase', color: item.accent }}>
-          {item.flag} {item.outlet}
-        </span>
-        <span style={{
-          fontSize: 10, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase',
-          background: `${item.accent}26`, color: item.accent,
-          borderRadius: 9999, padding: '3px 10px',
-        }}>
-          🎙 {item.kicker}
-        </span>
-      </div>
+      {/* YouTube thumbnail (16:9) for podcasts with video */}
+      {hasVideo && (
+        <div style={{ width: '100%', aspectRatio: '16 / 9', background: '#000', overflow: 'hidden', flexShrink: 0, position: 'relative' }}>
+          <img
+            src={`https://img.youtube.com/vi/${item.videoId}/maxresdefault.jpg`}
+            alt={`${item.outlet} podcast video thumbnail`}
+            loading="lazy"
+            decoding="async"
+            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+          />
+          <div style={{
+            position: 'absolute', inset: 0,
+            background: 'linear-gradient(180deg, rgba(13,10,11,0.0) 50%, rgba(13,10,11,0.45) 100%)',
+            pointerEvents: 'none',
+          }} />
+          <div style={{
+            position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)',
+            width: 56, height: 56, borderRadius: '50%',
+            background: item.accent, display: 'flex', alignItems: 'center', justifyContent: 'center',
+            boxShadow: `0 8px 24px ${item.accent}66`,
+            pointerEvents: 'none',
+          }}>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff" aria-hidden="true">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </div>
+        </div>
+      )}
 
-      <p style={{ fontSize: 15, fontWeight: 600, lineHeight: 1.4, color: '#fff', margin: 0, flex: 1 }}>
-        {item.headline}
-      </p>
+      <div style={{ display: 'flex', flexDirection: 'column', flex: 1, padding: 20, gap: 12 }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8, flexWrap: 'wrap' }}>
+          <span style={{ fontSize: 11, fontWeight: 800, letterSpacing: '0.2em', textTransform: 'uppercase', color: item.accent }}>
+            {item.flag} {item.outlet}
+          </span>
+          <span style={{
+            fontSize: 10, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase',
+            background: `${item.accent}26`, color: item.accent,
+            borderRadius: 9999, padding: '3px 10px',
+          }}>
+            🎙 {item.kicker}
+          </span>
+        </div>
 
-      <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.55)', lineHeight: 1.5, margin: 0 }}>
-        {item.eyebrow}
-      </p>
+        <p style={{ fontSize: 15, fontWeight: 600, lineHeight: 1.4, color: '#fff', margin: 0, flex: 1 }}>
+          {item.headline}
+        </p>
 
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: 8, borderTop: `1px solid ${S.cardBorder}` }}>
-        <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.4)' }}>{item.date}</span>
+        <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.55)', lineHeight: 1.5, margin: 0 }}>
+          {item.eyebrow}
+        </p>
+
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: 8, borderTop: `1px solid ${S.cardBorder}` }}>
+          <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.4)' }}>{item.date}</span>
+          {isExternal && <span style={{ fontSize: 13, fontWeight: 700, color: item.accent }}>↗</span>}
+        </div>
       </div>
     </a>
   );
