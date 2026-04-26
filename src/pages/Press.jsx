@@ -3,6 +3,10 @@ import { Helmet } from 'react-helmet-async';
 
 const APP_STORE_URL = 'https://apps.apple.com/us/app/llma-intentional-partnerships/id6760886909';
 
+// Press screenshot images live in llma.app's public folder; we reference
+// them via absolute URL so they don't have to be duplicated here.
+const APP_ASSETS = 'https://www.llma.app';
+
 const S = {
   bg: '#0D0A0B',
   purple: '#8F5CB8',
@@ -16,6 +20,7 @@ const S = {
   lavenderBorder: 'rgba(197,159,225,0.25)',
   teal: '#3ABFAA',
   tealMuted: 'rgba(58,191,170,0.1)',
+  tealBorder: 'rgba(58,191,170,0.25)',
   font: "'Plus Jakarta Sans', system-ui, sans-serif",
   card: '#111011',
   cardBorder: 'rgba(255,255,255,0.06)',
@@ -28,55 +33,102 @@ const STATS = [
   { value: '20+', label: 'Countries', sub: 'active users' },
 ];
 
-const COVERAGE = [
+const PRESS_COVERAGE = [
   {
-    flag: '🇬🇧',
     outlet: 'Metro UK',
+    headline: "I'm a gay man in a lavender marriage, we don't have sex but I won't divorce my wife",
+    url: 'https://metro.co.uk/2025/12/31/im-a-gay-man-a-lavender-marriage-dont-sex-wont-divorce-wife-25951304/',
     date: 'December 31, 2025',
-    headline: 'I\'m a gay man in a lavender marriage — we don\'t have sex but I won\'t divorce my wife',
-    type: 'print',
+    flag: '🇬🇧',
+    type: 'Feature',
+    accent: '#8F5CB8',
+    eyebrow: 'Marriage, identity, and modern partnership',
+    image: `${APP_ASSETS}/METRO%20UK.jpg`,
   },
   {
-    flag: '🇬🇧',
-    outlet: 'LadBible',
+    outlet: 'LADbible',
+    headline: "Gay man in sexless 'lavender marriage' explains why he won't get divorce",
+    url: 'https://www.ladbible.com/lifestyle/lavender-marriage-wife-relationships-divorce-us-arizona-097007-20251231',
     date: 'December 31, 2025',
-    headline: 'Gay man in sexless \'lavender marriage\' explains why he won\'t get divorce',
-    type: 'print',
+    flag: '🇬🇧',
+    type: 'Feature',
+    accent: '#DC5A4B',
+    eyebrow: 'A nontraditional family gets mainstream attention',
+    image: `${APP_ASSETS}/LAD%20Bible.jpg`,
   },
   {
-    flag: '🇬🇧',
     outlet: 'Tyla',
+    headline: "Man in 'lavender marriage' explains why he won't leave wife despite no sex life",
+    url: 'https://www.tyla.com/life/sex-and-relationships/lavender-marriage-gay-man-wife-divorce-relationship-720104-20260107',
     date: 'January 7, 2026',
-    headline: 'Man in \'lavender marriage\' explains why he won\'t leave wife despite no sex life',
-    type: 'print',
-  },
-  {
     flag: '🇬🇧',
+    type: 'Feature',
+    accent: '#A97BCF',
+    eyebrow: 'The internet keeps asking, so media keeps covering it',
+    image: `${APP_ASSETS}/Tyla.jpg`,
+  },
+  {
     outlet: 'Need To Know',
+    headline: "I'm in a LAVENDER marriage, we get ridiculed online but we've lasted 14 years",
+    url: 'https://needtoknow.co.uk/2026/02/23/im-in-a-lavender-marriage-we-get-ridiculed-online-but-weve-lasted-14-years/',
     date: 'February 23, 2026',
-    headline: 'I\'m in a LAVENDER marriage — we get ridiculed online but we\'ve lasted 14 years',
-    type: 'print',
+    flag: '🇬🇧',
+    type: 'Feature',
+    accent: '#7C4DA0',
+    eyebrow: 'Longevity beats the comment section',
+    image: `${APP_ASSETS}/need%20to%20know.jpg`,
   },
   {
-    flag: '🇺🇸',
     outlet: 'National Law Review',
-    date: 'March 4, 2026',
     headline: 'The First Lavender Marriage Matchmaking App Built by Someone Actually Living One',
-    type: 'print',
+    url: 'https://natlawreview.com/press-releases/first-lavender-marriage-matchmaking-app-built-someone-actually-living-one',
+    date: 'March 4, 2026',
+    flag: '🇺🇸',
+    type: 'Press Release',
+    accent: '#C59FE1',
+    eyebrow: 'Founder-market fit, but make it official',
+    image: `${APP_ASSETS}/National%20Law%20REview.jpg`,
   },
   {
-    flag: '🎙️',
+    outlet: 'Economic Policy Times',
+    headline: 'LLMA App Launches on iOS, Offering the First Lavender Marriage Platform',
+    url: 'https://www.llma.app/press',
+    date: 'March 2026',
+    flag: '🇺🇸',
+    type: 'Press Release',
+    accent: '#5A8FBC',
+    eyebrow: 'Coverage of the platform launch and market positioning',
+    image: `${APP_ASSETS}/economic%20policy%20times.jpg`,
+  },
+];
+
+const PODCASTS = [
+  {
     outlet: 'The Juicy Scoop with Heather McDonald',
-    date: '2025',
     headline: 'Marty Thomas on Lavender Marriage — living it, building a platform around it',
-    type: 'podcast',
+    date: '2025',
+    flag: '🎙️',
+    accent: '#8F5CB8',
+    kicker: 'Interview',
+    eyebrow: 'Big audience, bigger conversation',
   },
   {
-    flag: '🇦🇺',
-    outlet: 'Saucy Secrets — KIIS Australia',
+    outlet: "The Party's Over",
+    headline: 'Podcast and interview appearance',
     date: '2025',
-    headline: 'Lavender Marriages: what they are, who chooses them, and why it\'s growing',
-    type: 'podcast',
+    flag: '🎙️',
+    accent: '#DC5A4B',
+    kicker: 'Interview',
+    eyebrow: 'Thoughtful conversation, less tabloid energy',
+  },
+  {
+    outlet: 'Saucy Secrets — KIIS Australia',
+    headline: 'Lavender Marriages: what they are, who chooses them, and why it’s growing',
+    date: '2025',
+    flag: '🇦🇺',
+    accent: '#A97BCF',
+    kicker: 'Podcast',
+    eyebrow: 'International curiosity, same story hook',
   },
 ];
 
@@ -91,16 +143,114 @@ const TOPICS = [
   'Coming out within a marriage — what both partners actually go through',
 ];
 
+function PressCard({ item }) {
+  return (
+    <a
+      href={item.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        display: 'flex', flexDirection: 'column',
+        background: S.card, border: `1px solid ${S.cardBorder}`,
+        borderRadius: 16, overflow: 'hidden', textDecoration: 'none',
+        transition: 'transform 200ms ease, border-color 200ms ease',
+      }}
+    >
+      {/* Accent strip */}
+      <div style={{ height: 4, width: '100%', flexShrink: 0, background: `linear-gradient(90deg, ${item.accent}, transparent)` }} />
+
+      {/* Portrait screenshot */}
+      <div style={{ width: '100%', aspectRatio: '2 / 3', background: '#0A0A0F', overflow: 'hidden', flexShrink: 0 }}>
+        <img
+          src={item.image}
+          alt={`${item.outlet} coverage screenshot`}
+          loading="lazy"
+          decoding="async"
+          style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center', display: 'block' }}
+        />
+      </div>
+
+      <div style={{ display: 'flex', flexDirection: 'column', flex: 1, padding: 20, gap: 12 }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8, flexWrap: 'wrap' }}>
+          <span style={{ fontSize: 11, fontWeight: 800, letterSpacing: '0.2em', textTransform: 'uppercase', color: item.accent }}>
+            {item.flag} {item.outlet}
+          </span>
+          <span style={{
+            fontSize: 10, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase',
+            background: `${item.accent}26`, color: item.accent,
+            borderRadius: 9999, padding: '3px 10px',
+          }}>
+            {item.type}
+          </span>
+        </div>
+
+        <p style={{ fontSize: 15, fontWeight: 600, lineHeight: 1.4, color: '#fff', margin: 0, flex: 1 }}>
+          {item.headline}
+        </p>
+
+        <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.55)', lineHeight: 1.5, margin: 0 }}>
+          {item.eyebrow}
+        </p>
+
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: 8, borderTop: `1px solid ${S.cardBorder}` }}>
+          <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.4)' }}>{item.date}</span>
+          <span style={{ fontSize: 13, fontWeight: 700, color: item.accent }}>↗</span>
+        </div>
+      </div>
+    </a>
+  );
+}
+
+function PodcastCard({ item }) {
+  return (
+    <a
+      href="#contact"
+      style={{
+        display: 'flex', flexDirection: 'column',
+        background: S.card, border: `1px solid ${S.cardBorder}`,
+        borderRadius: 16, padding: 20, gap: 12, textDecoration: 'none',
+      }}
+    >
+      <div style={{ height: 4, width: '100%', flexShrink: 0, background: `linear-gradient(90deg, ${item.accent}, transparent)`, marginLeft: -20, marginRight: -20, marginTop: -20, width: 'calc(100% + 40px)' }} />
+
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8, flexWrap: 'wrap' }}>
+        <span style={{ fontSize: 11, fontWeight: 800, letterSpacing: '0.2em', textTransform: 'uppercase', color: item.accent }}>
+          {item.flag} {item.outlet}
+        </span>
+        <span style={{
+          fontSize: 10, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase',
+          background: `${item.accent}26`, color: item.accent,
+          borderRadius: 9999, padding: '3px 10px',
+        }}>
+          🎙 {item.kicker}
+        </span>
+      </div>
+
+      <p style={{ fontSize: 15, fontWeight: 600, lineHeight: 1.4, color: '#fff', margin: 0, flex: 1 }}>
+        {item.headline}
+      </p>
+
+      <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.55)', lineHeight: 1.5, margin: 0 }}>
+        {item.eyebrow}
+      </p>
+
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: 8, borderTop: `1px solid ${S.cardBorder}` }}>
+        <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.4)' }}>{item.date}</span>
+      </div>
+    </a>
+  );
+}
+
 export default function Press() {
   return (
     <div style={{ background: S.bg, minHeight: '100vh', color: '#fff', fontFamily: S.font }}>
       <Helmet>
         <title>Press & Media | LLMA - The Lavender Marriage App</title>
-        <meta name="description" content="Press kit, media coverage, and interview requests for LLMA — the lavender marriage app connecting gay men and straight women for intentional partnerships." />
+        <meta name="description" content="Press kit, media coverage, and interview requests for LLMA — the lavender marriage app connecting gay men and straight women for intentional partnerships. Featured in Metro UK, LADbible, Tyla, National Law Review." />
         <link rel="canonical" href="https://www.llma.life/press" />
         <meta property="og:url" content="https://www.llma.life/press" />
         <meta property="og:title" content="Press & Media | LLMA" />
-        <meta property="og:description" content="Press kit and media coverage for LLMA — the world's first app for lavender marriages and intentional platonic partnerships." />
+        <meta property="og:description" content="Press kit and media coverage for LLMA — featured in Metro UK, LADbible, Tyla, Need To Know, National Law Review, and more." />
         <meta property="og:image" content="https://www.llma.life/og-image.png" />
       </Helmet>
 
@@ -117,8 +267,8 @@ export default function Press() {
           <span style={{ fontSize: 18, fontWeight: 800, color: '#fff', letterSpacing: '-0.02em' }}>llma.life</span>
         </Link>
         <div style={{ display: 'flex', gap: 16, alignItems: 'center' }}>
-          <Link to="/5-truths-that-saved-me" style={{ color: 'rgba(255,255,255,0.5)', fontSize: 13, textDecoration: 'none' }}>Courses</Link>
           <Link to="/blog" style={{ color: 'rgba(255,255,255,0.5)', fontSize: 13, textDecoration: 'none' }}>Blog</Link>
+          <Link to="/community" style={{ color: 'rgba(255,255,255,0.5)', fontSize: 13, textDecoration: 'none' }}>Community</Link>
           <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" style={{
             background: S.purple, color: '#fff', padding: '7px 16px', borderRadius: 20,
             fontSize: 13, fontWeight: 700, textDecoration: 'none',
@@ -129,7 +279,7 @@ export default function Press() {
       {/* Hero */}
       <section style={{
         paddingTop: 120, paddingBottom: 72, paddingLeft: 24, paddingRight: 24,
-        maxWidth: 900, margin: '0 auto', textAlign: 'center',
+        maxWidth: 1100, margin: '0 auto', textAlign: 'center',
         position: 'relative', overflow: 'hidden',
       }}>
         <div style={{ position: 'absolute', top: 0, left: '50%', transform: 'translateX(-50%)', width: 800, height: 400, background: 'radial-gradient(ellipse, rgba(143,92,184,0.12) 0%, transparent 70%)', pointerEvents: 'none' }} />
@@ -149,14 +299,30 @@ export default function Press() {
           </h1>
           <p style={{
             fontSize: 18, color: 'rgba(255,255,255,0.55)', lineHeight: 1.65,
-            maxWidth: 560, margin: '0 auto 48px',
+            maxWidth: 600, margin: '0 auto 16px',
           }}>
-            The world's first platform for intentional partnerships and lavender marriages — built by someone living it.
+            Featured in Metro UK, LADbible, Tyla, National Law Review, and more. The world’s first platform for intentional partnerships and lavender marriages — built by someone living it.
           </p>
+
+          <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 48 }}>
+            <a href="mailto:martin@llma.life" style={{
+              background: S.purple, color: '#fff', padding: '12px 24px', borderRadius: 9999,
+              fontSize: 14, fontWeight: 700, textDecoration: 'none',
+            }}>
+              ✉ Media Contact
+            </a>
+            <a href="https://www.tiktok.com/@itsmcmartyfly" target="_blank" rel="noopener noreferrer" style={{
+              background: 'transparent', color: 'rgba(255,255,255,0.7)',
+              border: `1px solid ${S.cardBorder}`, padding: '12px 24px', borderRadius: 9999,
+              fontSize: 14, fontWeight: 600, textDecoration: 'none',
+            }}>
+              @itsmcmartyfly →
+            </a>
+          </div>
 
           {/* Stats */}
           <div style={{
-            display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 12,
+            display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: 12,
             maxWidth: 760, margin: '0 auto',
           }}>
             {STATS.map((s, i) => (
@@ -174,157 +340,66 @@ export default function Press() {
       </section>
 
       {/* About Marty */}
-      <section style={{ maxWidth: 900, margin: '0 auto 80px', padding: '0 24px' }}>
+      <section style={{ maxWidth: 1100, margin: '0 auto 64px', padding: '0 24px' }}>
         <div style={{
-          display: 'grid', gridTemplateColumns: '1fr 2fr', gap: 32,
           background: S.card, border: `1px solid ${S.cardBorder}`,
-          borderRadius: 24, padding: '40px 44px',
+          borderRadius: 24, padding: '36px 40px',
         }}>
-          <div>
-            <div style={{
-              width: '100%', aspectRatio: '1', borderRadius: 20,
-              background: 'linear-gradient(135deg, rgba(143,92,184,0.3) 0%, rgba(220,90,75,0.2) 100%)',
-              border: `1px solid ${S.purpleBorder}`,
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              fontSize: 64, marginBottom: 16,
-            }}>
-              💜
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-              {[
-                { label: 'Lavender Marriage' },
-                { label: 'Intentional Partnership' },
-                { label: 'Chosen Family' },
-                { label: 'LGBTQ+ Founder' },
-                { label: 'Gilbert, AZ' },
-              ].map((tag, i) => (
-                <span key={i} style={{
-                  display: 'inline-block', background: S.purpleMuted,
-                  border: `1px solid ${S.purpleBorder}`, borderRadius: 20,
-                  padding: '4px 12px', fontSize: 12, fontWeight: 600, color: S.lavender,
-                  width: 'fit-content',
-                }}>
-                  {tag.label}
-                </span>
-              ))}
-            </div>
-          </div>
-          <div>
-            <p style={{ fontSize: 11, fontWeight: 700, color: S.lavender, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 12 }}>
-              About Marty Thomas
-            </p>
-            <h2 style={{ fontSize: 28, fontWeight: 800, letterSpacing: '-0.5px', marginBottom: 20 }}>
-              Founder, LLMA Ventures LLC
-            </h2>
-            <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.7)', lineHeight: 1.8, marginBottom: 16 }}>
-              Marty Thomas is the founder of LLMA (Life and Love Made Authentic) and the creator of llma.app — the world's first dedicated platform for intentional partnerships, including lavender marriages.
-            </p>
-            <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.7)', lineHeight: 1.8, marginBottom: 16 }}>
-              A former Sysco executive who spent years championing LGBTQ+ inclusion in corporate America, Marty went public about his own lavender marriage with his wife Brandi on TikTok in 2025. The internet responded with <strong style={{ color: '#fff' }}>80 million views</strong>.
-            </p>
-            <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.7)', lineHeight: 1.8, marginBottom: 16 }}>
-              What started as radical transparency became a movement. Marty's content — chronicling his chosen family with Brandi, their daughter Londyn, and their French Bulldog Dior in Gilbert, Arizona — attracted 170,000+ followers and thousands of daily messages from people who finally felt seen. He built LLMA because no platform existed for this community.
-            </p>
-            <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginTop: 24 }}>
-              <a href="mailto:martin@llma.life" style={{
-                background: S.purple, color: '#fff', padding: '10px 20px',
-                borderRadius: 10, fontSize: 14, fontWeight: 700, textDecoration: 'none',
-              }}>
-                Email for Interviews
-              </a>
-              <a href="https://www.tiktok.com/@itsmcmartyfly" target="_blank" rel="noopener noreferrer" style={{
-                background: 'transparent', color: 'rgba(255,255,255,0.7)',
-                border: `1px solid ${S.cardBorder}`, padding: '10px 20px',
-                borderRadius: 10, fontSize: 14, fontWeight: 600, textDecoration: 'none',
-              }}>
-                @itsmcmartyfly →
-              </a>
-            </div>
-          </div>
+          <p style={{ fontSize: 11, fontWeight: 700, color: S.lavender, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 16 }}>
+            About Marty Thomas
+          </p>
+          <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.7)', lineHeight: 1.8, marginBottom: 16 }}>
+            Marty Thomas is the founder of LLMA (Life and Love Made Authentic) and the creator of llma.app, the first dedicated platform for intentional partnerships and lavender marriages. After going public about his own lavender marriage, Marty turned lived experience into a product, a movement, and a media story people keep clicking.
+          </p>
+          <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.7)', lineHeight: 1.8, margin: 0 }}>
+            His content on chosen family, nontraditional partnership, and radical honesty has generated major traction across social and earned media, while LLMA gives that audience somewhere real to go.
+          </p>
         </div>
       </section>
 
-      {/* Press Coverage */}
-      <section style={{ maxWidth: 900, margin: '0 auto 80px', padding: '0 24px' }}>
-        <h2 style={{ fontSize: 26, fontWeight: 800, letterSpacing: '-0.5px', marginBottom: 8 }}>Press Coverage</h2>
-        <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.45)', marginBottom: 32 }}>
-          Additional coverage available upon request. The Sun UK feature coming soon.
+      {/* Featured Coverage */}
+      <section style={{ maxWidth: 1100, margin: '0 auto 64px', padding: '0 24px' }}>
+        <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: S.lavender, marginBottom: 16 }}>
+          Featured Coverage
         </p>
-
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-          {COVERAGE.map((item, i) => (
-            <div key={i} style={{
-              background: S.card, border: `1px solid ${S.cardBorder}`,
-              borderRadius: 16, padding: '24px 28px',
-              display: 'flex', alignItems: 'flex-start', gap: 20,
-              transition: 'border-color 0.2s',
-            }}>
-              {/* Flag / icon */}
-              <div style={{
-                width: 52, height: 52, borderRadius: 12, flexShrink: 0,
-                background: item.type === 'podcast' ? S.coralMuted : S.purpleMuted,
-                border: `1px solid ${item.type === 'podcast' ? S.coralBorder : S.purpleBorder}`,
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                fontSize: 22,
-              }}>
-                {item.flag}
-              </div>
-
-              <div style={{ flex: 1, minWidth: 0 }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 6, flexWrap: 'wrap' }}>
-                  <span style={{ fontSize: 13, fontWeight: 800, color: '#fff' }}>{item.outlet}</span>
-                  <span style={{
-                    fontSize: 11, fontWeight: 700,
-                    color: item.type === 'podcast' ? S.coral : S.lavender,
-                    background: item.type === 'podcast' ? S.coralMuted : S.lavenderMuted,
-                    border: `1px solid ${item.type === 'podcast' ? S.coralBorder : S.lavenderBorder}`,
-                    borderRadius: 20, padding: '2px 10px', textTransform: 'uppercase', letterSpacing: '0.06em',
-                  }}>
-                    {item.type === 'podcast' ? 'Podcast' : 'Press'}
-                  </span>
-                  <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.3)' }}>{item.date}</span>
-                </div>
-                <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.75)', lineHeight: 1.5, margin: 0, fontStyle: 'italic' }}>
-                  "{item.headline}"
-                </p>
-              </div>
-            </div>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+          {PRESS_COVERAGE.map((item) => (
+            <PressCard key={item.url} item={item} />
           ))}
         </div>
       </section>
 
-      {/* About LLMA */}
-      <section style={{ maxWidth: 900, margin: '0 auto 80px', padding: '0 24px' }}>
-        <div style={{
-          background: 'linear-gradient(135deg, rgba(143,92,184,0.12) 0%, rgba(220,90,75,0.06) 100%)',
-          border: `1px solid ${S.purpleBorder}`,
-          borderRadius: 24, padding: '44px 48px',
-        }}>
-          <p style={{ fontSize: 11, fontWeight: 700, color: S.lavender, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 12 }}>
-            About LLMA
-          </p>
-          <h3 style={{ fontSize: 24, fontWeight: 800, letterSpacing: '-0.3px', marginBottom: 20 }}>
-            The world's first platform for intentional partnerships
-          </h3>
-          <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.7)', lineHeight: 1.8, marginBottom: 16 }}>
-            LLMA (Life and Love Made Authentic) is the world's first platform for intentional partnerships. It features a proprietary compatibility matching system, a 160-card assessment deck with AI-powered insights, photo reveal tools, and tiered membership plans.
-          </p>
-          <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.7)', lineHeight: 1.8, marginBottom: 24 }}>
-            LLMA is live in 20+ countries with 1,000+ members spanning the full spectrum of people seeking non-romantic life partnership: LGBTQ+ safety, financial stability, chosen family, and the rejection of traditional dating culture.
-          </p>
-          <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" style={{
-            display: 'inline-block', background: S.purple, color: '#fff',
-            padding: '12px 24px', borderRadius: 12,
-            fontSize: 14, fontWeight: 700, textDecoration: 'none',
-          }}>
-            Download LLMA on iOS →
-          </a>
+      {/* Podcasts & Interviews */}
+      <section style={{ maxWidth: 1100, margin: '0 auto 64px', padding: '0 24px' }}>
+        <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: S.lavender, marginBottom: 16 }}>
+          Podcasts & Interviews
+        </p>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+          {PODCASTS.map((item, i) => (
+            <PodcastCard key={i} item={item} />
+          ))}
         </div>
       </section>
 
-      {/* Topics + Contact side by side */}
-      <section style={{ maxWidth: 900, margin: '0 auto 80px', padding: '0 24px', display: 'grid', gridTemplateColumns: '3fr 2fr', gap: 24 }}>
+      {/* Pull quote */}
+      <section style={{ maxWidth: 760, margin: '0 auto 64px', padding: '0 24px' }}>
+        <div style={{
+          background: 'linear-gradient(135deg, rgba(143,92,184,0.15) 0%, rgba(220,90,75,0.08) 100%)',
+          border: `1px solid ${S.purpleBorder}`,
+          borderRadius: 20, padding: '36px 32px', textAlign: 'center',
+        }}>
+          <p style={{ fontSize: 32, color: S.lavender, opacity: 0.4, margin: '0 0 16px', lineHeight: 1 }}>“</p>
+          <p style={{ fontSize: 19, fontWeight: 600, lineHeight: 1.5, color: '#fff', maxWidth: 600, margin: '0 auto' }}>
+            Every article I read quotes academics or talks about apps that don’t exist yet. I’ve been living this. I built the platform for it.
+          </p>
+          <p style={{ marginTop: 16, fontSize: 13, fontWeight: 700, color: S.lavender }}>
+            Marty Thomas, Founder of LLMA
+          </p>
+        </div>
+      </section>
 
+      {/* Topics + Contact */}
+      <section id="contact" style={{ maxWidth: 1100, margin: '0 auto 80px', padding: '0 24px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 24 }}>
         {/* Topics */}
         <div style={{ background: S.card, border: `1px solid ${S.cardBorder}`, borderRadius: 20, padding: '32px 36px' }}>
           <p style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.4)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 20 }}>
@@ -341,61 +416,33 @@ export default function Press() {
         </div>
 
         {/* Contact */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-          <div style={{ background: S.card, border: `1px solid ${S.cardBorder}`, borderRadius: 20, padding: '32px 28px', flex: 1 }}>
-            <p style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.4)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 20 }}>
-              Media Contact
-            </p>
-            <p style={{ fontSize: 18, fontWeight: 800, color: '#fff', marginBottom: 4 }}>Marty Thomas</p>
-            <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.45)', marginBottom: 24 }}>Founder, LLMA Ventures LLC</p>
+        <div style={{ background: S.card, border: `1px solid ${S.cardBorder}`, borderRadius: 20, padding: '32px 28px' }}>
+          <p style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.4)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 20 }}>
+            Media Contact
+          </p>
+          <p style={{ fontSize: 18, fontWeight: 800, color: '#fff', marginBottom: 4 }}>Marty Thomas</p>
+          <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.45)', marginBottom: 24 }}>Founder, LLMA Ventures LLC</p>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-              <a href="mailto:martin@llma.life" style={{
-                display: 'flex', alignItems: 'center', gap: 10,
-                color: S.lavender, textDecoration: 'none', fontSize: 14, fontWeight: 600,
-              }}>
-                <span style={{ fontSize: 16 }}>✉️</span> martin@llma.life
-              </a>
-              <a href="tel:+13238256664" style={{
-                display: 'flex', alignItems: 'center', gap: 10,
-                color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontSize: 14,
-              }}>
-                <span style={{ fontSize: 16 }}>📞</span> (323) 825-6664
-              </a>
-              <a href="https://www.tiktok.com/@itsmcmartyfly" target="_blank" rel="noopener noreferrer" style={{
-                display: 'flex', alignItems: 'center', gap: 10,
-                color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontSize: 14,
-              }}>
-                <span style={{ fontSize: 16 }}>🎵</span> @itsmcmartyfly
-              </a>
-              <a href="https://www.instagram.com/thelavlam" target="_blank" rel="noopener noreferrer" style={{
-                display: 'flex', alignItems: 'center', gap: 10,
-                color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontSize: 14,
-              }}>
-                <span style={{ fontSize: 16 }}>📸</span> @thelavlam
-              </a>
-              <a href="https://www.youtube.com/@itsmcmartyfly" target="_blank" rel="noopener noreferrer" style={{
-                display: 'flex', alignItems: 'center', gap: 10,
-                color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontSize: 14,
-              }}>
-                <span style={{ fontSize: 16 }}>▶️</span> @itsmcmartyfly
-              </a>
-            </div>
-
-            <div style={{ marginTop: 24, paddingTop: 20, borderTop: `1px solid ${S.cardBorder}`, fontSize: 13, color: 'rgba(255,255,255,0.35)', lineHeight: 1.6 }}>
-              Media kit, app screenshots, and usage data available upon request.
-            </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+            <a href="mailto:martin@llma.life" style={{ display: 'flex', alignItems: 'center', gap: 10, color: S.lavender, textDecoration: 'none', fontSize: 14, fontWeight: 600 }}>
+              <span style={{ fontSize: 16 }}>✉️</span> martin@llma.life
+            </a>
+            <a href="tel:+13238256664" style={{ display: 'flex', alignItems: 'center', gap: 10, color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontSize: 14 }}>
+              <span style={{ fontSize: 16 }}>📞</span> (323) 825-6664
+            </a>
+            <a href="https://www.tiktok.com/@itsmcmartyfly" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: 10, color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontSize: 14 }}>
+              <span style={{ fontSize: 16 }}>🎵</span> @itsmcmartyfly on TikTok
+            </a>
+            <a href="https://www.instagram.com/thelavlam" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: 10, color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontSize: 14 }}>
+              <span style={{ fontSize: 16 }}>📸</span> @thelavlam on Instagram
+            </a>
+            <a href="https://www.youtube.com/@itsmcmartyfly" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: 10, color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontSize: 14 }}>
+              <span style={{ fontSize: 16 }}>▶️</span> @itsmcmartyfly on YouTube
+            </a>
           </div>
 
-          {/* Press badge */}
-          <div style={{
-            background: S.purpleMuted, border: `1px solid ${S.purpleBorder}`,
-            borderRadius: 16, padding: '20px 24px', textAlign: 'center',
-          }}>
-            <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', marginBottom: 4 }}>As seen in</p>
-            <p style={{ fontSize: 15, fontWeight: 700, color: S.lavender, lineHeight: 1.6 }}>
-              Metro UK · LadBible · Tyla · Need To Know · National Law Review
-            </p>
+          <div style={{ marginTop: 24, paddingTop: 20, borderTop: `1px solid ${S.cardBorder}`, fontSize: 13, color: 'rgba(255,255,255,0.35)', lineHeight: 1.6 }}>
+            Media kit, app screenshots, and usage data available upon request.
           </div>
         </div>
       </section>
@@ -409,9 +456,9 @@ export default function Press() {
         <p style={{ marginBottom: 8 }}>
           <Link to="/" style={{ color: S.lavender, textDecoration: 'none', fontWeight: 600 }}>llma.life</Link>
           {' · '}
-          <Link to="/5-truths-that-saved-me" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none' }}>Courses</Link>
-          {' · '}
           <Link to="/blog" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none' }}>Blog</Link>
+          {' · '}
+          <Link to="/community" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none' }}>Community</Link>
           {' · '}
           <a href="https://llma.app" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none' }}>llma.app</a>
         </p>
