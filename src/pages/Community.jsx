@@ -336,11 +336,11 @@ export default function Community() {
       <Helmet>
         <title>Community | LLMA - Find Your People</title>
         <meta name="description" content="Join the LLMA community — 1,000+ members across 20+ countries building intentional partnerships, lavender marriages, and chosen families." />
-        <link rel="canonical" href="https://llma.life/community" />
-        <meta property="og:url" content="https://llma.life/community" />
+        <link rel="canonical" href="https://www.llma.life/community" />
+        <meta property="og:url" content="https://www.llma.life/community" />
         <meta property="og:title" content="Community | LLMA - Find Your People" />
         <meta property="og:description" content="Join 1,000+ members across 20+ countries building intentional partnerships, lavender marriages, and chosen families." />
-        <meta property="og:image" content="https://llma.life/og-image.png" />
+        <meta property="og:image" content="https://www.llma.life/og-image.png" />
       </Helmet>
       <Nav />
 

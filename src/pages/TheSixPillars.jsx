@@ -199,11 +199,11 @@ export default function TheSixPillars() {
       <Helmet>
         <title>The Six Pillars of an Intentional Partnership | LLMA</title>
         <meta name="description" content="The six foundational principles behind every successful lavender marriage and intentional partnership. A framework from LLMA founder Marty Thomas." />
-        <link rel="canonical" href="https://llma.life/the-six-pillars" />
-        <meta property="og:url" content="https://llma.life/the-six-pillars" />
+        <link rel="canonical" href="https://www.llma.life/the-six-pillars" />
+        <meta property="og:url" content="https://www.llma.life/the-six-pillars" />
         <meta property="og:title" content="The Six Pillars of an Intentional Partnership | LLMA" />
         <meta property="og:description" content="The six foundational principles behind every successful lavender marriage and intentional partnership." />
-        <meta property="og:image" content="https://llma.life/og-image.png" />
+        <meta property="og:image" content="https://www.llma.life/og-image.png" />
       </Helmet>
 
       {/* Nav */}

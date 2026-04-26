@@ -293,11 +293,11 @@ export default function FiveTruths() {
       <Helmet>
         <title>5 Truths That Saved Me | LLMA</title>
         <meta name="description" content="The five things Marty Thomas wishes he'd known sooner about lavender marriage, identity, and intentional love. A personal essay from the founder of LLMA." />
-        <link rel="canonical" href="https://llma.life/5-truths-that-saved-me" />
-        <meta property="og:url" content="https://llma.life/5-truths-that-saved-me" />
+        <link rel="canonical" href="https://www.llma.life/5-truths-that-saved-me" />
+        <meta property="og:url" content="https://www.llma.life/5-truths-that-saved-me" />
         <meta property="og:title" content="5 Truths That Saved Me | LLMA" />
         <meta property="og:description" content="The five things Marty Thomas wishes he'd known sooner about lavender marriage, identity, and intentional love." />
-        <meta property="og:image" content="https://llma.life/og-image.png" />
+        <meta property="og:image" content="https://www.llma.life/og-image.png" />
       </Helmet>
       <Nav />
 
