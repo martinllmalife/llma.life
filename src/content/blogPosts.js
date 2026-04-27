@@ -13,6 +13,48 @@ const AUTHOR_TEAM = {
 };
 
 export const posts = [
+  // ── NEW (2026-04-27) ───────────────────────────────────────────────────
+  {
+    slug: 'five-words-pt2-your',
+    title: "5 Words That Changed It All, Part 2: Why YOUR Is the Most Underrated Word in Marriage",
+    date: 'April 27, 2026',
+    sortDate: new Date('2026-04-27'),
+    tag: 'Series',
+    tagColor: '#B49BFF',
+    tagBg: 'rgba(180,155,255,0.14)',
+    author: AUTHOR_MARTY,
+    excerpt: "Most people don't choose their person. They choose someone other people approve of. Part 2 of the 5 Words series digs into the word YOUR, why lavender marriages can't skip it, and the one exercise that exposes whose checklist you've actually been shopping from.",
+    tags: ['#LLMA', '#LavenderMarriage', '#FiveWordsSeries', '#ModernMarriage', '#IntentionalPartnership'],
+    heroImage: null,
+    bodyHtml: `
+<p class="llma-lead">If you missed Part 1 of this series, the five words that changed everything about my marriage to Brandi are simple. <strong>Choose. Your. Person. On. Purpose.</strong></p>
+<p>Five words. Ten parts. We're on word two.</p>
+<p>Word two is YOUR. And it might be the most underrated word in the whole sentence.</p>
+<hr class="llma-divider">
+<h2>The Problem With How Most People Pick</h2>
+<p>Here's what I've watched happen to people I love. They go shopping for a partner the way they'd go shopping for a couch their mother-in-law has to sit on. Will my parents approve? Will my friends nod? Will the engagement photos look right on the grid? Will the wedding hashtag be cute?</p>
+<p>That's not choosing your person. That's choosing <strong>their</strong> person and signing your name to it.</p>
+<p>I had a friend in her early thirties marry the most "on paper" perfect guy you can imagine. Mom loved him. Sorority loved him. The bridal party photos were so symmetrical they looked AI-generated. Three years in, she's sitting at my kitchen table wondering why she feels lonely in her own house.</p>
+<p>The answer was sitting right next to her. She married someone else's idea of a husband.</p>
+<hr class="llma-divider">
+<h2>Why Lavender Marriages Cannot Skip This Step</h2>
+<p>When you're in a relationship structure that doesn't fit the default script, you don't get to coast on autopilot. Brandi and I had to build our marriage from raw materials. There was no Pinterest board for what we were doing. No mood music. No relatives nodding along.</p>
+<p>That sounds harder, and it is. It's also the secret. Because when nobody's giving you a template, you're forced to ask the only question that matters. <strong>What do WE actually want this thing to feel like?</strong></p>
+<p>We sat down. We made a list. Independence inside the partnership. Honesty even when it's awkward. A best-friend baseline. A shared aesthetic. Real warmth. The freedom to date our way through life and still come home to one person who knows us.</p>
+<p>Then we picked each other off of that list. Not off of someone else's.</p>
+<hr class="llma-divider">
+<h2>How to Build YOUR List</h2>
+<p>If you're single, do this exercise before you pick anyone. If you're partnered, do it together and compare notes, it's a wildly clarifying conversation.</p>
+<p>Write down the ten things that have to be present in your partnership for you to feel like a real human inside of it. Not the things that look good. The things that feel good when nobody is watching.</p>
+<p>Then ruthlessly delete every item on that list that you put there because someone else expected it.</p>
+<p>What you're left with is YOUR list. And only then can you choose YOUR person.</p>
+<div class="llma-quote"><p>"She didn't choose HER person. She chose THEIR person. There's a difference and it's the whole game."</p></div>
+<p>This is the work. It's the part the wedding-industrial complex would love for you to skip. Don't.</p>
+<p>Part 3 drops next week. We're going to break down the third word: PERSON. Spoiler, it's not always who you think it should be.</p>
+<p><strong><a href="https://apps.apple.com/us/app/llma-intentional-partnerships/id6760886909">Download LLMA on the App Store</a> — we built it for the people writing their own partnership rules. Stay Bold. Stay Inspired.</strong></p>
+`,
+  },
+
   // ── NEW (2026-04-21) ───────────────────────────────────────────────────
   {
     slug: 'the-real-summer-house-breakup-was-ciara-and-amanda',
