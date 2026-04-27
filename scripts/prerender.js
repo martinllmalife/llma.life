@@ -24,25 +24,24 @@ const routes = [
 ]
 
 // React 19 automatically hoists <title>, <meta>, and <link> tags from anywhere
-// in the component tree to the front of the renderToString output. <script> tags
-// are NOT hoisted — extract JSON-LD scripts separately from the body HTML.
+// in the component tree to the front of the renderToString output. We pull
+// those hoisted tags off and inject them into <head> via the template.
+//
+// JSON-LD <script> tags are intentionally LEFT in the body. Previously this
+// script extracted them and hoisted them to <head>, but on client hydration
+// React re-rendered the same scripts in the body, producing two copies in the
+// post-hydration DOM. Googlebot executes JS, so it saw duplicate FAQPage /
+// Article schemas and surfaced "Duplicate field 'FAQPage'" errors in Search
+// Console. Google reads JSON-LD from anywhere on the page, so leaving the
+// scripts in the body is correct and avoids the duplication.
 function extractHeadTags(html) {
-  // Step 1: pull hoisted tags from the start of the HTML (before any div/nav/etc.)
   const hoistedPattern =
     /^((?:\s*(?:<title[^>]*>[\s\S]*?<\/title>|<meta[^>]*\/?>|<link[^>]*\/?>))*)/
   const hoistedMatch = html.match(hoistedPattern)
   const hoisted = hoistedMatch ? hoistedMatch[0].trim() : ''
-  let remaining = html.slice(hoisted.length)
+  const remaining = html.slice(hoisted.length)
 
-  // Step 2: extract <script type="application/ld+json"> from anywhere in the body
-  const jsonLdTags = []
-  remaining = remaining.replace(
-    /<script\s+type="application\/ld\+json"[^>]*>[\s\S]*?<\/script>/g,
-    (match) => { jsonLdTags.push(match); return '' }
-  )
-
-  const headTags = [hoisted, ...jsonLdTags].filter(Boolean).join('\n    ')
-  return { headTags, bodyHtml: remaining }
+  return { headTags: hoisted, bodyHtml: remaining }
 }
 
 const template = fs.readFileSync(toAbs('dist/index.html'), 'utf-8')
