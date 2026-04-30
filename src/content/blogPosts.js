@@ -13,6 +13,54 @@ const AUTHOR_TEAM = {
 };
 
 export const posts = [
+  // ── NEW (2026-04-30) ───────────────────────────────────────────────────
+  {
+    slug: 'one-in-four-forty-never-married',
+    title: "1 in 4 Forty-Year-Olds Have Never Been Married. The Wedding Industry Should Be Worried.",
+    date: 'April 30, 2026',
+    sortDate: new Date('2026-04-30'),
+    tag: 'Culture',
+    tagColor: '#3B82F6',
+    tagBg: 'rgba(59,130,246,0.12)',
+    author: AUTHOR_MARTY,
+    excerpt: "Pew Research data: 25% of US 40-year-olds have never been married, the highest share since 1900. Marriage rates hit a record low. Inside the numbers, the TikTok lavender-marriage explosion, and why people aren't anti-love, they're anti-template.",
+    tags: ['#LLMA', '#LavenderMarriage', '#NeverMarried', '#PewResearch', '#ModernMarriage'],
+    heroImage: null,
+    bodyHtml: `
+<p class="llma-lead">A statistic is doing the rounds again, and every time I see it I get a little smug about it. According to Pew Research Center, <strong>25% of 40-year-olds in the United States have never been married.</strong> That's up from 20% in 2010, and it's the highest share Pew has ever recorded. They've been counting since 1900.</p>
+<p>Read that again. One in four 40-year-olds in this country has never said "I do." And the line is going up, not down.</p>
+<p>This is not a story about love dying. This is a story about a template dying.</p>
+<hr class="llma-divider">
+<h2>What the Data Actually Says</h2>
+<p>A few numbers worth holding in your head together, because separately they look like single data points and stacked they look like a regime change.</p>
+<p><strong>25% of 40-year-olds never married</strong> as of 2021, the highest share since recordkeeping began (Pew Research Center). Men 28%, women 22%. The <strong>US household marriage rate sat at 47.1% in 2024</strong>, just barely above the all-time low of 46.8% set in 2022. The <strong>median age at first marriage</strong> is now <strong>30.8 for men and 28.4 for women</strong> (US Census Bureau, 2025), also a record high. And high schoolers in 2023 reporting they expect to get married someday came in at <strong>67%</strong>, down from 80% three decades ago, per Pew analysis of University of Michigan data.</p>
+<p>Stack all that together and you get a picture the wedding-industrial complex has been very politely refusing to look at. Younger generations are not just delaying marriage. They are increasingly opting out of the version of marriage they were handed.</p>
+<hr class="llma-divider">
+<h2>The Conversation Happening on TikTok</h2>
+<p>Here's the part the data tables don't show but the algorithm absolutely does. Search "lavender marriage" on TikTok right now. The hashtag and adjacent posts have collectively pulled millions of views, and according to Betches, <strong>over 600,000 comments</strong>, the majority of them from straight, single, and even married women.</p>
+<p>The comments are not "this is wild." The comments are "where do I sign up." Straight women in their thirties watching content about platonic life partnerships and replying things like "this is what I've actually been describing for years."</p>
+<p>And it's not isolated to TikTok. A lavender marriage matchmaking app launched recently and reportedly has over 1,000 users across 20+ countries already. The infrastructure is being built in real time.</p>
+<hr class="llma-divider">
+<h2>Why People Are Actually Opting Out</h2>
+<p>This is the part the panic-takes get wrong. The dropping marriage rate is not a sign that nobody wants love. It's a sign that the default container for love has stopped fitting most people's lives.</p>
+<p>The math used to be simple. Get married in your mid-twenties, one earner mostly, kids by thirty, house, retirement, done. That math broke. The cost of housing broke it. The shape of careers broke it. The arrival of egalitarian partnerships into a script written for non-egalitarian ones broke it. And the political volatility around LGBTQ+ rights and reproductive rights broke it again.</p>
+<p>What's actually happening is that people are looking at the legacy template and asking the question that nobody asked their grandparents: <strong>"What is this for?"</strong></p>
+<p>Once you ask "what is marriage for," you stop accepting the default container. Some people decide it's for love and decide to stay single. Some decide it's for stability and pick a platonic life partner. Some decide it's for both and write their own version, like a lavender marriage where the partnership is real and the romance lives somewhere else.</p>
+<div class="llma-quote"><p>"This isn't decline. It's design."</p></div>
+<hr class="llma-divider">
+<h2>What Lavender Marriages Are Actually Doing</h2>
+<p>The reason lavender marriage went from a 1920s Hollywood survival tactic to a 2026 TikTok trend is that the use case has flipped. It used to be a closet. Now it's a choice.</p>
+<p>Two close friends in their thirties who want shared finances, a household, an emergency contact, someone to cosign a lease, someone to be there at the hospital, and who'd rather build that with their best person than wait for a romantic match that may or may not ever show up. That's a lavender marriage. The relationship can be queer, can be straight, can be one of each. The point is the partnership is intentional and the financial and legal scaffolding is real.</p>
+<p>The wedding industry doesn't have a Pinterest board for this yet. Good. Means we get to design it.</p>
+<hr class="llma-divider">
+<h2>Where LLMA Comes In</h2>
+<p>We didn't build LLMA because we hate marriage. We built it because we love partnership and we noticed that the only template most people had access to wasn't built for the lives they're actually living.</p>
+<p>If you're one of the one in four, or one of the people watching the one in four and wondering if there's a third option besides "wait for the perfect person" or "settle for the wrong one," there is. It's called designing a partnership on purpose, with the person who actually fits your life, in whatever shape that takes.</p>
+<p><strong><a href="https://apps.apple.com/us/app/llma-intentional-partnerships/id6760886909">Download LLMA on the App Store</a> — for the people writing their own marriage rules, lavender or otherwise. Stay Bold. Stay Inspired.</strong></p>
+<p><em>Sources: Pew Research Center, "A record-high share of 40-year-olds in the US have never been married" (June 28, 2023). US Census Bureau, 2025. Betches, "Lavender Marriages Are Trending But Not For Why You Might Think." National Law Review press release on lavender-marriage matchmaking app launch.</em></p>
+`,
+  },
+
   // ── NEW (2026-04-27) ───────────────────────────────────────────────────
   {
     slug: 'five-words-pt2-your',
