@@ -13,6 +13,55 @@ const AUTHOR_TEAM = {
 };
 
 export const posts = [
+  // ── NEW (2026-05-11) ───────────────────────────────────────────────────
+  {
+    slug: 'west-wilson-no-overlap-lie-intentional-partnership',
+    title: "West Wilson Said \"No Overlap.\" Here's Why That's the Wrong Defense.",
+    date: 'May 11, 2026',
+    sortDate: new Date('2026-05-11'),
+    tag: 'Culture',
+    tagColor: '#3B82F6',
+    tagBg: 'rgba(59,130,246,0.12)',
+    author: AUTHOR_MARTY,
+    excerpt: "West Wilson's Summer House reunion defense was three words: 'no overlap.' The problem isn't whether it's true. It's why we've decided that's the bar we're supposed to clear.",
+    tags: ['#LLMA', '#SummerHouse', '#WestWilson', '#IntentionalPartnership', '#HonestRelationships'],
+    heroImage: null,
+    bodyHtml: `
+<p class="llma-lead">Let's set the scene.</p>
+<p>West Wilson is sitting at the Summer House Season 10 reunion. Ciara Miller -- who dated West before things got complicated -- is across from him. Amanda Batula, West's current girlfriend and Ciara's best friend, is somewhere in the mix. Kyle Cooke, Amanda's ex-husband of four years, is also there. Andy Cohen is moderating.</p>
+<p>West's defense for everything that went down? Three words.</p>
+<p>"No overlap."</p>
+<p>And here's the thing. Even if it's technically true -- even if the timelines are immaculate -- it's still the wrong answer.</p>
+<hr class="llma-divider">
+<h2>The Bar We Set for Relationships Is Embarrassingly Low</h2>
+<p>"No overlap" means: I wasn't cheating by the narrowest legal definition of cheating.</p>
+<p>That's it. That's the whole argument. And we've somehow decided that this is a defense. That the absence of explicit wrongdoing is the same as acting with integrity.</p>
+<p>It's not.</p>
+<p>When West started dating Amanda -- his ex's best friend, right after a public separation -- the honorable move wasn't to make sure the dates didn't technically overlap. The honorable move was to have a conversation. To go to Ciara. To say something like: here's where I'm at, here's what I want, here's what I'm asking of you.</p>
+<p>He didn't do that. Neither did Amanda. And now they're having that conversation at a Bravo reunion, in front of cameras, in front of Kyle, in front of Ciara in a revenge dress, in front of America.</p>
+<p>That's not bad luck. That's what happens when you skip the hard talk.</p>
+<hr class="llma-divider">
+<h2>Why We Avoid the Honest Conversation</h2>
+<p>Nobody wants to have the awkward talk. I get it. Saying "hey, I have feelings for your best friend" is genuinely terrible to say and genuinely terrible to hear.</p>
+<p>But here's what's worse: getting to the reunion and saying "no overlap" while everyone in the room -- and everyone watching at home -- can feel that something got skipped.</p>
+<p>The honest conversation feels risky because it puts your cards on the table. It forces you to be clear about what you want, which means the other person can say no, or be hurt, or change how they feel about you.</p>
+<p>The dishonest path feels safer because nothing is ever technically said. You just let the situation develop and then claim innocence when it turns complicated.</p>
+<p>But the dishonest path isn't actually safer. It just delays the cost. And then charges interest.</p>
+<hr class="llma-divider">
+<h2>What Intentional Partnership Actually Looks Like</h2>
+<p>"Intentional partnership" sounds like a corporate phrase. It just means this: you talk about what you're doing before you do it, not after it blows up.</p>
+<p>You say what you want. You hear what the other person wants. You make explicit agreements instead of letting things stay implicit. You have the awkward conversation in private so you don't end up having the devastating one in public.</p>
+<p>This is what LLMA is built around. Not because it's idealistic. Because it's practical. People who start with honest conversations don't end up at reunions saying "no overlap." They've already had the harder, realer conversation -- and they're not on the defensive because they were never hiding.</p>
+<hr class="llma-divider">
+<h2>Build the Kind of Relationship That Doesn't Need a Defense</h2>
+<p>The measure of an intentional partnership isn't whether you can prove you didn't overlap. It's whether you never needed to prove it in the first place.</p>
+<p>Ciara Miller wore a revenge dress to the reunion and it slapped. Kyle Cooke is out here publicly auditing his Instagram follows. West and Amanda are starring in a spinoff that premieres May 19.</p>
+<p>None of that is actually the story.</p>
+<p>The story is that three people who genuinely care about each other ended up in a painful public situation because the honest conversation didn't happen. And that happens in ordinary, non-Bravo relationships every single day.</p>
+<p>We just don't have cameras there to document it.</p>
+<div class="llma-quote"><p>"Build relationships where the agreements are explicit, the conversations are honest, and the other people in your life don't find out via a Bravo press release."</p></div>
+<p><strong><a href="https://apps.apple.com/us/app/llma-intentional-partnerships/id6760886909">Download LLMA on the App Store</a> -- for people who are done with the guessing game. Real partnerships. Real agreements. Stay Bold. Stay Inspired.</strong></p>`,
+  },
   // ── NEW (2026-05-06) ───────────────────────────────────────────────────
   {
     slug: 'bravo-amanda-west-spinoff-kyle-divorce-relationship-content',
