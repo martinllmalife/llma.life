@@ -1,0 +1,47 @@
+{
+  "drop_date": "2026-05-14",
+  "primary_topic": 2,
+  "topics": [
+    {
+      "id": 1,
+      "title": "Summer House 'Scandoval 2.0': Amanda Batula + West Wilson vs. Ciara Miller",
+      "hook": "Kyle Cooke alleges West had a secret girlfriend the whole time — 'In The City' spinoff premieres May 19",
+      "summary": "Amanda Batula and Kyle Cooke split in January 2026. Amanda quickly confirmed a romance with West Wilson, Ciara Miller's ex and her best friend. The reunion generated massive Bravo discourse about whether the Kyle-Amanda marriage was ever truly romantic — organically surfacing lavender marriage discourse in comment sections.",
+      "sources": [
+        "https://www.eonline.com/news/1431807/where-summer-house-cast-stands-after-amanda-batula-west-wilson-scandal",
+        "https://www.eonline.com/news/1431881/summer-house-reunion-kyle-cooke-alleges-west-wilson-had-girlfriend-in-2025"
+      ],
+      "relevance": "Partnership-of-convenience vs. romantic love framing — perfect LLMA entry point, already covered May 6 and May 11.",
+      "buzz_level": "HIGH",
+      "buzz_platforms": ["Twitter/X", "Reddit r/BravoRealHousewives", "TikTok", "E! Online"],
+      "note": "Skipped as primary — covered in the last two drops. Strong as a supporting reference."
+    },
+    {
+      "id": 2,
+      "title": "Lavender Marriages Are Going Mainstream: Gen Z Women Are Openly Applying",
+      "hook": "A single TikTok about marrying a gay best friend hit 3.6M views and 600K comments — mostly from straight women saying 'yes'",
+      "summary": "The #lavendermarriage hashtag is surging on TikTok in 2026, driven by Gen Z women and gay men openly discussing intentional platonic marriages. The trend is fueled by dating fatigue, economic pressures, LGBTQ+ rights anxiety, and a desire for safe, respectful companionship. Unlike the historical closeted version, this iteration is transparent and consensual.",
+      "sources": [
+        "https://betches.com/lavender-marriages-trend-tiktok/",
+        "https://www.tiktok.com/tag/lavendermarriage"
+      ],
+      "relevance": "Direct topic match — the conversation is happening at massive scale without authoritative framing. LLMA can own this.",
+      "buzz_level": "HIGH",
+      "buzz_platforms": ["TikTok #lavendermarriage", "Reddit r/gaybros r/AskWomen", "Twitter/X"],
+      "selected": true
+    },
+    {
+      "id": 3,
+      "title": "Whitney Leavitt Keeps Denying Lavender Marriage Rumors — and Nobody Believes Her",
+      "hook": "Secret Lives of Mormon Wives star vs. the internet's most stubborn theory",
+      "summary": "Whitney Leavitt has spent over a year publicly denying that her marriage to Conner is a lavender arrangement. Conner's alleged Grindr activity fueled speculation. Her responses — while earnest — have kept 'lavender marriage' circulating in mainstream pop culture for audiences who never knew the term.",
+      "sources": [
+        "https://parade.com/celebrities/whitney-leavitt-husband-conner",
+        "https://cafemom.com/entertainment/whitney-leavitt-addresses-lavender-marriage-rumors"
+      ],
+      "relevance": "Mainstream on-ramp for the term. Used as pop culture hook in today's drop.",
+      "buzz_level": "MEDIUM-HIGH",
+      "buzz_platforms": ["TikTok #WhitneyLeavitt", "Reddit r/SecretLivesofMormonWives", "Twitter/X"]
+    }
+  ]
+}
