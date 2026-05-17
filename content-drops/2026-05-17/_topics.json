@@ -1,0 +1,47 @@
+{
+  "drop_date": "2026-05-17",
+  "primary_topic": 2,
+  "topics": [
+    {
+      "id": 1,
+      "title": "In The City (Bravo) Premieres May 19 — Kyle & Amanda's Divorce On Camera",
+      "hook": "Bravo's Summer House spinoff drops two days from now. Kyle and Amanda are literally navigating divorce, shared businesses, and shared friend groups in real time on television.",
+      "summary": "In The City premieres May 19 starring Amanda Batula, Kyle Cooke, and Lindsay Hubbard. The show documents the end of Kyle and Amanda's marriage, their intertwined NYC lives, and the Amanda-West-Ciara love triangle fallout. New scenes were filmed after Amanda confirmed her relationship with West Wilson.",
+      "sources": [
+        "https://variety.com/2026/tv/news/in-the-city-bravo-premiere-date-amanda-west-hug-first-trailer-1236710537/",
+        "https://www.realitytea.com/2026/04/08/in-the-city-cast-bravo-summer-house-spinoff/"
+      ],
+      "relevance": "Pop culture hook — Kyle and Amanda's uncoupling under cameras accidentally illustrates the LLMA point: what happens when you don't design your exit the same way you design your life.",
+      "buzz_level": "HIGH",
+      "buzz_platforms": ["Bravo", "Twitter/X", "Reddit r/BravoRealHousewives", "TikTok"]
+    },
+    {
+      "id": 2,
+      "title": "Platonic Co-Parenting Is Now a Mainstream Trend — Apps Are Exploding",
+      "hook": "People are actively choosing their best friends as co-parents. Dedicated apps have gone from 30K to 100K+ users. The Washington Stand is panicking. LLMA should be talking.",
+      "summary": "Platonic co-parenting — two people choosing to raise a child together without a romantic relationship — has gone from fringe to mainstream. Modamily hit 100K registered users (from 30K), LetsBeParents grew from 1,200 to 10,000 monthly users. LGBTQ+ community is a driver but heterosexual singles are a growing segment. Counseling emphasized as key. Backlash from conservative press is already loud, which means the conversation is happening at scale.",
+      "sources": [
+        "https://washingtonstand.com/article/the-new-way-of-distorting-the-family-platonic-coparenting",
+        "https://www.todaysparent.com/family/parenting/platonic-parenting-having-babies-with-friends/",
+        "https://www.marieclaire.com/sex-love/a30517691/raising-a-child-with-your-best-friend/"
+      ],
+      "relevance": "Direct LLMA topic — intentional partnership applied to the biggest decision possible: parenthood. Fresh angle, not covered in previous drops.",
+      "buzz_level": "HIGH",
+      "buzz_platforms": ["TikTok", "Reddit r/childfree r/AskWomen", "Marie Claire", "Washington Stand (backlash signal = viral)"],
+      "selected": true
+    },
+    {
+      "id": 3,
+      "title": "Lavender Marriage TikTok Trend Continues — Gen Z Applying for Their Gay Best Friend",
+      "hook": "The 3.6M view TikTok is still circulating. New creators are making 'interview-style' videos asking gay men if they'd consider it.",
+      "summary": "The lavender marriage discourse continues at high volume on TikTok, now with new interview-style and 'application' formats. Ongoing elevated buzz but LLMA has now covered this topic twice (May 6, May 14). Best as supporting reference only.",
+      "sources": [
+        "https://www.tiktok.com/discover/lavender-marriage",
+        "https://betches.com/lavender-marriages-trend-tiktok/"
+      ],
+      "relevance": "Ongoing — covered twice already. Use as supporting reference, not primary angle.",
+      "buzz_level": "HIGH",
+      "buzz_platforms": ["TikTok", "Reddit", "Twitter/X"]
+    }
+  ]
+}

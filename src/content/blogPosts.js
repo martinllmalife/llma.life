@@ -13,6 +13,57 @@ const AUTHOR_TEAM = {
 };
 
 export const posts = [
+  // ── NEW (2026-05-17) ───────────────────────────────────────────────────
+  {
+    slug: 'bravo-accidentally-made-the-case-for-platonic-co-parenting',
+    title: "Bravo Accidentally Made the Case for Platonic Co-Parenting. You're Welcome.",
+    date: 'May 17, 2026',
+    sortDate: new Date('2026-05-17'),
+    tag: 'Culture',
+    tagColor: '#3B82F6',
+    tagBg: 'rgba(59,130,246,0.12)',
+    author: AUTHOR_MARTY,
+    excerpt: "In The City premieres Monday and we're about to watch Kyle and Amanda navigate divorce, a shared business, and overlapping friend groups in real time. Meanwhile, platonic co-parenting apps just hit 100K users. These two facts are connected.",
+    tags: ['#LLMA', '#PlatonicCoParenting', '#IntentionalPartnership', '#InTheCity', '#ModernFamily'],
+    heroImage: null,
+    bodyHtml: `
+<p class="llma-lead">In The City premieres Monday.</p>
+<p>That's Kyle Cooke and Amanda Batula's new Bravo docuseries -- a spinoff of Summer House -- where we get to watch two people who loved each other, married each other, built a business together, and then split up... navigate all of that. On camera. In New York City. With their shared friends. Immediately after Amanda confirmed she's dating Ciara Miller's ex-boyfriend.</p>
+<p>It's a lot.</p>
+<p>And I'm not here to add to the pile-on, because honestly, Kyle and Amanda are human beings navigating something genuinely hard. Divorce hurts even when it's the right call. And doing it with cameras following you around while your ex's new relationship is trending on Twitter? That sounds like a special kind of awful.</p>
+<p>But watching it unfold does surface a real question.</p>
+<p>What if they'd designed their exit the same way they designed their lives together?</p>
+<hr class="llma-divider">
+<h2>The Part Nobody Plans For</h2>
+<p>Here's the thing about romantic partnerships: we have a whole social script for the beginning. The proposal, the wedding, the house, the next step. Hallmark movies, bridal magazines, entire industries built around the early parts.</p>
+<p>We have basically nothing for the hard middle or the end.</p>
+<p>So when it stops working -- when you love someone but you're not in love with them, or when the marriage served a season of life and that season is over -- most people are improvising. They're making it up as they go. Financial untangling, friend group division, shared-space negotiations with no roadmap and a lot of feelings in the way.</p>
+<p>Kyle and Amanda are doing this live. In front of America. While running a business together.</p>
+<p>Meanwhile, across town (figuratively), a completely different group of people are doing something that looks a little radical from the outside.</p>
+<hr class="llma-divider">
+<h2>Platonic Co-Parenting Is Now an App Category</h2>
+<p>Platonic co-parenting -- two people choosing to raise a child together with no romantic relationship -- is officially a trend with infrastructure.</p>
+<p>Modamily, a co-parenting matchmaking app, just hit 100,000 registered users. That's up from 30,000 a few years ago. LetsBeParents went from 1,200 active monthly users in 2023 to 10,000 this year. The Washington Stand recently published a panicked article calling it "the new way of distorting the family," which is a reliable signal that something is hitting a nerve.</p>
+<p>The people using these apps are not confused. They're not settling. They're not making the best of a bad situation.</p>
+<p>They're interviewing potential co-parents the way you'd screen a business partner for the most important project of your life.</p>
+<p>Because that's what parenthood is.</p>
+<hr class="llma-divider">
+<h2>What Intentional Co-Parenting Actually Requires</h2>
+<p>The thing that makes platonic co-parenting both harder and potentially more stable than the romantic version is the same thing: you can't coast on chemistry.</p>
+<p>Romantic couples often avoid the hard structural conversations because the relationship feels good and who wants to ruin it with paperwork talk. Financial agreements, division of labor, what happens if one of you wants to move, what happens if one of you meets someone -- these conversations get deferred. And then they become crises.</p>
+<p>Platonic co-parents don't have the luxury of deferring. When there's no romance to smooth over the hard stuff, you have to actually talk about the hard stuff first. What does financial partnership look like? What are the custody arrangements? What does it mean for both families? What happens if someone develops feelings?</p>
+<div class="llma-quote"><p>"The couples who make it work -- romantic or platonic -- have one thing in common: they made real agreements, not assumptions."</p></div>
+<p>The Washington Stand thinks this is a threat to the family. I think it's the family getting more intentional about itself.</p>
+<hr class="llma-divider">
+<h2>The Kyle and Amanda Thread</h2>
+<p>Kyle and Amanda didn't choose platonic co-parenting. They chose romantic partnership, it ran its course, and now they're navigating the aftermath.</p>
+<p>But In The City is going to show us something that most of us never see: what the transition actually looks like. What it means to stay in each other's lives -- business, friends, maybe eventually something like chosen family -- after the romance ends.</p>
+<p>Done poorly, that's a mess. Done well, that's something that looks a little bit like what the LLMA community builds on purpose.</p>
+<p>The difference is the conversation. The agreements. The intention.</p>
+<p>Kyle and Amanda are having those conversations late, in front of cameras, with heightened stakes. Some people have them early, quietly, without drama.</p>
+<p>The outcome isn't guaranteed either way. But the odds get a lot better when you build the structure before you need it.</p>
+<p><strong><a href="https://apps.apple.com/us/app/llma-intentional-partnerships/id6760886909">Download LLMA on the App Store</a> -- for people who want to design their partnerships before life designs them for you. Stay Bold. Stay Inspired.</strong></p>`,
+  },
   // ── NEW (2026-05-14) ───────────────────────────────────────────────────
   {
     slug: 'lavender-marriage-tiktok-mainstream-what-you-got-wrong',
