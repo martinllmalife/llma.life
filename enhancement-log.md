@@ -4,6 +4,52 @@ This log tracks automated UI enhancements made by the Claude Code agent.
 
 ---
 
+## [2026-05-17 Auto-Content Drop]
+
+**Trending Topics Researched:**
+1. In The City (Bravo spinoff) premieres May 19 — Kyle & Amanda's on-camera divorce, West Wilson drama continues
+2. Platonic co-parenting going mainstream — Modamily hits 100K users, LetsBeParents 10x growth, conservative media backlash = signal it's viral
+3. Lavender marriage TikTok trend continuing (skipped as primary — covered May 6 and May 14)
+
+**Primary Topic Selected:** Platonic co-parenting with In The City hook
+
+**Content Generated:**
+- `tiktok_script.txt` — 75-85 sec script, "100K app users" hook, Kyle/Amanda reference, platonic co-parenting angle
+- `blog_post.md` — ~600 words, "Bravo Accidentally Made the Case for Platonic Co-Parenting. You're Welcome."
+- `instagram_carousel.txt` — 7 slides, bold cover hook, co-parenting structure vs. romantic vibes
+- `qa_snippet.txt` — Reddit/Quora format, late-30s friends considering co-parenting, practical advice + soft LLMA CTA
+
+**Blog Published:**
+- Added to `src/content/blogPosts.js` as newest entry
+- Committed and pushed to `origin/main` (commit: 3059524)
+- Vercel auto-deploy triggered
+
+**Files:** `content-drops/2026-05-17/`
+
+---
+
+## [2026-05-11 Auto-Content Drop]
+
+**Trending Topics Researched:**
+1. Summer House S10 Reunion — West Wilson "no overlap" defense, Ciara revenge dress, Amanda/West/Kyle fallout (reunion airs May 26)
+2. Gen Z lavender marriage surge — 200%+ interest growth since 2020, dating app fatigue (156 hrs/yr, 6 meaningful connections)
+3. TikTok influencer divorce wave — Kristy & Desmond Scott split after infidelity allegations
+
+**Content Generated:**
+- `content-drops/2026-05-11/tiktok_script.txt` — 75-sec script: West Wilson's "no overlap" lie and the skipped conversation that costs you
+- `content-drops/2026-05-11/blog_post.md` — ~600 words, SEO optimized, Summer House reunion hook
+- `content-drops/2026-05-11/instagram_carousel.txt` — 7 slides: "No Overlap Is Not a Defense"
+- `content-drops/2026-05-11/qa_snippet.txt` — Reddit-style answer: "my friend is dating my ex and says nothing happened while we were together"
+- `content-drops/2026-05-11/_topics.json` — 3 topics with sources
+
+**Blog Published:**
+- Slug: `west-wilson-no-overlap-lie-intentional-partnership`
+- Added to `src/content/blogPosts.js` as newest post
+- Committed and pushed to `origin/main` (commit b28ad29)
+- Vercel auto-deploy triggered
+
+---
+
 ## [2026-04-21 — Content Drop Run]
 - **Component**: blogPosts.js (content)
 - **File**: src/content/blogPosts.js
