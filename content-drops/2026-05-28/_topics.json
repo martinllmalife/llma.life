@@ -1,0 +1,38 @@
+{
+  "date": "2026-05-28",
+  "topics": [
+    {
+      "title": "Kyle Cooke's 'I Hear Things' and the Emotional Affair Accusation Culture",
+      "summary": "In The City (Bravo, premiered May 19) shows Kyle confronting Amanda about an emotional affair with West Wilson. The accusation reveals how romantic partnerships pathologize deep emotional connection between people. Perfect hook for LLMA's message about intentional emotional agreements.",
+      "hook": "Pop culture / Bravo reality TV",
+      "sources": [
+        "https://www.bravotv.com/the-daily-dish/kyle-cooke-asks-amanda-batula-about-west-wilson-emotional-affair-in-the-city-premiere",
+        "https://variety.com/2026/tv/news/in-the-city-premiere-amanda-batula-kyle-cooke-west-cheating-1236753992/",
+        "https://www.realitytea.com/2026/05/20/kyle-cooke-questions-amanda-batula-emotional-affair-west-wilson/"
+      ],
+      "selected_for": "blog_post, tiktok_script, instagram_carousel"
+    },
+    {
+      "title": "Gen Z Dating App Burnout Hits Crisis Levels (156 Hours/Year, 6 Meaningful Connections)",
+      "summary": "April 2026 data shows Gen Z spends 156 hours/year on dating apps with an average of just 6 meaningful connections. 74% report moderate to severe burnout. Gen Z is actively looking for alternatives to traditional romantic partnership pipelines.",
+      "hook": "Generational dating trends / burnout culture",
+      "sources": [
+        "https://rollingout.com/2026/04/14/gen-z-dating-app-burnout-exhaustion/",
+        "https://screenshot-media.com/culture/internet-culture/lavender-marriages-dating-trend-tiktok/",
+        "https://maclynninternational.us/blog/lavender-marriages-why-are-gen-z-and-millennials-marrying-their-best-friends/"
+      ],
+      "selected_for": "qa_snippet"
+    },
+    {
+      "title": "LLMA Named First Lavender Marriage App Built by Someone Living One — National Press Coverage",
+      "summary": "LLMA is receiving national press coverage as the first intentional partnership matchmaking app founded by someone actually living a lavender marriage. Trending alongside broader Gen Z interest in platonic partnership as an intentional life choice.",
+      "hook": "LLMA brand moment / lavender marriage mainstream",
+      "sources": [
+        "https://natlawreview.com/press-releases/first-lavender-marriage-matchmaking-app-built-someone-actually-living-one",
+        "https://theamm.org/articles/2270-why-lavender-marriage-is-making-a-modern-comeback",
+        "https://thred.com/culture/what-are-lavender-marriages-and-why-are-they-on-the-rise/"
+      ],
+      "selected_for": "supporting context"
+    }
+  ]
+}
