@@ -1,0 +1,31 @@
+{
+  "date": "2026-05-29",
+  "topics": [
+    {
+      "title": "Summer House Reunion: Ciara Miller Calls Amanda Batula a Snake, West Wilson Reveals First Kiss Timeline",
+      "summary": "The Summer House Season 10 reunion just aired (late May 2026) and exploded with the most-viral Bravo moment of the year: Ciara Miller's tearful 'you're a snake' confrontation with Amanda Batula. West Wilson was also grilled about exactly when he and Amanda crossed from friendship into something romantic -- his answer (he cited a specific night in Rome) only deepened the controversy. The clip became the most-reshared Bravo moment of 2026. Fans are split between Team Ciara and Team Amanda, but both sides are asking the same question: 'When exactly did it start?' LLMA angle: romantic partnership demands a clean timestamp on human feelings -- and that's the design flaw.",
+      "pop_culture_hook": "Bravo / Summer House Season 10 Reunion",
+      "llma_angle": "The 'when did it start?' demand is a structural failure of romantic partnership. Human feelings don't have clean timelines. Intentional partnership builds in how to handle that honestly before you're defending yourself at a reunion.",
+      "source_url": "https://www.nbcnews.com/pop-culture/pop-culture-news/summer-house-reunion-amanda-batula-west-wilson-ciara-miller-bravo-rcna346416",
+      "buzz_level": "high"
+    },
+    {
+      "title": "Emotional Outsourcing Is 2026's Defining Relationship Trend (Dating.com Survey: 48% of Gen Z Women Want Parallel Partnerships)",
+      "summary": "A 2026 Dating.com survey of 2,000 millennials introduced 'Emotional Outsourcing' -- intentionally distributing emotional needs across multiple connections rather than expecting one person to meet all of them. Key stat: 48% of single Gen Z women are open to having parallel relationships (one partner for physical needs, another for emotional). Platonic Life Partnership searches are up 400% on matchmaking platforms. This is a data-backed mainstream validation of LLMA's core thesis.",
+      "pop_culture_hook": "Gen Z / millennial dating trend with hard survey data",
+      "llma_angle": "48% of Gen Z women are already living the LLMA approach -- they just don't have a name for it yet. This is the 'introduce them to the community' angle.",
+      "source_url": "https://editorialge.com/rise-of-platonic-life-partner/",
+      "buzz_level": "high"
+    },
+    {
+      "title": "Selena Gomez / Benny Blanco Lavender Marriage TikTok Wave Escalates (IBTimes UK Running Multiple Articles in May 2026)",
+      "summary": "The lavender marriage speculation around Selena and Benny continues to grow, with IBTimes UK publishing back-to-back articles in May 2026. The TikTok discovery page for #LavenderMarriage is now almost entirely Gomez/Blanco content. LLMA already published on this in April (angle: wrong question), but the May escalation has new angles -- specifically the volume of people being introduced to the term for the first time and asking 'wait, what IS a lavender marriage?'",
+      "pop_culture_hook": "Celebrity / TikTok viral",
+      "llma_angle": "The new arrivals need the explanation -- Q&A format works perfectly here.",
+      "source_url": "https://www.ibtimes.co.uk/selena-gomez-benny-blancos-lavender-marriage-obvious-tiktok-explodes-videos-pointing-husband-1778411",
+      "buzz_level": "high"
+    }
+  ],
+  "selected_primary": "Summer House Reunion (blog_post, tiktok_script, instagram_carousel)",
+  "selected_secondary": "Emotional Outsourcing + Platonic Life Partner data (instagram_carousel support, qa_snippet)"
+}

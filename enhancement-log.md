@@ -4,6 +4,58 @@ This log tracks automated UI enhancements made by the Claude Code agent.
 
 ---
 
+## [2026-05-29 Auto-Content Drop]
+
+**Trending Topics Researched:**
+1. Summer House Season 10 Reunion -- Ciara Miller calls Amanda Batula "a snake," West Wilson reveals Rome first-kiss timeline, most-clipped Bravo moment of 2026
+2. Emotional Outsourcing / Platonic Life Partners -- Dating.com 2026 survey: 48% Gen Z women open to parallel partnerships, 400% surge in platonic matchmaking searches
+3. Selena Gomez / Benny Blanco lavender marriage TikTok wave escalates -- IBTimes UK running multiple articles May 2026
+
+**Primary Topic Selected:** Summer House Reunion "when did it start?" framework failure
+
+**Content Generated:**
+- `tiktok_script.txt` -- 75-sec script, Ciara/Amanda reunion hook, "feelings don't generate timestamps" take, LLMA CTA
+- `blog_post.md` -- ~800 words, "Ciara Called Amanda a Snake at the Reunion. But 'When Did It Start?' Is the Wrong Question."
+- `instagram_carousel.txt` -- 7 slides, Summer House reunion hook + emotional outsourcing stats slide
+- `qa_snippet.txt` -- Reddit/Quora format, "my partner says my best friendship is an emotional affair" + soft LLMA CTA
+- `_topics.json` -- 3 topics with sources
+
+**Blog Published:**
+- Slug: `summer-house-reunion-ciara-amanda-snake-wrong-question`
+- Added to `src/content/blogPosts.js` as newest entry
+- Committed and pushed to `origin/main`
+- Vercel auto-deploy triggered
+
+**Bonus:** Also committed pending May 28 blog post (had been generated but not committed by previous run).
+
+---
+
+## [2026-05-28 Auto-Content Drop]
+
+**Trending Topics Researched:**
+1. Kyle Cooke "I hear things" / emotional affair accusation on In The City premiere (May 19) -- Kyle confronts Amanda about emotional connection with West Wilson, Amanda denies firmly
+2. Gen Z dating app burnout at crisis levels -- 156 hrs/year on apps, 6 meaningful connections, 74% report moderate-to-severe burnout
+3. LLMA named first lavender marriage matchmaking app built by someone living one -- national press coverage
+
+**Primary Topic Selected:** Emotional affair culture with In The City hook ("I hear things" quote)
+
+**Content Generated:**
+- `tiktok_script.txt` -- 75-sec script, Kyle/Amanda emotional affair hook, "we ask one person to be everything" take, LLMA CTA
+- `blog_post.md` -- ~700 words, "Kyle Cooke Said 'I Hear Things.' Here's the Real Problem With Emotional Affair Culture."
+- `instagram_carousel.txt` -- 7 slides, "emotional affair is just romantic partnership punishing you for having feelings"
+- `qa_snippet.txt` -- Reddit/Quora format, "am I wrong for being closer to my best friend than my partner?" + soft LLMA CTA
+- `_topics.json` -- 3 topics with sources
+
+**Blog Published:**
+- Slug: `kyle-cooke-emotional-affair-culture-intentional-partnership`
+- Added to `src/content/blogPosts.js` as newest entry
+- Committed and pushed to `origin/main`
+- Vercel auto-deploy triggered
+
+**Files:** `content-drops/2026-05-28/`
+
+---
+
 ## [2026-05-17 Auto-Content Drop]
 
 **Trending Topics Researched:**
