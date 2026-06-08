@@ -1,0 +1,39 @@
+{
+  "date": "2026-06-08",
+  "topics": [
+    {
+      "id": 1,
+      "title": "Gen Z marriage rates hit all-time lows while platonic co-living goes viral",
+      "summary": "Only 10% of 18-27 year olds are currently married. Median first marriage age hit 30+ for men. 44% cite financial readiness as the #1 barrier. Meanwhile #PlatonicLifePartner has 13.5M TikTok views and a video about getting divorced and moving in with a best friend hit 9.9M views.",
+      "angle": "Gen Z is already structurally doing lavender marriage — shared finances, chosen family, life partnership without romance. They just won't call it that until someone gives them the vocabulary.",
+      "sources": [
+        "https://gitnux.org/gen-z-marriage-statistics/",
+        "https://www.connectedcouples.app/blog/gen-z-relationship-statistics",
+        "https://www.refinery29.com/en-us/2022/02/10854249/platonic-life-partners-tiktok-explained",
+        "https://www.scarymommy.com/parenting/platonic-family-platonic-soulmates-tiktok"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Adam22 celebrated his own divorce on social media",
+      "summary": "Lena the Plug filed for divorce on June 1, 2026. Adam22 responded by reposting the TMZ article about the split with a message asking Black women interested in dating him to DM him — effectively turning his divorce announcement into a dating ad within hours.",
+      "angle": "This is peak 'romantic partnership collapsing in real time on the internet' content. The chaos of performative romantic partnership. LLMA: what if you built something that didn't require anyone to publicly collapse when it ended?",
+      "sources": [
+        "https://www.tmz.com/categories/celebrity-divorces/",
+        "https://www.eonline.com/photos/38024/2026-celebrity-breakups"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Summer House Season 11 casting is uncertain after the Amanda/West/Ciara fallout",
+      "summary": "Bravo's VP of Current Production confirmed in early June 2026 that Season 11 casting is still unresolved. 'We're still figuring out the cast' — the Amanda Batula/West Wilson/Ciara Miller love triangle created so much collateral relationship damage that the entire show's cast is in flux.",
+      "angle": "When romantic partnership drama is so explosive it collapses not just the couple but the entire social structure around them — that's the design flaw LLMA keeps flagging. Intentional partnership design asks the hard questions before you're on a Bravo couch.",
+      "sources": [
+        "https://www.eonline.com/news/1432679/summer-house-season-11-cast-are-ciara-amanda-west-returning",
+        "https://www.nbcnews.com/pop-culture/pop-culture-news/summer-house-reunion-amanda-batula-west-wilson-ciara-miller-bravo-rcna346416"
+      ]
+    }
+  ],
+  "selected_topic": 1,
+  "pop_culture_hook": "Adam22 literally turned his divorce announcement into a Tinder bio. Gen Z watched, nodded, and went back to planning their platonic co-living arrangements."
+}

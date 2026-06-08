@@ -13,6 +13,50 @@ const AUTHOR_TEAM = {
 };
 
 export const posts = [
+  // ── NEW (2026-06-08) ───────────────────────────────────────────────────
+  {
+    slug: 'gen-z-already-doing-lavender-marriages',
+    title: "Gen Z Is Already Doing Lavender Marriages. They Just Don't Have the Vocabulary Yet.",
+    date: 'June 8, 2026',
+    sortDate: new Date('2026-06-08'),
+    tag: 'Trend Watch',
+    tagColor: '#8B5CF6',
+    tagBg: 'rgba(139,92,246,0.12)',
+    author: AUTHOR_MARTY,
+    excerpt: "Only 10% of Gen Z adults are married right now. But the #PlatonicLifePartner hashtag has 13 million TikTok views. A video about getting divorced and moving in with your best friend got 9.9 million views. Gen Z isn't anti-commitment -- they're solving a design problem. And they're doing it out loud.",
+    tags: ['#LLMA', '#LavenderMarriage', '#GenZ', '#PlatonicLifePartner', '#IntentionalPartnership'],
+    heroImage: null,
+    bodyHtml: `
+<p class="llma-lead">Adam22 responded to his own divorce announcement by asking women to DM him. The same day.</p>
+<p>I'm not bringing this up to pile on. I'm bringing this up because it perfectly encapsulates what romantic partnership looks like when it collapses publicly in 2026: fast, chaotic, immediately performative, and weirdly on-brand.</p>
+<p>Gen Z watched. Gen Z nodded. Gen Z went back to planning their platonic co-living situations.</p>
+<hr class="llma-divider">
+<h2>The Numbers Are Wild</h2>
+<p>Let's do the stats real quick because they tell a story.</p>
+<p>Only <strong>10% of 18 to 27 year olds</strong> are currently married. The median age at first marriage just hit an all-time high: 30.2 years for men, 28.6 for women. Gen Z is on track to push that past 31 by 2030.</p>
+<p><strong>44% of Gen Z</strong> says financial readiness is the number one barrier to marriage. Not "haven't found the right person." Not "not ready emotionally." <em>Can't afford it.</em></p>
+<p>And here's the part nobody in the hot-take discourse is looking at: while marriage rates drop, <strong>the #PlatonicLifePartner hashtag on TikTok has over 13 million views</strong>. A video about a woman planning to get divorced and move in with her best friend got <strong>9.9 million views</strong> and over a million likes.</p>
+<p>People aren't opting out of commitment. They're opting out of a specific <em>design</em> of commitment that isn't working for them.</p>
+<hr class="llma-divider">
+<h2>What Gen Z Is Actually Building</h2>
+<p>Here's what the platonic life partnership content actually shows: people are choosing partners who are reliable, who share their financial situation, who they trust with the long-term stuff -- and they're not requiring those partners to also be their romantic relationships.</p>
+<p>That is, functionally, a lavender marriage.</p>
+<p>Not because anyone is hiding anything. Not because it's strategic for appearances. But because intentional partnership -- choosing someone you trust to build a life with, on explicit terms, without pretending romantic feelings are the only thing that makes commitment real -- is genuinely a better design for a lot of people.</p>
+<p>Gen Z arrived at this from the financial side. ("I can't afford to live alone and also I love my best friend.") LGBTQ+ communities arrived at it from the authenticity side. ("I need a partnership structure that doesn't require me to perform a romance I don't have.") The overlap is real and it's growing.</p>
+<hr class="llma-divider">
+<h2>The Design Problem Nobody Will Name</h2>
+<p>Romantic partnership asks one person to be: your financial co-signer, emotional support system, housing solution, social anchor, intellectual companion, co-parent, physical partner, and brand-appropriate Instagram presence.</p>
+<p>That is an enormous amount of load to put on a single relationship structure. And it's a structure that collapses -- loudly, publicly -- at an impressive rate.</p>
+<p>Gen Z isn't anti-commitment. They're anti <strong>this specific design</strong> of commitment. And they're building alternatives, messily, out loud, on TikTok, with varying vocabulary and zero blueprint.</p>
+<p>At LLMA, we think the blueprint matters. Not to tell anyone how to structure their relationships -- but to give people the language, the framework, and the community to build <em>on purpose</em> instead of defaulting into something that was designed for a different century.</p>
+<hr class="llma-divider">
+<h2>You Can Just Call It What It Is</h2>
+<p>When a 9.9 million view TikTok is about choosing your best friend as your life partner, you're not watching a quirky trend. You're watching a generation reinvent the institution of partnership in real time.</p>
+<p>And they're going to need better vocabulary than "it's complicated."</p>
+<div class="llma-quote"><p>"Gen Z isn't broken. Gen Z is just solving a design problem."</p></div>
+<p>Come build the blueprint with us.</p>
+`,
+  },
   // ── NEW (2026-05-29) ───────────────────────────────────────────────────
   {
     slug: 'summer-house-reunion-ciara-amanda-snake-wrong-question',
