@@ -13,6 +13,51 @@ const AUTHOR_TEAM = {
 };
 
 export const posts = [
+  // ── NEW (2026-06-09) ───────────────────────────────────────────────────
+  {
+    slug: 'west-wilson-secret-girlfriend-summer-house-design-flaw',
+    title: "West Wilson Had a Whole Girlfriend. Here's the Design Flaw No One's Naming.",
+    date: 'June 9, 2026',
+    sortDate: new Date('2026-06-09'),
+    tag: 'Culture',
+    tagColor: '#3B82F6',
+    tagBg: 'rgba(59,130,246,0.12)',
+    author: AUTHOR_MARTY,
+    excerpt: "The Summer House Season 10 reunion finale airs tonight, and West Wilson had a whole girlfriend while pursuing Amanda Batula. Both admitted they lied to Ciara's face. This isn't a story about bad people — it's a story about what happens when you skip the intentional partnership conversation entirely.",
+    tags: ['#LLMA', '#SummerHouse', '#WestWilson', '#IntentionalPartnership', '#ModernRelationships'],
+    heroImage: null,
+    bodyHtml: `
+<p class="llma-lead">Tonight's Summer House Season 10 reunion finale is going to be a lot. And honestly? I'm grateful for it. Not because I enjoy watching people cry on Bravo couches — okay, I enjoy it a little — but because what Amanda Batula, West Wilson, and Ciara Miller just went through on national television is the clearest illustration I've seen in years of what undesigned partnership looks like.</p>
+<p>Let me catch you up if you've been living peacefully and offline.</p>
+<hr class="llma-divider">
+<h2>What Actually Happened (Besides the Vibe-Based Chaos)</h2>
+<p>West Wilson was dating someone named Meija Moreno. Exclusively. She called him her boyfriend. He called her his girlfriend. This was happening all summer while they were filming. One week after his Watch What Happens Live appearance in March, West and Amanda went public on Instagram with their situationship.</p>
+<p>Then, at the reunion, both West and Amanda admitted they "100% lied" to Ciara — Amanda's longtime friend — when they denied the romantic involvement. Not a misunderstanding. Not a miscommunication. A lie. A confirmed, agreed-upon lie to someone's face.</p>
+<p>Amanda walked off set. She told Andy she felt "embarrassed."</p>
+<p>West's other girlfriend showed up on screen to confirm everything.</p>
+<p>And the Season 11 cast is now basically a question mark because the collateral relationship damage was that extensive.</p>
+<hr class="llma-divider">
+<h2>The Design Flaw Nobody Is Talking About</h2>
+<p>Here's what I want to say that the Bravo commentators won't: this isn't a story about bad people. It's a story about what happens when you build partnership on feelings and forward momentum instead of conversations and commitments.</p>
+<p>Nobody sat down and said: "What are we, actually? What do we owe the people already in our lives? What's the honest answer to 'are you seeing anyone else?'"</p>
+<p>They skipped those questions because they're uncomfortable. And then they skipped them again when Ciara asked directly. And then they skipped them again in a public Instagram statement.</p>
+<p>The embarrassment Amanda felt on that couch? That's the compounding interest on skipped conversations.</p>
+<hr class="llma-divider">
+<h2>What Intentional Partnership Design Actually Looks Like</h2>
+<p>I'm not saying everyone needs a spreadsheet and a formal partnership agreement to date someone from their friend group. (Though, like. Maybe.) I'm saying that the three people on that couch could have had a five-minute honest conversation that would have made all of this unnecessary.</p>
+<p>"I have feelings for you. I'm still seeing someone else and I need to be honest with Ciara about what's happening."</p>
+<p>That's it. That's the design. That's LLMA in one sentence.</p>
+<p>Intentional partnership — whether it's romantic, platonic, lavender, or some hybrid you invented yourself — starts with the boring conversation. The "what are we actually doing here" conversation. The "what are my commitments and what are yours" conversation.</p>
+<p>It's not romantic to have that conversation. It is, however, the thing that keeps you off a Bravo couch crying and saying you need a five-minute break.</p>
+<hr class="llma-divider">
+<h2>The Part That Actually Matters</h2>
+<p>Here's what gets me about this story. Ciara handled it with more grace than anyone had a right to expect. She said she felt more betrayed by Amanda than by West. Because the expectation wasn't the situationship — it was the honesty. She wanted the honest answer, and she didn't get it.</p>
+<div class="llma-quote"><p>"That's what breaks friendships. Not the messy feelings. Not the complicated timeline. Not even the other girlfriend. The decision to skip the honest conversation."</p></div>
+<p>LLMA exists because a lot of people are building their most important partnerships the way West and Amanda built this one — following the feeling until it collides with reality, then being surprised by the wreckage.</p>
+<p>You can do it differently. It just requires the conversation first.</p>
+<p><strong><a href="https://apps.apple.com/us/app/llma-intentional-partnerships/id6760886909">Download LLMA on the App Store</a> — for people who want to stop vibing their way into situations and start designing what they actually want. Stay Bold. Stay Inspired.</strong></p>
+`,
+  },
   // ── NEW (2026-06-08) ───────────────────────────────────────────────────
   {
     slug: 'gen-z-already-doing-lavender-marriages',
