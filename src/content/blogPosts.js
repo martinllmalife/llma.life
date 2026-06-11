@@ -13,6 +13,52 @@ const AUTHOR_TEAM = {
 };
 
 export const posts = [
+  // ── NEW (2026-06-11) ───────────────────────────────────────────────────
+  {
+    slug: 'tiktok-selena-gomez-lavender-marriage-what-it-actually-means',
+    title: "TikTok Thinks Selena Gomez Is in a Lavender Marriage. Here's What That Would Actually Mean.",
+    date: 'June 11, 2026',
+    sortDate: new Date('2026-06-11'),
+    tag: 'Culture',
+    tagColor: '#3B82F6',
+    tagBg: 'rgba(59,130,246,0.12)',
+    author: AUTHOR_MARTY,
+    excerpt: "TikTok is flooded with videos claiming Selena Gomez and Benny Blanco are in a lavender marriage. Whether it's true or not is irrelevant — because lavender marriages aren't the scandal the internet thinks they are. Here's the actual definition, and why designing your partnership beats vibing into one every single time.",
+    tags: ['#LLMA', '#LavenderMarriage', '#SelenaGomez', '#IntentionalPartnership', '#ModernRelationships', '#RelationshipDesign'],
+    heroImage: null,
+    bodyHtml: `
+<p class="llma-lead">TikTok has assigned itself a new investigative beat, and this week's subject is Selena Gomez.</p>
+<p>Videos are going viral. Body language experts are weighing in. People are freeze-framing red carpet footage and replaying interview clips like they're working a cold case. The verdict, per the algorithm: Selena and Benny Blanco might be in a lavender marriage.</p>
+<p>The reaction in most comment sections is some version of "shocking" or "I knew something was off."</p>
+<p>I want to gently suggest that everyone slow down — not because the speculation is necessarily wrong, but because the framing is.</p>
+<hr class="llma-divider">
+<h2>What a Lavender Marriage Actually Is</h2>
+<p>A lavender marriage, historically, was an arrangement between a gay man and a straight woman (or vice versa) who partnered up publicly to protect each other — from a society that was actively hostile to anyone who didn't perform heterosexuality convincingly. They built real homes. Real families. Real lives. The "lavender" part referred to what was hidden, not to the relationship being fake.</p>
+<p>Modern lavender marriages don't require hiding anything. Today's version is two people who look at each other and say: "I trust you. I want to build a life with you. The romantic assumptions people make about married couples don't fully apply to us, and we're okay with that."</p>
+<p>That's not a scandal. That's a design choice.</p>
+<hr class="llma-divider">
+<h2>Why TikTok Gets This Wrong</h2>
+<p>The way "lavender marriage" circulates on social media right now, it's treated as a reveal. An exposure. As if catching someone in a lavender marriage means you've found proof that something is broken or fraudulent.</p>
+<p>But what you've actually found — if the speculation is even correct — is two adults who may have opted into a partnership structure that the internet didn't approve in advance.</p>
+<p>Which, I'm sorry, is not a crime.</p>
+<p>The real question isn't "are they really in love in the way rom-coms taught us to expect?" The real question is: did they choose each other intentionally? Do they have shared values? Have they had the conversations that matter?</p>
+<p>If yes to those things, they're doing better than most couples who stumbled into marriage on a vibe and a matching anniversary Instagram.</p>
+<hr class="llma-divider">
+<h2>The Part That Actually Matters</h2>
+<p>Here's the thing I keep thinking about: lavender marriage speculation goes viral because people are deeply curious about relationship structures that don't look like the default. And that curiosity is valid.</p>
+<p>Most of us were handed a template — date, fall in love, get married, stay married — and told to execute it without asking too many questions. When someone appears to have colored outside the lines, the instinct is to expose it. To name it as a problem.</p>
+<p>But what if it's not a problem? What if it's evidence that two people sat down and said "what do we actually want to build together?" and then built it?</p>
+<p>Selena Gomez has Lupus. She's navigated transplant surgery, mental health hospitalizations, and a media environment that has dissected her every relationship since she was a teenager. If she found a partner she trusts and designed something that works for her actual life — not the life the internet imagined for her — that's not a red flag. That's wisdom.</p>
+<div class="llma-quote"><p>"The question TikTok is asking: 'are they really in love the way movies told us?' The question that actually matters: 'did they choose each other on purpose?' One of these is useful. The other is gossip."</p></div>
+<hr class="llma-divider">
+<h2>What LLMA Is For</h2>
+<p>This is the entire reason LLMA exists. Not for people who want to blow up their relationships — for people who want to design them.</p>
+<p>Intentional partnerships. Platonic life partners. Lavender marriages. Chosen family structures. Romantic couples who are also honest that the "forever" part means commitment to the design, not to the feeling never changing.</p>
+<p>The internet keeps stumbling onto these structures in celebrity gossip and treating them like scandals. We're here to say: this is just a relationship. One people actually thought about.</p>
+<p>You're allowed to do that too.</p>
+<p><strong><a href="https://apps.apple.com/us/app/llma-intentional-partnerships/id6760886909">Download LLMA on the App Store</a> — for people ready to design their partnerships instead of just falling into them. Stay Bold. Stay Inspired.</strong></p>
+`,
+  },
   // ── NEW (2026-06-10) ───────────────────────────────────────────────────
   {
     slug: '18-years-vs-8-months-partnership-design-jason-biggs-megan-stallion',
