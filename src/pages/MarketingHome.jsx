@@ -119,19 +119,43 @@ function VideoHero() {
         transform: isLoaded ? 'translateY(0)' : 'translateY(20px)',
         transition: 'opacity 1s ease-out, transform 1s ease-out',
       }}>
-        <div style={{
-          display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 28,
-          background: 'rgba(143,92,184,0.25)', border: '1px solid rgba(143,92,184,0.4)',
-          borderRadius: 9999, padding: '7px 18px',
-          fontSize: 11, fontWeight: 700, color: S.lavender,
-          letterSpacing: '0.08em', textTransform: 'uppercase',
-          backdropFilter: 'blur(12px)',
-          boxShadow: '0 4px 24px rgba(143,92,184,0.15)',
-          opacity: isLoaded ? 1 : 0,
-          transform: isLoaded ? 'translateY(0)' : 'translateY(-10px)',
-          transition: 'opacity 1.2s ease-out 0.2s, transform 1.2s ease-out 0.2s',
-        }}>
-          ✦ Life &amp; Love Made Authentic
+        {/* Trademark lockup — matches brand HTML spec exactly:
+              llma · Plus Jakarta Sans 800 · white
+              LIFE AND LOVE MADE AUTHENTIC · 600 · #A78BFA · 14pt letter-spacing */}
+        <div
+          role="img"
+          aria-label="LLMA — Life and Love Made Authentic"
+          style={{
+            display: 'flex', flexDirection: 'column', alignItems: 'center',
+            gap: 'clamp(8px, 1.4vw, 18px)', marginBottom: 36,
+            opacity: isLoaded ? 1 : 0,
+            transform: isLoaded ? 'translateY(0)' : 'translateY(-10px)',
+            transition: 'opacity 1.2s ease-out 0.2s, transform 1.2s ease-out 0.2s',
+          }}
+        >
+          <div style={{
+            fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif",
+            fontSize: 'clamp(96px, 16vw, 200px)',
+            fontWeight: 800,
+            color: '#FFFFFF',
+            letterSpacing: '0.01em',
+            lineHeight: 0.95,
+            textShadow: '0 4px 48px rgba(0,0,0,0.7), 0 2px 16px rgba(0,0,0,0.5)',
+          }}>
+            llma
+          </div>
+          <div style={{
+            fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif",
+            fontSize: 'clamp(11px, 1.7vw, 18px)',
+            fontWeight: 600,
+            color: '#A78BFA',
+            letterSpacing: '0.42em',
+            textTransform: 'uppercase',
+            textShadow: '0 2px 16px rgba(0,0,0,0.6)',
+            paddingLeft: '0.42em',
+          }}>
+            Life and Love Made Authentic
+          </div>
         </div>
 
         <h1 style={{
