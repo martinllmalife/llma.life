@@ -119,24 +119,58 @@ function VideoHero() {
         transform: isLoaded ? 'translateY(0)' : 'translateY(20px)',
         transition: 'opacity 1s ease-out, transform 1s ease-out',
       }}>
-        {/* Trademark lockup — official filed mark (mascot + llma + tagline) */}
-        <img
-          src="/llma-logo-lockup.png"
-          alt="LLMA — Life and Love Made Authentic"
-          width={1920}
-          height={480}
-          fetchPriority="high"
+        {/* Trademark lockup — matches USPTO filing exactly:
+              llama mascot (left) + UPPERCASE LLMA (right) + 'LIFE AND LOVE / MADE AUTHENTIC' stacked */}
+        <div
+          role="img"
+          aria-label="LLMA — Life and Love Made Authentic"
           style={{
-            width: 'min(640px, 90vw)',
-            height: 'auto',
-            display: 'block',
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            gap: 'clamp(16px, 2.6vw, 32px)',
             marginBottom: 36,
             filter: 'drop-shadow(0 4px 48px rgba(0,0,0,0.7)) drop-shadow(0 2px 16px rgba(0,0,0,0.5))',
             opacity: isLoaded ? 1 : 0,
             transform: isLoaded ? 'translateY(0)' : 'translateY(-10px)',
             transition: 'opacity 1.2s ease-out 0.2s, transform 1.2s ease-out 0.2s',
           }}
-        />
+        >
+          <img
+            src="/llma-logo.png"
+            alt=""
+            width={1024}
+            height={1024}
+            fetchPriority="high"
+            style={{
+              width: 'clamp(96px, 13vw, 160px)',
+              height: 'auto',
+              flexShrink: 0,
+              display: 'block',
+            }}
+          />
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 'clamp(4px, 0.8vw, 10px)', textAlign: 'left' }}>
+            <div style={{
+              fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif",
+              fontSize: 'clamp(64px, 10vw, 132px)',
+              fontWeight: 800,
+              color: '#FFFFFF',
+              letterSpacing: '-0.01em',
+              lineHeight: 0.9,
+            }}>
+              LLMA
+            </div>
+            <div style={{
+              fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif",
+              fontSize: 'clamp(12px, 1.7vw, 19px)',
+              fontWeight: 600,
+              color: '#FFFFFF',
+              letterSpacing: '0.22em',
+              lineHeight: 1.25,
+              textTransform: 'uppercase',
+            }}>
+              Life and Love<br />Made Authentic
+            </div>
+          </div>
+        </div>
 
         <h1 style={{
           fontSize: 'clamp(48px, 7.5vw, 88px)', fontWeight: 900,
